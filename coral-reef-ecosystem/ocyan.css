@@ -212,7 +212,7 @@ h2{
 .coral-animation-container{
     margin: 0;
     padding: 0;
-    background-image: url("coral-reef-ecosystem/coral-reef-background.png");
+    background-image: url("./coral-reef-background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
