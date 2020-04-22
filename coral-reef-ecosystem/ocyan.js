@@ -1,5 +1,18 @@
 
 $(document).ready(function(){
+    $("#play-button").click(function(){
+        document.querySelector(".animation-container").requestFullscreen();
+        $("#play-button").css("display","none");
+        $("#exit-button").css("display","block");
+        screen.orientation.lock("landscape") // lock screen to landscape mode
+       });
+       $("#exit-button").click(function(){
+            document.exitFullscreen();
+            $("#play-button").css("display","block");
+            $("#exit-button").css("display","none");
+            screen.orientation.unlock(); // unlock screen from landscape mode
+        });
+        /*
     var height = $(window).height() 
     var width = $(window).width()
    if(width > height){
@@ -22,7 +35,7 @@ $(document).ready(function(){
           $("#play-button").css("display","block");
           $("#exit-button").css("display","none");
          });
-    }; 
+    }; */
    /* $(window).resize(function() {
         var height = $(window).height();
         var width = $(window).width();
