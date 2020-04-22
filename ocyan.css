@@ -1,0 +1,299 @@
+
+body{
+    margin:0;
+    height: 200vh;
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-y: scroll;
+}
+#side-bar{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+}
+.rotate{
+  transform: rotate(180deg);
+}
+
+/* navigation bar*/
+nav{
+  display: flex;
+  position: fixed;
+  overflow: auto;
+  z-index: 13;
+  justify-content: flex-end;
+  width: 100%;
+  height: auto;
+}
+/* compass image div (flex item)*/
+.side-menu-img{
+  flex-basis: 10%;
+  display: block;
+  width: 15vw;
+  height: 18vh;
+  overflow:auto;
+}
+/* menu options and links  (div - flex item)*/
+.side-menu{
+  display: none;
+  flex-basis: 30%;
+  background-color: rgba(19, 64, 116, 0.9);
+  height: 200vh;
+  min-height: 100vh;
+  box-shadow:0 -10vw 5vw rgb(19, 64, 116);
+  overflow: auto;
+}
+/* compass image */
+#menu{
+  width: 100%;
+  height: 18vh;
+}
+.menu-title{
+  font-size: 3em;
+  text-align: center;
+  letter-spacing: 0.1em;
+  border-bottom: 1vh  rgb(19, 64, 116);
+  color: white;
+
+}
+ul{
+  padding: 0;
+  height:fit-content;
+}
+.marine-eco-list{
+  display: none;
+}
+li, .marine-eco-li{
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  padding:2% 2% 2% 2%;
+  text-decoration: none;
+  list-style-type: none;
+  color:white;
+  overflow: auto;
+  text-align: center;
+}
+li:hover{
+  color:#A6E3FB ;
+}
+
+section{
+    background: linear-gradient( #A6E3FB , #134074);
+    height: 100%;
+    width: 100%;
+}
+
+/* coral reef ecosystem page edit */ 
+.ecosystem-body{
+    padding-top: 20%;
+    background: transparent;
+    height: 100%;
+    width: 100%;
+}
+.animation-container{
+    margin: 0 25% 10% 25%;
+    padding: 0;
+    width: 50%;
+    height: 60vh; 
+    background-color: transparent; 
+    position: relative;
+    border-radius: 5rem;
+}
+#play-button {
+    position: absolute;
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0, 0.5);
+    border: 0;
+    z-index: 12;
+    border-radius: 5rem;
+}
+.bi.bi-tablet{
+  transform: rotate(180deg);
+}
+#instruction{
+  margin: 5% 10% 0 10%;
+  width: 80%;
+  background-color:#FF6B35;
+  padding: 1%;
+}
+.iframe-container {
+    margin:0;
+    padding: 0;
+    width:100%;
+    height:100%;
+    background-color: transparent;
+    position: absolute;
+    z-index: 11;
+    border-radius: 5rem;
+  }
+#coral-iframe {
+     border: 0;
+     padding: 0;
+     height: 100%;
+     left: 0;
+     top: 0;
+     width: 100%;
+     border-radius: 5rem;
+     background-color: transparent;
+     
+  }
+/* exit button */
+#exit-button{
+    position: fixed;
+    display: none;
+    color: black;
+    background-color: white;
+    border: unset;
+    margin: 2%;
+    z-index: 99999 !important;
+}
+/* animation page edit */ 
+/* The Modal (background) */
+#turtle-modal, #shark-modal, #lionfish-modal, #triggerfish-modal, #clownfish-modal, #crab-modal{
+  display: none; 
+  position: fixed;
+  z-index: 998; 
+  margin: 10vh 10% 10vh 10%; 
+  padding:2%;
+  width:76%; 
+  height: 75vh; 
+  overflow: auto; 
+  background-color: rgb(#392061); 
+  background-color: rgba(57,32,97,0.9);
+};
+/* Modal Content/Box */
+.modal-content{
+  display:flex;
+  flex-wrap: nowrap;
+  z-index: 999;
+  width: 100%; 
+  height: 100%; 
+  background-color: transparent;
+  margin: 0; 
+  padding: 0;
+}
+
+/* The Close Button */
+#tclose, .sclose, .lclose, .tfclose, .cfclose, .cclose {
+color: black;
+float: right;
+font-size: 28px;
+font-weight: bold;
+max-width: 5%;
+}
+
+#tclose:hover, .sclose:hover, .lclose:hover, .tfclose:hover, .cfclose:hover, .cclose:hover, #tclose:focus, #sclose:focus, #lclose:focus, #tfclose:focus, #cfclose:focus, #cclose:focus {
+color: grey;
+text-decoration: none;
+cursor: pointer;
+}
+.ff-images, .fact-file{
+ flex: 50%;
+ max-width: 50%;
+ padding: 1%;
+}
+.modal-img{
+  margin-top: 20%;
+  width: 100%;
+}
+p {
+  width: 100%;
+  font-size: 1.em;
+}
+h2{
+  font-size: 2.5em;
+  text-align: center;
+  width: 100%;
+}
+.coral-animation-container{
+    margin: 0;
+    padding: 0;
+    background-image: url("coral-reef-ecosystem/coral-reef-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.ca-container{
+    margin: 0;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: transparent;
+}
+.coral-animation-empty{
+    background-color: transparent;
+    width: 25%;
+    flex: 0 2 25%;
+}
+.coral-animation-animal{
+    background-color: transparent;
+    width: 25%;
+    flex: 0 1 35%;
+    display: flex;
+    flex-direction: column;
+}
+.coral-animation-shark{
+    background-color: transparent;
+    width: 50%;
+    flex: 0 1 50%;
+    display: flex;
+}
+
+/* Define the animals */
+.animal-st {width:20vw;height:auto;top:10px;left:0;} /* sea turle */
+.animal-lf {max-width: 10vw;height:auto;top:10px;left:0;} /* lionfish */
+.animal-rs{width:50vw;height:auto;left:0;}   /* reef shark */
+.animal-tf{max-width:20vw;height:auto;top:10px;left:0;}  /* triggerfish */
+.animal-cf {max-width:20vw;height:auto;top:10px;left:0;} /* Clownfish */
+.animal-cfa{width:20vw;height:auto;top:10px;left:0;} /* Clownfish and anemone */
+.animal-c {width:10vw;height:auto;margin-top: 60%;left:0;} /* Crab */
+
+/* Define the animations for the coral animation animals */
+.animal-st, .animal-lf, .animal-rs, .animal-tf, .animal-cf, .animal-cfa, .animal-c{
+	animation-name: floating;
+	-webkit-animation-name: floating;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
+}
+.animal-st{animation-duration: 13s;}
+.animal-lf{animation-duration: 10s;}
+.animal-rs{animation-duration: 12s;}
+.animal-tf{animation-duration: 7s;}
+.animal-cf {animation-duration: 8s;}
+.animal-cfa{animation: unset;}
+.animal-c {animation-duration: 6s;}
+
+@keyframes floating {
+	0% {
+		transform: translate(0%,0%);	
+	}
+	25% {
+		transform: translate(0%,20%);	
+	}	
+	50% {
+		transform: translate(0%,5%);	
+	}	
+	75% {
+		transform: translate(0%,15%);	
+	}	
+	100% {
+		transform: translate(0%,0%);
+	}	;		
+};
+/* on hover animation stops */
+.animal-st:hover, .animal-lf:hover, .animal-rs:hover, .animal-tf:hover, .animal-cf:hover, .animal-c:hover{animation-play-state: paused;};
