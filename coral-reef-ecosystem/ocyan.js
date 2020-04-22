@@ -8,7 +8,7 @@ $(document).ready(function(){
             document.querySelector(".animation-container").requestFullscreen();
             $("#play-button").css("display","none");
             $("#exit-button").css("display","block");
-            screen.orientation.lock("landscape-primary") // lock screen to landscape mode
+            screen.orientation.lock("landscape") // lock screen to landscape mode
            });
            $("#exit-button").click(function(){
                 document.exitFullscreen();
@@ -23,7 +23,7 @@ $(document).ready(function(){
           $("#exit-button").css("display","none");
          });
     }; 
-    $(window).resize(function() {
+   /* $(window).resize(function() {
         var height = $(window).height();
         var width = $(window).width();
         if (width > height) {
@@ -45,7 +45,7 @@ $(document).ready(function(){
               $("#exit-button").css("display","none");
           });
        }; 
-    });
+    });*/
 
 
   /* $("#play-button").click(function(){
