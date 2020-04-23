@@ -3,7 +3,7 @@
   <head>
     <meta name="description" content=" this describes the content of my webpage ">
     <meta name="keywords" content=" html">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="ocyan.css">
   </head>  
@@ -43,9 +43,6 @@
     <div class="ecosystem-body">
 <!-- navigation bar consistent throughout webpage, embed modal for carers, map instructions, about us etc...-->
         <div class="animation-container">
-          <button id="exit-button">
-            <h2>Exit</h2>
-          </button>
           <button id="play-button">
             <h2>Play</h2>
             <div id= "instruction">
@@ -53,7 +50,7 @@
             </div>
             </button>
           <div class="iframe-container">
-           <iframe scrolling = "yes" id="coral-iframe" src="https://rbenameur.github.io/ocyan.github.io/coral-reef-ecosystem/coral-reef-animation-folder/coral-reef-animation.html" frameborder="0" allowfullscreen = "true">
+           <iframe scrolling = "yes" id="coral-iframe" allow-popups= "true" allow-scripts= "true" allow-modals= "true" src="file:///Users/raniabenameur/Documents/GitHub/ocyan.github.io/coral-reef-ecosystem/coral-reef-animation-folder/coral-reef-animation.html" frameborder="0" webkitallowfullscreen = "true" mozallowfullscreen= "true" allowfullscreen = "true">
            Your browzer does not support iframes
            </iframe>
           </div>
@@ -62,9 +59,7 @@
       </section>
    <footer>
    </footer>
-   
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <script src="ocyan.js"></script>
-
   </body>
 </html>
