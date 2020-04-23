@@ -99,11 +99,11 @@ section{
     position: relative;
     border-radius: 5rem;
 }
-.animation-container:fullscreen{
+/*.animation-container:fullscreen{
   width: 100%;
   height: 100%; 
   border-radius: 5rem;
-}
+}*/
 #play-button {
     position: absolute;
     margin:0;
