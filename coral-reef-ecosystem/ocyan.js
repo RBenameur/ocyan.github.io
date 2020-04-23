@@ -3,7 +3,7 @@ $(document).ready(function(){
     // On #play-button click the iframe container becomes full screen, and hidden whilst exit button becomes visible.
     $("#play-button").click(function(){
         //document.querySelector(".animation-container").requestFullscreen();
-        var animation = document.querySelector(".coral-iframe");
+        var animation = document.querySelector("#coral-iframe");
         if (animation.requestFullscreen){
             animation.requestFullscreen(); 
         } else if (animation.webkitRequestFullscreen){
@@ -16,7 +16,6 @@ $(document).ready(function(){
             alert(" I'm sorry, your browser does not support fullscreen mode! Please try a different browser");
         }
         $("#play-button").css("display","none");
-        $("#exit-button").css("display","block");
         screen.orientation.lock("landscape") // lock screen to landscape mode on mobile screens
         //on click of the turtle animation
         $(".animal-st").click(function(){$("#turtle-modal").css("display", "block");});
