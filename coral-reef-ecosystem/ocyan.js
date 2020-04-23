@@ -3,7 +3,7 @@ $(document).ready(function(){
     // On #play-button click the iframe container becomes full screen, and hidden whilst exit button becomes visible.
     $("#play-button").click(function(){
         //document.querySelector(".animation-container").requestFullscreen();
-        var animation = document.querySelector(".animation-container");
+        var animation = document.querySelector(".coral-iframe");
         if (animation.requestFullscreen){
             animation.requestFullscreen(); 
         } else if (animation.webkitRequestFullscreen){
