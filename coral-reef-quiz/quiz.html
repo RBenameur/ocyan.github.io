@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <!--To remove--->
+    <section class ="start-page">
+        <h1>Coral Reef Content Page</h1>
+        <button type="button" class="start-quiz btn btn-info">Start Quiz</button>
+    </section>
+    <!--To remove--->
+    <div id="quiz">
+        <div id="quiz-container">
+            <h3 class="quiz-title">Coral Reef Quiz</h3> 
+            <div class="content-container">
+                <div class="quiz-half quiz-q-a">
+                    <p id="question" class="bold"> Q: goes here</p>
+                    <label class="option-container btn btn-primary" for="option-a">
+                        <input type="radio" id="option-a" name="options" value="a"><span class="option-text">Choice A</span>
+                    </label>
+                    <label class="option-container btn btn-primary" for="option-b">
+                        <input type="radio" id="option-b" name="options" value="b"><span class="option-text">Choice B</span>
+                    </label>
+                    <label class="option-container btn btn-primary" for="option-c">
+                        <input type="radio" id="option-c" name="options" value="c"><span class="option-text">Choice C</span>
+                    </label>
+                    <label class="option-container btn btn-primary" for="option-d">
+                        <input type="radio" id="option-d" name="options" value="d"><span class="option-text">Choice D</span>
+                    </label>
+                    <div id="button-container">
+                        <button id="prev" type="button" class="navigate btn btn-light">Previous</button>
+                        <button id="next" type="button" class="navigate btn btn-light">Next</button>
+                        <button id="submit" type="button" class="btn btn-success">See Results</button>
+                    </div>
+                </div>
+                <div class="quiz-half quiz-img">
+                    <div><img class="coral-img" alt="placeholder" src="https://images.unsplash.com/photo-1533713692156-f70938dc0d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"></div>
+                </div>
+            </div>
+           <div id="progress-bar">
+             <div class="progress-meter"></div>  
+             <div class="mascot-img"></div>  
+             <div class="question-num-cont"><p class="question-num">You're on <br> Q 8/10</p></div>  
+            </div> 
+        </div>
+        <div id="result">
+            <p class ="result-text">You got x% or y out of z right.</p>
+            <div class="bold hint-container"></div>
+            <button id = "reset" type="button" class="btn btn-info">Reset quiz</button>
+            <br>
+            <button type="button" class="btn btn-success">Save score</button>   <!--This button doesn't do anything yet, but clicking on it will save score-->
+        </div>
+    </div>
+    <script src="quiz.js"></script> 
+</body>
+</html>
