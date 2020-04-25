@@ -516,30 +516,47 @@ $(document).ready(function(){
             });
             $("body").toggleClass("body-fixed");
         if (ScreenOrientation.type === "landscape-primary" || ScreenOrientation.type === "landscape-secondary" || $(window).height() < $(window).width() && $(window).height() < 800){
-            $(".side-menu").css("height","400vh");
-            $("ul").css("height","400vh");
+            $(".side-menu").css({
+                "height":"400vh",
+                "overflow":"scroll",
+            });
+            $("ul").css("height","450vh");
         } else {
             $(".side-menu").css("height","100vh"); 
             $("ul").css("height","100vh");
         };
     });
     // On some menu options click additional options appear and arrow rotates
-    $(".marine-eco-menu").click(function(){
-        $(".marine-eco-li").css("font-size", "1.5vw");
-        $("ul").css("height", "fit-content");
-        $("#me-icon").toggleClass("rotate");
-        $(".marine-eco-list").toggle(
-            function(){
-                $(this).css({
-                "height": "auto",
-                "overflow-y": "scroll",
-                });
-            });
+    $("#adventure-map").click(function(){
+        $(".advent-li").css("font-size", "1.5vw");
+        $(".nav-ul").css("height", "fit-content");
+        $("#am-icon").toggleClass("rotate");
         if (ScreenOrientation.type === "landscape-primary" || ScreenOrientation.type === "landscape-secondary" || $(window).height() < $(window).width() && $(window).height() < 800){
-            $("ul").css("height","500vh");
-        } else{ 
-            $("ul").css("height","100vh");
+            $(".advent-list").css("height","fit-content");
+            $(".nav-ul").css("height","550vh");
+        }else {
+            $(".advent-list").css("height","fit-content");
+            $(".nav-ul").css("height","45vh");
         };
+        $(".advent-list").animate({"height":'toggle'});
+    }); 
+    $("#marine-ecosystem").click(function(){
+        $(".marine-eco-li").css("font-size", "1.5vw");
+        $(".nav-ul").css("height", "fit-content");
+        $("#me-icon").toggleClass("rotate");
+        if (ScreenOrientation.type === "landscape-primary" |ScreenOrientation.type === "landscape-secondary" || $(window).height() < $(window).width() && $(window).height() < 800){
+            $(".marine-eco-list").css("height","fit-content");
+            $("#marine-ecosystem").css({
+                "height":"fit-content",
+                "overflow":"hidden",
+            });
+            $(".nav-ul").css("height","550vh");
+
+        } else{ 
+            $(".marine-eco-list").css("height","fit-content");
+            $(".nav-ul").css("height","fit-content");
+        };
+        $(".marine-eco-list").animate({"height":'toggle'});
     }); 
 
 });
