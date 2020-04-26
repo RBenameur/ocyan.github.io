@@ -44,7 +44,7 @@ html, body {font-family: Arial, Helvetica, sans-serif;}
     align-items: center;
     height: auto;
     min-width: 55vw;
-    padding: 1.8em;
+    padding: 2em;
     box-shadow: 0 5px 25px 0 rgba(0,0,0,.25);
     background: url("prelanding-bkgd.png");
     background-repeat: no-repeat;
@@ -55,38 +55,38 @@ html, body {font-family: Arial, Helvetica, sans-serif;}
 .content-container {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
+    margin-top: 1em;
 }
 
-.quiz-half {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+fieldset {
+    padding: 2em;
     height: auto;
+   /* min-width: 45%;*/
     width: auto;
-    border-radius: 15px;
-}
-
-.quiz-q-a {
     background: rgba(240, 162, 2, .8);
+    border-radius: 15px;
     border: rgba(0,0,0,.5);
-    padding: 1em;
-    height: auto;
-    width: auto;
 }
 
-p#question {
-    display: block;
-    height: auto;
+legend {
+    float: left;
+    margin-bottom: .5em;
+    width: 100%;
     /*background-color: #DCDCDC;*/
     color: #fff;
     text-shadow: 1px 1px black;
     font-size: 1.2em;
     text-align: center;
-
 }
+
+
+.clear {
+    clear: both;
+  }
 
 
 .coral-img {
@@ -94,7 +94,7 @@ p#question {
     max-width: 20vw;
     height: 32vh;
     margin-top: -1em;
-    margin-right: 1em;
+    margin-right: 1.5em;
     border: 3px #f0a202 solid;
 }
 
