@@ -2,6 +2,18 @@
   *{
     font-family: Arial, Helvetica, sans-serif;
   }
+/*adventure map page*/
+#admap-body{
+  background: #54CEF7;
+}
+object{
+width: 100vw;
+height:100vh;
+overflow: hidden;
+background: #54CEF7;
+z-index: 10;
+}
+/* coral reef ecosystem page*/
 body{
   margin:0;
   background: linear-gradient( #A6E3FB , #134074);
@@ -92,6 +104,9 @@ body{
   }
   li:hover, .marine-eco-menu:hover {
   color:#A6E3FB ;
+  }
+  a:hover{
+    text-decoration: none;
   }
   section{
     margin: 0;
@@ -337,6 +352,36 @@ body{
   }
 /* tablet screen portrait */
 @media screen and (min-width : 700px) and (max-width: 1200px) and (orientation: portrait){
+  /* adventure map */
+ #admap-body{
+    margin:0;
+    overflow:hidden;
+}
+.wrapper{
+    transform: rotate(90deg);
+    transform-origin:bottom left;
+    
+    position:absolute;
+    top: -100vw;
+    left: 0;
+    
+    height:100vw;
+    width:100vh;
+    
+    background-color:#000;
+    color:#fff;
+
+    overflow:hidden;
+}
+nav{
+  height: 100%;
+  overflow:auto;
+}
+object{
+  position: relative;
+  height:100vw;
+  width:100vh;
+}
   /* coral side images */
   #side-bar{
     display:none;
@@ -455,6 +500,36 @@ body{
   }
 
 @media screen and (min-width:0px) and (max-width: 700px) and (orientation: portrait){
+  /* adventure map */
+  #admap-body{
+    margin:0;
+    overflow:hidden;
+}
+.wrapper{
+    transform: rotate(90deg);
+    transform-origin:bottom left;
+    
+    position:absolute;
+    top: -100vw;
+    left: 0;
+    
+    height:100vw;
+    width:100vh;
+    
+    background-color:#000;
+    color:#fff;
+
+    overflow:hidden;
+}
+nav{
+  height: 200%;
+  overflow:auto;
+}
+object{
+  position: relative;
+  height:100vw;
+  width:100vh;
+}
   section{
     padding: 0 5% 0 5%;
     margin: 0;
