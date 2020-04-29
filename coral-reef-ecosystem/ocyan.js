@@ -512,7 +512,7 @@ $(document).ready(function(){
     // On compass image click menu appears
     $("#menu").click(function(){
         if(ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()){
-            $("nav").toggleClass("nav-portrait");
+            $("#ecosystem-nav").toggleClass("nav-portrait");
             $(".side-menu").animate({
                 "width": 'toggle',
                 },0);
