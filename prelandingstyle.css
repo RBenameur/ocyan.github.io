@@ -1,0 +1,40 @@
+/* pre landing page */
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    margin:0;
+    background-image: url("./prelanding-bkgd.png");
+    background-size: cover;
+    height: auto;
+    width: auto;
+    overflow-y: visible;
+  }
+  .prelandingelements{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-left: 80px;
+  }
+
+  #logo{
+    display: block;
+    margin-top: 10px;
+    margin-left: 80px;
+    width: 50%;
+    }
+
+    .mascot{
+      margin-top: 150px;
+      margin-left: 150px;
+    }
+
+    h2{
+      background-color: white;
+      opacity: 0.5
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  
+  
+
+    
