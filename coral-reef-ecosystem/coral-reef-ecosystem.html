@@ -6,6 +6,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="ocyan.css">
+    <link rel="stylesheet" href="../coral-reef-quiz/quiz.css">
   </head>  
   <body>
   <img id="side-bar" src="../navigation-menu-folder/sidebars.png" alt= "side bar">
@@ -87,8 +88,8 @@
           </div>
          </div>
        </div>
-      <div id="coraltestknowlege">
-        <button>coral reef quiz</button>
+       <div id="coraltestknowlege">
+        <button id="take-quiz" class="btn btn-warning">Coral Reef Quiz</button>
       </div>
       <div id="learnmore">
         <p> add links to this div</p>
@@ -97,9 +98,59 @@
       <button> Download Coral Reef PDF</button>
       </div>
       </section>
+      <div id="quiz">
+        <div class="start">
+          <div class="exit">+</div>
+          <h3>Coral Reef Quiz</h3>
+          <button type="button" class="start-quiz btn btn-info">Start Quiz</button>
+        </div>
+        <div id="quiz-container">
+            <div class="exit warning">+</div>
+            <h3 class="quiz-title">Coral Reef Quiz</h3> 
+            <div class="content-container">
+                <fieldset class="quiz-q-a">
+                    <legend id="question" class="bold"> Q: goes here</legend>
+                    <label class="option-container clear btn btn-primary" for="option-a">
+                        <input type="radio" id="option-a" name="options" value="a"><span class="option-text">Choice A</span>
+                    </label>
+                    <label class="option-container btn btn-primary" for="option-b">
+                        <input type="radio" id="option-b" name="options" value="b"><span class="option-text">Choice B</span>
+                    </label>
+                    <label class="option-container btn btn-primary" for="option-c">
+                        <input type="radio" id="option-c" name="options" value="c"><span class="option-text">Choice C</span>
+                    </label>
+                    <label class="option-container btn btn-primary" for="option-d">
+                        <input type="radio" id="option-d" name="options" value="d"><span class="option-text">Choice D</span>
+                    </label>
+                    <div class="button-container">
+                        <button id="prev" type="button" class="navigate btn btn-light">Previous</button>
+                        <button id="next" type="button" class="navigate btn btn-light">Next</button>
+                        <button id="submit" type="button" class="btn btn-success">See Results</button>
+                    </div>
+                </fieldset>
+                <div class="quiz-img">
+                    <div class="side-img"><img class="coral-img" alt="placeholder" src="https://images.unsplash.com/photo-1533713692156-f70938dc0d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"></div>
+                </div>
+            </div>
+           <div id="progress-bar">
+             <div class="progress-meter"></div>  
+             <div class="mascot-img"></div>  
+             <div class="question-num-cont"><p class="question-num">You're on <br> Q 1/10</p></div>  
+            </div> 
+        </div>
+        <div id="result">
+            <div class="exit warning">+</div>
+            <p class ="result-text">You got x% or y out of z right.</p>
+            <div class="bold hint-container"></div>
+            <button id = "reset" type="button" class="btn btn-info">Reset quiz</button>
+            <br>
+            <button id="save-score" type="button" class="btn btn-success">Save score</button>   <!--This button doesn't do anything yet, but clicking on it will save score-->
+        </div>
+      </div>
    <footer>
    </footer>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <script src="ocyan.js"></script>
+   <script src="../coral-reef-quiz/quiz.js"></script>
   </body>
 </html>
