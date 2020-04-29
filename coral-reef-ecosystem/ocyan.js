@@ -511,10 +511,18 @@ $(document).ready(function(){
 
     // On compass image click menu appears
     $("#menu").click(function(){
+        if(ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()){
+            $("nav").toggleClass("nav-portrait");
             $(".side-menu").animate({
-            "width": 'toggle'
+                "width": 'toggle',
+                },0);
+                $("body").toggleClass("body-fixed");
+        } else{
+            $(".side-menu").animate({
+            "width": 'toggle',
             });
             $("body").toggleClass("body-fixed");
+        };
         if (ScreenOrientation.type === "landscape-primary" || ScreenOrientation.type === "landscape-secondary" || $(window).height() < $(window).width() && $(window).height() < 800){
             $(".side-menu").css({
                 "height":"400vh",
