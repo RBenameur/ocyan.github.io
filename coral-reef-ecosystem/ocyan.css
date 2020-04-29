@@ -12,19 +12,13 @@
 #admap-body{
   background: #54CEF7;
 }
-/* main div */
-.wrapper{
-  position:absolute;
-}
 /* the map */
 #svg66{
 width: 100vw;
 height:100vh;
 overflow: hidden;
 background: #54CEF7;
-z-index: 10;
-position: relative;
-top:-10vh;
+z-index: 2;
 }
 /* div containing modals */
 #hidden-div{
@@ -43,14 +37,14 @@ top:-10vh;
   height: 80vh;
   top: -100vh;
   position: relative;
-  z-index:14;
+  z-index:4;
 }
 /* modals information */
 .admap-modal{
-  z-index:13;
+  z-index:4;
   padding:1vh 1vw;
-  width:40vw; 
-  height: 60vh; 
+  width:50vw; 
+  height: 55vh; 
   margin: 20vh 30vw 0 30vw;
   overflow: hidden; 
   border-radius: 1rem;
@@ -59,13 +53,13 @@ top:-10vh;
 }
 /* modals on hover*/
 .admap-modal-hover{
-  z-index:13;
+  z-index:2;
   position: relative;
   top: -100vh;
   padding:1vh 1vw;
-  width:40vw; 
-  height: 60vh; 
-  margin: 20vh 30vw 20vh 30vw;
+  width:50vw; 
+  height: 55vh; 
+  margin: 20vh 30vw 0 30vw;
   overflow: hidden; 
   border-radius: 1rem;
   background-color:rgb(255,107,53,0.8);
@@ -86,9 +80,10 @@ top:-10vh;
   align-self: center;
   flex: 58%;
   height: 58%;
-  width: 80%;
+  width: 70%;
   border-radius: 1rem;
   box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
 }
 /* modal button flex item*/
 .marker-flexitem{
@@ -99,15 +94,13 @@ top:-10vh;
 .explore-button{
   vertical-align: middle;
   font-size:3vw;
-  margin:8% 1.5%;
+  margin:3% 1.5% 4% 1.5%;
   padding: 1.5%;
   text-align:center;
   background-color:#E9D758;
   box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
   border-radius:5rem;
 }
-
-
 /* coral reef ecosystem page*/
 body{
   margin:0;
@@ -449,7 +442,7 @@ body{
     animation-play-state: paused
   }
 /* tablet screen portrait */
-@media screen and (min-width : 700px) and (max-width: 1200px) and (orientation: portrait){
+@media screen and (min-width : 700px) and (max-width: 1000px) and (orientation: portrait){
   /* adventure map */
  #admap-body{
     margin:0;
@@ -486,6 +479,60 @@ body{
     width:100vh;
     top:-30vw;
   }
+  /* clickable modals */
+.admap-sf{
+  width: 100vh;
+  height: 100vw;
+  top: -122vw;
+  position: relative;
+  z-index:4;
+}
+  /* modals hidden class */
+.admap-modal-hidden, .admap-hover-hidden{
+  display: none;
+  position: relative;
+  top: -122vw;
+}
+  .admap-modal{
+    z-index:5;
+    padding:1vw 1vh;
+    width:50vh; 
+    height: 55vw; 
+    margin: 20vw 30vh 0 30vh;
+    overflow: hidden; 
+    border-radius: 1rem;
+    background-color:rgb(255,107,53,0.8);
+    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+  }
+  /* modals on hover*/
+  .admap-modal-hover{
+    z-index:2;
+    position: relative;
+    top: -122vw;
+    padding:1vh 1vw;
+    width:50vh; 
+    height: 55vw; 
+    margin: 20vh 30vw 0 30vw;
+    overflow: hidden; 
+    border-radius: 1rem;
+    background-color:rgb(255,107,53,0.8);
+    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+  }
+/* flex item, img at background */
+.marker-flexitem-img{
+  height: 70%;
+  width: 58%;
+}
+.explore-button{
+  vertical-align: middle;
+  font-size:3vw;
+  margin-top: 5%;
+  padding: 1.5%;
+  text-align:center;
+  background-color:#E9D758;
+  box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+  border-radius:5rem;
+}
   /* coral side images */
   #side-bar{
     display:none;
@@ -497,7 +544,8 @@ body{
     }
     #menu{
       width:80%;
-      height:auto;
+      height: auto;
+      overflow: hidden;
     }
    .side-menu-img{
       flex-basis: 20%;
@@ -618,7 +666,7 @@ body{
     transform-origin:bottom left;
     
     position:absolute;
-    /*top: -100vw;*/
+    top: -100vw;
     left: 0;
     
     height:100vw;
@@ -632,15 +680,71 @@ body{
 nav{
   height: 30%;
   overflow:auto;
+  position: relative;
 }
 .nav-portrait{
   height: 100vw;
-  overflow: auto;
+  overflow:auto;
 }
 #svg66{
   position: relative;
   height:100vw;
   width:100vh;
+  top:-30vw;
+}
+/* clickable modals */
+.admap-sf{
+width: 100vh;
+height: 100vw;
+top: -122vw;
+position: relative;
+z-index:4;
+}
+/* modals hidden class */
+.admap-modal-hidden, .admap-hover-hidden{
+display: none;
+position: relative;
+top: -122vw;
+}
+.admap-modal{
+  z-index:5;
+  padding:1vw 1vh;
+  width:50vh; 
+  height: 55vw; 
+  margin: 20vw 30vh 0 30vh;
+  overflow: hidden; 
+  border-radius: 1rem;
+  background-color:rgb(255,107,53,0.8);
+  box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+}
+/* modals on hover*/
+.admap-modal-hover{
+  z-index:2;
+  position: relative;
+  top: -122vw;
+  padding:1vh 1vw;
+  width:50vh; 
+  height: 55vw; 
+  margin: 20vh 30vw 0 30vw;
+  overflow: hidden; 
+  border-radius: 1rem;
+  background-color:rgb(255,107,53,0.8);
+  box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+}
+/* flex item, img at background */
+.marker-flexitem-img{
+height: 70%;
+width: 58%;
+}
+.explore-button{
+vertical-align: middle;
+font-size:3vw;
+margin-top: 5%;
+padding: 1.5%;
+text-align:center;
+background-color:#E9D758;
+box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+border-radius:5rem;
 }
   section{
     padding: 0 5% 0 5%;

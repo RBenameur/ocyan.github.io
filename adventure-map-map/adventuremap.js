@@ -1,94 +1,104 @@
 
 $(document).ready(function(){
-     screen.orientation.lock("landscape");
-   $("#coralreef").hover(function(){
-        $("#admap-hover").removeClass("admap-hover-hidden");
-        $("#admap-hover").addClass("admap-modal-hover");
-        $(".marker-flexitem-img").css("background-image","url(../adventure-map-map/map-images/coralreef.jpg)");
-        $(".explore-button-title").text("Explore Coral Reefs");
-    }, function(){
-        $("#admap-hover").removeClass("admap-modal-hover");
-        $("#admap-hover").addClass("admap-hover-hidden");
-    });
-    $("#polar").hover(function(){
-        $("#admap-hover").removeClass("admap-hover-hidden");
-        $("#admap-hover").addClass("admap-modal-hover");
-        $(".marker-flexitem-img").css("background-image","url(../adventure-map-map/map-images/polar.jpg)");
-        $(".explore-button-title").text("Explore Polar Seas");
-    }, function(){
-        $("#admap-hover").removeClass("admap-modal-hover");
-        $("#admap-hover").addClass("admap-hover-hidden");
-    });
-    $("#kelp").hover(function(){
-        $("#admap-hover").removeClass("admap-hover-hidden");
-        $("#admap-hover").addClass("admap-modal-hover");
-        $(".marker-flexitem-img").css("background-image","url(../adventure-map-map/map-images/kelp.jpg)");
-        $(".explore-button-title").text("Explore Kelp Forests");
-    }, function(){
-        $("#admap-hover").removeClass("admap-modal-hover");
-        $("#admap-hover").addClass("admap-hover-hidden");
-    });
-    $("#sandybeach").hover(function(){
-        $("#admap-hover").removeClass("admap-hover-hidden");
-        $("#admap-hover").addClass("admap-modal-hover");
-        $(".marker-flexitem-img").css("background-image","url(../adventure-map-map/map-images/sandybeach.jpg)");
-        $(".explore-button-title").text("Explore Sandy Beaches");
-    }, function(){
-        $("#admap-hover").removeClass("admap-modal-hover");
-        $("#admap-hover").addClass("admap-hover-hidden");
-    });
-    $("#deepsea").hover(function(){
-        $("#admap-hover").removeClass("admap-hover-hidden");
-        $("#admap-hover").addClass("admap-modal-hover");
-        $(".marker-flexitem-img").css("background-image","url(../adventure-map-map/map-images/deepsea.jpg)");
-        $(".explore-button-title").text("Explore Deep Seas");
-    }, function(){
-        $("#admap-hover").removeClass("admap-modal-hover");
-        $("#admap-hover").addClass("admap-hover-hidden");
-    });
-    $("#hydrothermal").hover(function(){
-        $("#admap-hover").removeClass("admap-hover-hidden");
-        $("#admap-hover").addClass("admap-modal-hover");
-        $(".marker-flexitem-img").css("background-image","url(../adventure-map-map/map-images/hydrothermalvent.jpg)");
-        $(".explore-button-title").text("Explore Hydrothermal Vents");
-    }, function(){
-        $("#admap-hover").removeClass("admap-modal-hover");
-        $("#admap-hover").addClass("admap-hover-hidden");
-    });
-    $("#saltmarsh").hover(function(){
-        $("#admap-hover").removeClass("admap-hover-hidden");
-        $("#admap-hover").addClass("admap-modal-hover");
-        $(".marker-flexitem-img").css("background-image","url(../adventure-map-map/map-images/saltmarsh.jpg)");
-        $(".explore-button-title").text("Explore Saltmarshes");
-    }, function(){
-        $("#admap-hover").removeClass("admap-modal-hover");
-        $("#admap-hover").addClass("admap-hover-hidden");
-    });
-    $("#rockyshore").hover(function(){
-        $("#admap-hover").removeClass("admap-hover-hidden");
-        $("#admap-hover").addClass("admap-modal-hover");
-        $(".marker-flexitem-img").css("background-image","url(../adventure-map-map/map-images/rockyshore.jpg)");
-        $(".explore-button-title").text("Explore Rocky Shores");
-    }, function(){
-        $("#admap-hover").removeClass("admap-modal-hover");
-        $("#admap-hover").addClass("admap-hover-hidden");
-    });
-    $("#mangrove").hover(function(){
-        $("#admap-hover").removeClass("admap-hover-hidden");
-        $("#admap-hover").addClass("admap-modal-hover");
-        $(".marker-flexitem-img").css("background-image","url(../adventure-map-map/map-images/mangrove.jpg)");
-        $(".explore-button-title").text("Explore Mangrove Forests");
-    }, function(){
-        $("#admap-hover").removeClass("admap-modal-hover");
-        $("#admap-hover").addClass("admap-hover-hidden");
-    });
-  //  $("#lostcity").hover(function(){
-  //      $("#admap-modal").toggleClass("admap-modal");
-  //      $("#admap-modal").toggleClass("admap-modal-hidden");
-  //      $(".marker-flexitem-img").css("background-image","url(../adventure-map-map/map-images/coral-map-img.png.jpg)");
-       // $(".map-title").text("Rainforest of the sea");
-  //      $(".explore-button-title").text("Explore the Lost City");
-  //  });
+    if(screen.orientation.lock){
+        screen.orientation.lock("landscape");
+    }
+    function hasTouch() {
+        return 'ontouchstart' in $(document).html
+               || navigator.maxTouchPoints > 0
+               || navigator.msMaxTouchPoints > 0;
+    };
+    if(!hasTouch()){
+    $("#coralreef").hover(function(){
+            $("#admap-hover").removeClass("admap-hover-hidden");
+            $("#admap-hover").addClass("admap-modal-hover");
+            $(".marker-flexitem-img").css("background-image","url(../adventure-map-map/map-images/coralreef.jpg)");
+            $(".explore-button-title").text("Explore Coral Reefs");
+        }, function(){
+            $("#admap-hover").removeClass("admap-modal-hover");
+            $("#admap-hover").addClass("admap-hover-hidden");
+        });
+        $("#polar").hover(function(){
+            $("#admap-hover").removeClass("admap-hover-hidden");
+            $("#admap-hover").addClass("admap-modal-hover");
+            $(".marker-flexitem-img").css("background-image","url(../adventure-map-map/map-images/polar.jpg)");
+            $(".explore-button-title").text("Explore Polar Seas");
+        }, function(){
+            $("#admap-hover").removeClass("admap-modal-hover");
+            $("#admap-hover").addClass("admap-hover-hidden");
+        });
+        $("#kelp").hover(function(){
+            $("#admap-hover").removeClass("admap-hover-hidden");
+            $("#admap-hover").addClass("admap-modal-hover");
+            $(".marker-flexitem-img").css("background-image","url(../adventure-map-map/map-images/kelp.jpg)");
+            $(".explore-button-title").text("Explore Kelp Forests");
+        }, function(){
+            $("#admap-hover").removeClass("admap-modal-hover");
+            $("#admap-hover").addClass("admap-hover-hidden");
+        });
+        $("#sandybeach").hover(function(){
+            $("#admap-hover").removeClass("admap-hover-hidden");
+            $("#admap-hover").addClass("admap-modal-hover");
+            $(".marker-flexitem-img").css("background-image","url(../adventure-map-map/map-images/sandybeach.jpg)");
+            $(".explore-button-title").text("Explore Sandy Beaches");
+        }, function(){
+            $("#admap-hover").removeClass("admap-modal-hover");
+            $("#admap-hover").addClass("admap-hover-hidden");
+        });
+        $("#deepsea").hover(function(){
+            $("#admap-hover").removeClass("admap-hover-hidden");
+            $("#admap-hover").addClass("admap-modal-hover");
+            $(".marker-flexitem-img").css("background-image","url(../adventure-map-map/map-images/deepsea.jpg)");
+            $(".explore-button-title").text("Explore Deep Seas");
+        }, function(){
+            $("#admap-hover").removeClass("admap-modal-hover");
+            $("#admap-hover").addClass("admap-hover-hidden");
+        });
+        $("#hydrothermal").hover(function(){
+            $("#admap-hover").removeClass("admap-hover-hidden");
+            $("#admap-hover").addClass("admap-modal-hover");
+            $(".marker-flexitem-img").css("background-image","url(../adventure-map-map/map-images/hydrothermalvent.jpg)");
+            $(".explore-button-title").text("Explore Hydrothermal Vents");
+        }, function(){
+            $("#admap-hover").removeClass("admap-modal-hover");
+            $("#admap-hover").addClass("admap-hover-hidden");
+        });
+        $("#saltmarsh").hover(function(){
+            $("#admap-hover").removeClass("admap-hover-hidden");
+            $("#admap-hover").addClass("admap-modal-hover");
+            $(".marker-flexitem-img").css("background-image","url(../adventure-map-map/map-images/saltmarsh.jpg)");
+            $(".explore-button-title").text("Explore Saltmarshes");
+        }, function(){
+            $("#admap-hover").removeClass("admap-modal-hover");
+            $("#admap-hover").addClass("admap-hover-hidden");
+        });
+        $("#rockyshore").hover(function(){
+            $("#admap-hover").removeClass("admap-hover-hidden");
+            $("#admap-hover").addClass("admap-modal-hover");
+            $(".marker-flexitem-img").css("background-image","url(../adventure-map-map/map-images/rockyshore.jpg)");
+            $(".explore-button-title").text("Explore Rocky Shores");
+        }, function(){
+            $("#admap-hover").removeClass("admap-modal-hover");
+            $("#admap-hover").addClass("admap-hover-hidden");
+        });
+        $("#mangrove").hover(function(){
+            $("#admap-hover").removeClass("admap-hover-hidden");
+            $("#admap-hover").addClass("admap-modal-hover");
+            $(".marker-flexitem-img").css("background-image","url(../adventure-map-map/map-images/mangrove.jpg)");
+            $(".explore-button-title").text("Explore Mangrove Forests");
+        }, function(){
+            $("#admap-hover").removeClass("admap-modal-hover");
+            $("#admap-hover").addClass("admap-hover-hidden");
+        });
+    //  $("#lostcity").hover(function(){
+    //      $("#admap-modal").toggleClass("admap-modal");
+    //      $("#admap-modal").toggleClass("admap-modal-hidden");
+    //      $(".marker-flexitem-img").css("background-image","url(../adventure-map-map/map-images/coral-map-img.png.jpg)");
+        // $(".map-title").text("Rainforest of the sea");
+    //      $(".explore-button-title").text("Explore the Lost City");
+    //  });
+    };
+
     $("#coralreef").click(function(){
         $("#admap-sf").removeClass("admap-modal-hidden");
         $("#admap-sf").addClass("admap-sf");
