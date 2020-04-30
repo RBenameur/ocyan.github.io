@@ -20,36 +20,31 @@
   background: #54CEF7;
   z-index: 2;
   }
-/* div containing modals */
-#hidden-div{
-  height: 0;
-  position: absolute;
-}
 /* modals hidden class */
 .admap-modal-hidden, .admap-hover-hidden{
   display: none;
-  position: relative;
-  top: -100vh;
 }
-/* clickable modals */
-.admap-sf{
-  width: 100vw;
-  height: 50vh;
-  margin-top:10%;
-  top: -100vh;
-  position: relative;
-  z-index:4;
-}
-a{
+a, a:hover{
   color: unset;
 }
-/* modals information */
+/* when toggled to #modal-wrapper prevents hover modals from activating*/
+.modal-wrapper{
+  z-index:4;
+  width:100vw;
+  height:100vh;
+  position: absolute;
+  left:0;
+  top:0;
+}
+/* clickable modals */
 .admap-modal{
   z-index:4;
+  top:0;
+  left:0;
+  position: absolute;
   padding:1vh 1vw;
-  width:30vw; 
+  width: 30vw; 
   height: 45vh; 
-  margin: 20vh 30vw 0 30vw;
   overflow: hidden; 
   border-radius: 1rem;
   background-color:rgb(255,107,53,0.8);
@@ -58,18 +53,18 @@ a{
 /* modals on hover*/
 .admap-modal-hover{
   z-index:2;
-  position: relative;
-  top: -100vh;
+  top:0;
+  left:0;
+  position: absolute;
   padding:1vh 1vw;
   width: 30vw; 
   height: 45vh; 
-  margin: 10% 30vw 0 0vw;
   overflow: hidden; 
   border-radius: 1rem;
   background-color:rgb(255,107,53,0.8);
   box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
 }
-/* marker flexbox */
+/* modal: flexbox */
 .marker-flexbox{
   display: flex;
   flex-direction: column;
@@ -78,7 +73,7 @@ a{
   width: 100%;
   padding-bottom: 1%;
 }
-/* flex item, img at background */
+/* modal: flex item, img at background */
 .marker-flexitem-img{
   align-self: center;
   flex: 58%;
@@ -455,7 +450,7 @@ body{
     animation-play-state: paused
   }
 /* tablet screen portrait */
-@media screen and (min-width : 700px) and (max-width: 1000px) and (orientation: portrait){
+@media screen and (min-width : 700px) and (max-width: 1200px) and (orientation: portrait){
   /* adventure map */
  #admap-body{
     margin:0;
@@ -465,17 +460,12 @@ body{
 .wrapper{
     transform: rotate(90deg);
     transform-origin:bottom left;
-    
     position:absolute;
     top: -100vw;
     left: 0;
-    
     height:100vw;
     width:100vh;
-    
     background-color: #54CEF7;;
-    color:#fff;
-
     overflow:hidden;
   }
   /* narrower <nav> to allow access to click coral reef ecosystem*/
@@ -505,56 +495,70 @@ body{
     position: relative;
     height:100vw;
     width:100vh;
+    overflow: hidden;
     /*top:-30vw;*/
   }
-    /* clickable modals */
-  .admap-sf{
-    width: 100vh;
-    height: 100vw;
-    top: -90vw;
-    position: relative;
-    z-index:4;
-  }
-    /* modals hidden class */
-  .admap-modal-hidden, .admap-hover-hidden{
-    display: none;
-    position: relative;
-    top: -90vw;
-  }
-  .admap-modal{
-    z-index:5;
-    padding:1vw 1vh;
-    width:50vh; 
-    height: 55vw; 
-    margin: 20vw 30vh 0 30vh;
-    overflow: hidden; 
-    border-radius: 1rem;
-    background-color:rgb(255,107,53,0.8);
-    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
-  }
-  /* modals on hover*/
-  .admap-modal-hover{
-    z-index:2;
-    position: relative;
-    top: -90vw;
-    padding:1vh 1vw;
-    width:50vh; 
-    height: 55vw; 
-    margin: 20vh 30vw 0 30vw;
-    overflow: hidden; 
-    border-radius: 1rem;
-    background-color:rgb(255,107,53,0.8);
-    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
-  }
+/* modals hidden class */
+.admap-modal-hidden, .admap-hover-hidden{
+  display: none;
+}
+a, a:hover{
+  color: unset;
+}
+/* when toggled to #modal-wrapper prevents hover modals from activating*/
+.modal-wrapper{
+  z-index:4;
+  width:100vh;
+  height:100vw;
+  position: absolute;
+  left:0;
+  top:0;
+}
+/* clickable modals */
+.admap-modal{
+  z-index:4;
+  top:0;
+  left:0;
+  position: absolute;
+  padding:1vw 1vh;
+  width: 30vh; 
+  height: 45vw; 
+  overflow: hidden; 
+  border-radius: 1rem;
+  background-color:rgb(255,107,53,0.8);
+  box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+}
+/* modal: flexbox */
+.marker-flexbox{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 90%;
+  width: 100%;
+  padding-bottom: 1%;
+}
+/* modals on hover*/
+.admap-modal-hover{
+  z-index:2;
+  top:0;
+  left:0;
+  position: absolute;
+  padding:1vw 1vh;
+  width: 30vh; 
+  height: 45vw; 
+  overflow: hidden; 
+  border-radius: 1rem;
+  background-color:rgb(255,107,53,0.8);
+  box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+}
   /* flex item, img at background */
   .marker-flexitem-img{
-    height: 70%;
-    width: 58%;
+    height: 58%;
+    width: 70%;
   }
   .explore-button{
     vertical-align: middle;
-    font-size:3vw;
-    margin-top: 5%;
+    margin-top: 5vw;
     padding: 1.5%;
     text-align:center;
     background-color:#E9D758;
@@ -598,6 +602,14 @@ body{
     }
 /* tablet landscape*/
 @media screen and (min-width : 700px) and (max-width: 1390px) and (orientation: landscape){
+ /* .wrapper{
+    position:absolute;
+    left: 0;
+    height:100vh;
+    width:100vw;
+    background-color: #54CEF7;
+    overflow:hidden;
+  }*/
  .side-menu{
     display: none;
     flex-basis: 60%;
@@ -622,6 +634,14 @@ body{
 }
 /* mobile screen and landscape orientation */
 @media screen and (min-width: 0px) and (max-width: 700px) and (orientation: landscape) {
+  /*.wrapper{
+    position:absolute;
+    left: 0;
+    height:100vh;
+    width:100vw;
+    background-color: #54CEF7;
+    overflow:hidden;
+  }*/
   section{
     padding: 0 18% 0 18%;
     margin: 0;
@@ -693,17 +713,12 @@ body{
   .wrapper{
     transform: rotate(90deg);
     transform-origin:bottom left;
-    
     position:absolute;
     top: -100vw;
     left: 0;
-    
     height:100vw;
     width:100vh;
-    
     background-color:#54CEF7;;
-    color:#fff;
-
     overflow:hidden;
   }
   /* <nav> for adventure map toggle class*/
@@ -730,47 +745,59 @@ body{
   nav{
     height: 10%;
   }
-
-  /* clickable modals */
-  .admap-sf{
-    width: 100vh;
-    height: 100vw;
-    top: -80vw;
-    position: relative;
-    z-index:4;
-  }
-  /* hover and click modals hidden class */
-  .admap-modal-hidden, .admap-hover-hidden{
-    display: none;
-    position: relative;
-    top: -80vw;
-  }
-  /* on click modals */
-  .admap-modal{
-    z-index:5;
-    padding:1vw 1vh;
-    width:50vh; 
-    height: 55vw; 
-    margin: 20vw 30vh 0 30vh;
-    overflow: hidden; 
-    border-radius: 1rem;
-    background-color:rgb(255,107,53,0.8);
-    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
-  }
-  /* modals on hover*/
-  .admap-modal-hover{
-    z-index:2;
-    position: relative;
-    top: -80vw;
-    padding:1vh 1vw;
-    width:50vh; 
-    height: 55vw; 
-    margin: 20vh 30vw 0 30vw;
-    overflow: hidden; 
-    border-radius: 1rem;
-    background-color:rgb(255,107,53,0.8);
-    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
-  }
+/* modals hidden class */
+.admap-modal-hidden, .admap-hover-hidden{
+  display: none;
+}
+a, a:hover{
+  color: unset;
+}
+/* when toggled to #modal-wrapper prevents hover modals from activating*/
+.modal-wrapper{
+  z-index:4;
+  width:100vh;
+  height:100vw;
+  position: absolute;
+  left:0;
+  top:0;
+}
+/* clickable modals */
+.admap-modal{
+  z-index:4;
+  top:0;
+  left:0;
+  position: absolute;
+  padding:1vw 1vh;
+  width: 30vh; 
+  height: 45vw; 
+  overflow: hidden; 
+  border-radius: 1rem;
+  background-color:rgb(255,107,53,0.8);
+  box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+}
+/* modal: flexbox */
+.marker-flexbox{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 90%;
+  width: 100%;
+  padding-bottom: 1%;
+}
+/* modals on hover*/
+.admap-modal-hover{
+  z-index:2;
+  top:0;
+  left:0;
+  position: absolute;
+  padding:1vw 1vh;
+  width: 30vh; 
+  height: 45vw; 
+  overflow: hidden; 
+  border-radius: 1rem;
+  background-color:rgb(255,107,53,0.8);
+  box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+}
   /* flex item, img at background */
   .marker-flexitem-img{
     height: 70%;
@@ -779,7 +806,7 @@ body{
   .explore-button{
     vertical-align: middle;
     font-size:3vw;
-    margin-top: 5%;
+    margin-top: 5vw;
     padding: 1.5%;
     text-align:center;
     background-color:#E9D758;
