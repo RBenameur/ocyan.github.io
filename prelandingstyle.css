@@ -10,31 +10,107 @@ body{
     width: auto;
     overflow-y: visible;
   }
-  .prelandingelements{
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px;
-    margin-left: 80px;
-  }
 
   #logo{
     display: block;
-    margin-top: 10px;
-    margin-left: 80px;
+    margin-top: 50px;
+    margin-right: 10px;
     width: 50%;
     }
-
-    .mascot{
-      margin-top: 150px;
-      margin-left: 150px;
-    }
-
-    h2{
-      background-color: white;
-      opacity: 0.5
-      font-family: Arial, Helvetica, sans-serif;
-    }
-  
-  
-
     
+    #mascot {
+      position: absolute;
+      left: 800px;
+      top: 250px;
+      z-index: -1;
+    }
+
+    .button{
+      color:#5CC8FF;
+      background-color: #134074;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      padding: 15px 45px;
+      border-radius: 7px;
+      border-color:#134074;
+    }
+
+
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: black;
+      color: white;
+      text-align: center;
+    }
+ 
+  .left {
+      float:left;
+  }
+  
+  .right {
+      float:right;
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  #welcome {
+    width: 500px;
+    background-image: url("./speechbubble.png");
+    background-position: center;
+    opacity: 0.7;
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-weight: bold; 
+    border-radius: 30px;
+  }
+ 
+  #welcome-text {
+    width: 450px;
+    text-align: center;
+    margin-left: 15px;
+  }
+
+  #welcome-text1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #134074;
+    margin-left: 10px;
+  }
+
+  #welcome-text2 {
+    color: #134074;
+    line-height: 30px;
+  }
+  
+
+  #click {
+    width: 250px;
+    color: #134074;
+    font-weight: bold;
+    background-color: white;
+    opacity: 0.7;
+    text-align: center;
+    margin-left: 100px;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+
+  #text {
+    margin-left: 10px;
+  }
+
+  #explore {
+    margin-left: 130px;
+    font-weight: bold;   
+  }
+
+  input[type="text"] {
+    font-size: 1em;
+  
+}
