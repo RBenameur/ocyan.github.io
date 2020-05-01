@@ -25,7 +25,9 @@
   display: none;
 }
 a, a:hover{
-  color: unset;
+    color: unset;
+    text-decoration: none;
+    cursor: pointer;
 }
 /* when toggled to #modal-wrapper prevents hover modals from activating*/
 .modal-wrapper{
@@ -91,25 +93,81 @@ a, a:hover{
 /* button to enter ecosystem */
 .explore-button{
   vertical-align: middle;
-  margin:3% 1.5% 4% 1.5%;
+  margin:1.8vw 1.5% 4% 1.5%;
   padding: 1.5%;
   text-align:center;
   background-color:#E9D758;
   box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
   border-radius:5rem;
+  cursor:pointer;
 }
 .explore-button-title{
   font-size: 2vw;
 }
-/* menu for adventure map */
-.admap-menu{
-  display: flex;
-  position: fixed;
-  z-index: 13;
-  justify-content: flex-end;
-  width: 100%;
-  height: auto;
+
+/* <nav> for adventure map */
+
+.admap-menu-closed {
+    display: flex;
+    position: fixed;
+    z-index: 13;
+    justify-content: flex-end;
+    width: 100%;
+    height: 10vh;
 }
+
+/* toggle class for adventure map open menu */
+
+.admap-menu-open {
+    height: 100vw;
+    overflow: auto;
+}
+
+
+/*compass drawing*/
+
+#compass-img {
+    margin-top: 4vh;
+    margin-right: 1.5vw;
+    width: 12vw;
+    height: auto;
+    position: fixed;
+    cursor: pointer;
+}
+
+/* menu options and links  (div - flex item)*/
+
+.side-menu {
+    display: none;
+    flex-basis: 60%;
+    background-color: rgba(19, 64, 116, 0.9);
+    box-shadow: 0 -10vw 5vw rgb(19, 64, 116);
+    overflow: auto;
+}
+
+
+/* hover effect */
+
+#compass-img:hover {
+    filter: blur(2px);
+}
+
+h1,
+h2 {
+    text-align: center;
+} 
+
+/* compass image fiv for adventure map*/
+
+.ad-side-menu-img {
+    flex-basis: 12%;
+    display: block;
+    width: auto;
+    height: 20vh;
+    overflow: auto;
+    cursor: pointer;
+}
+
 /* coral reef ecosystem page*/
 body{
   margin:0;
@@ -118,6 +176,15 @@ body{
   width: 100vw;
   overflow-y: scroll;
 }
+
+
+/* class for body to stop scrolling when on the menu*/
+
+.body-fixed {
+    overflow: hidden;
+}
+
+
 #coral-body{
   margin:0;
   height: 200vh;
@@ -127,83 +194,130 @@ body{
   /* class for body to stop scrolling when on the menu*/
   .body-fixed{
     overflow: hidden;
-  }
-  /* coral side images */
-  #side-bar{
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: -1;
-  }
-  /* styling for all arrows to rotate on click*/
-  .rotate{ 
-  transform: rotate(180deg);
-  }
-  /* apply to all navigation menus*/
-  nav {
-  display: flex;
-  position: fixed;
-  z-index: 13;
-  justify-content: flex-end;
-  width: 100%;
-  height: auto;
-  }
-  /* compass image div (flex item)*/
-  .ad-side-menu-img, .side-menu-img{
-  flex-basis: 10%;
-  display: block;
-  width: 15vw;
-  height: 18vh;
-  overflow:auto;
-  }
-  /* menu options and links  (div - flex item)*/
-  .side-menu{
-  display: none;
-  flex-basis: 30%;
-  background-color: rgba(19, 64, 116, 0.9);
-  box-shadow:0 -10vw 5vw rgb(19, 64, 116);
-  overflow: auto;
-  }
-  /* compass image */
-  #menu{
-  width: 100%;
-  height: auto;
-  }
-  .menu-title{
-  font-size: 5vw;
-  text-align: center;
-  letter-spacing: 1vw;
-  border-bottom: 1vh  rgb(19, 64, 116);
-  color: white;
-  }
-  ul{
-  padding: 0;
-  height:fit-content;
-  }
-  .advent-list{
-  display: none;
-  height: 15vh;
-  }
-  .marine-eco-list{
-  display: none;
-  height: fit-content;
-  }
-  li, .marine-eco-menu{
-  font-size: 2vw;
-  letter-spacing: 0.2vw;
-  padding:2% 2% 2% 2%;
-  text-decoration: none;
-  list-style-type: none;
-  color:white;
-  overflow: auto;
-  text-align: center;
-  }
-  li:hover, .marine-eco-menu:hover {
-  color:#A6E3FB ;
-  }
-  a:hover{
+}
+
+/* coral side images */
+
+#side-bar {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+
+/* <nav> for ecosystems */
+
+#ecosystem-nav {
+    z-index: 5;
+}
+
+
+/* styling for all arrows to rotate on click*/
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+
+/* apply to all navigation menus except adventure map*/
+
+.nav-main-div {
+    display: flex;
+    position: fixed;
+    z-index: 13;
+    justify-content: flex-end;
+    width: 100%;
+    height: 10vh;
+    z-index: 5;
+}
+
+
+/* compass image div (flex item)*/
+
+.side-menu-img {
+    flex-basis: 14%;
+    display: block;
+    width: 15vw;
+    height: 25vh;
+    overflow: auto;
+}
+
+
+/*logo */
+
+#ocyan-logo {
+    margin-top: 4vh;
+    margin-left: 1.5vw;
+    z-index: 4;
+    width: 23vw;
+    height: auto;
+    position: fixed;
+    cursor: pointer;
+}
+
+
+/* compass image */
+
+#menu {
+    margin-top: 2.5vh;
+    margin-right: 1.5vw;
+    width: 14vw;
+    height: auto;
+    cursor: pointer;
+}
+
+.menu-title {
+    margin-top: 2.5vw;
+    font-size: 6vw;
+    text-align: center;
+    letter-spacing: 1vw;
+    border-bottom: 1vh rgb(19, 64, 116);
+    color: white;
+}
+
+ul {
+    padding: 0;
+    height: fit-content;
+    cursor: pointer;
     text-decoration: none;
-  }
+    list-style-type: none;
+}
+
+.advent-list {
+    display: none;
+    height: 15vh;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.marine-eco-list {
+    display: none;
+    height: fit-content;
+}
+
+li,
+.marine-eco-menu {
+    font-size: 3.5vw;
+    letter-spacing: 0.2vw;
+    padding: 2% 2% 2% 2%;
+}
+
+.nav-ul {
+
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    overflow: auto;
+    text-align: center;
+    cursor: pointer;
+}
+li:hover,
+.marine-eco-menu:hover {
+    color: #A6E3FB;
+    cursor: pointer;
+}
+
   section{
     margin: 0;
     padding:0 25% 0 25%;
@@ -246,6 +360,7 @@ body{
     border: 0;
     z-index: 12;
     border-radius: 5rem;
+     cursor: pointer;
   }
   #instruction{
   margin: 5% 10% 0 10%;
@@ -290,6 +405,7 @@ body{
   border-radius: 5rem;
   background-color:rgb(255,107,53,0.8);
   box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+  cursor: pointer;
   }
   /* This class is added when animal animation is clicked */
   .modal-content{
@@ -350,40 +466,70 @@ body{
   border-radius:5rem;
 }
 /* first paragraph in animal modals */
-.modal-textintro{
-  display: block;
-  height: auto;
-  padding: 2%;
-  margin: 1.5%;
-  font-size: 2vw;
-  width: auto;
-  background-color: #5CC8FF;
-  border-radius: 1rem;
+
+.modal-textintro {
+    display: block;
+    height: auto;
+    padding: 2%;
+    margin: 1.5%;
+    font-size: 2vw;
+    width: auto;
+    background-color: #5CC8FF;
+    border-radius: 1rem;
 }
-.modal-text{
-  display: block;
-  height: auto;
-  padding: 2%;
-  margin: 1.5%;
-  font-size: 2vw;
-  width: auto;
-  background-color: #5CC8FF;
-  border-radius: 1rem;
+
+.modal-text {
+    display: block;
+    height: auto;
+    padding: 2%;
+    margin: 1.5%;
+    font-size: 2vw;
+    width: auto;
+    background-color: #5CC8FF;
+    border-radius: 1rem;
 }
-.coral-animation-container{
-  margin: 0;
-  padding: 0;
-  background-image: url("./coral-reef-background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  }
-  .ca-container{
+
+/*
+.coral-animation-container {
+}*/
+
+
+/**quiz popup***/
+
+#coraltestknowlege {
+    z-index: 2;
+}
+
+#to-quiz {
+    /*click button to navigate to quiz*/
+    z-index: 2;
+}
+
+
+/* coral reef ecosystem page edit */
+
+#whattypes-oalicf {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+}
+
+.animation-container {
+    margin: 0;
+    padding: 0;
+    background-image: url("./coral-reef-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.ca-container {
+  
     margin: 0;
     width: 100%;
     height: 25%;
@@ -479,10 +625,33 @@ body{
     background-color: #54CEF7;;
     overflow:hidden;
   }
-  /* narrower <nav> to allow access to click coral reef ecosystem*/
-  nav{
-  height: 15%;
-  }
+    /*logo */
+    #ad-ocyan-logo {
+        margin-top: 2vw;
+        margin-left: 1.5vh;
+        z-index: 9;
+        width: 30vh;
+        height: auto;
+        position: fixed;
+        cursor: pointer;
+    }
+      /*compass drawing*/
+    #compass-img {
+        margin-top: 2vh;
+        margin-right: 1.5vw;
+        width: 20vw;
+        height: auto;
+        position: fixed;
+        cursor: pointer;
+    }
+      /* compass image fiv for adventure map*/
+    .ad-side-menu-img {
+        display: block;
+        width: 30vw;
+        height: 30vh;
+        overflow: auto;
+        flex-basis: 15%;
+    }
   /* toggle class for adventure map open menu */
   .admap-menu-open{
     height: 100vw;
@@ -569,7 +738,7 @@ a, a:hover{
   }
   .explore-button{
     vertical-align: middle;
-    margin-top: 5vw;
+    margin-top: 5vh;
     padding: 1.5%;
     text-align:center;
     background-color:#E9D758;
@@ -584,11 +753,21 @@ a, a:hover{
       padding: 0 5% 0 5%;
       margin: 0;
       width: 100%;
+  }
+      /*logo */
+    #ocyan-logo {
+        margin-top: 2vh;
+        margin-left: 1.5vw;
+        z-index: 0;
+        width: 40vw;
+        height: auto;
+        position: fixed;
     }
-    #menu{
-      width:80%;
-      height: auto;
-      overflow: hidden;
+    #menu {
+        margin-top: 2.5vh;
+        margin-right: 1.5vw;
+        width: 18vw;
+        height: auto;
     }
    .side-menu-img{
       flex-basis: 20%;
@@ -596,11 +775,11 @@ a, a:hover{
       height: 40vh;
       overflow:auto;
     }
-    .side-menu{
-    display: none;
-    flex-basis: 60%;
-    height: 400vh;
-    min-height: 100vh;
+    .side-menu {
+        display: none;
+        flex-basis: 80%;
+        height: 400vh;
+        min-height: 100vh;
     }
     .menu-title{
     font-size: 8vw;
@@ -628,7 +807,7 @@ a, a:hover{
     min-height: 100vh;
   }
   section{
-    padding: 0 17.5% 0% 17.5%;
+    padding: 10% 17.5% 0% 17.5%;
     margin: 0;
     width: 100%;
   }
@@ -642,6 +821,17 @@ a, a:hover{
  .animation-container{
     height: 80vh; 
   }
+      .explore-button {
+        vertical-align: middle;
+        margin-top: 4vh;
+        padding: 1.5%;
+        text-align: center;
+        background-color: #E9D758;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+        border-radius: 5rem;
+        cursor: pointer;
+    }
+}
 }
 /* mobile screen and landscape orientation */
 @media screen and (min-width: 0px) and (max-width: 700px) and (orientation: landscape) {
@@ -660,7 +850,7 @@ a, a:hover{
   }
   /* compass image div (flex item)*/
   .side-menu-img{
-  flex-basis: 20%;
+  flex-basis: 15%;
   width: 10vw;
   height: 40vh;
   overflow:auto;
@@ -668,7 +858,7 @@ a, a:hover{
   /* menu options and links  (div - flex item)*/
   .side-menu{
   display: none;
-  flex-basis: 60%;
+  flex-basis: 70%;
   height: 400vh;
   min-height: 400vh;
   overflow: auto;
@@ -715,7 +905,16 @@ a, a:hover{
   }
 
 @media screen and (min-width:0px) and (max-width: 700px) and (orientation: portrait){
-  /* adventure map body*/
+    /* adventure map*/
+    /*logo */
+    #ad-ocyan-logo {
+        margin-top: 2vh;
+        margin-left: 1.5vw;
+        z-index: 9;
+        width: 50vw;
+        height: auto;
+        position: fixed;
+    }
   #admap-body{
     margin:0;
     overflow:hidden;
@@ -753,16 +952,12 @@ a, a:hover{
     height:100vw;
     width:100vh;
   }
-  nav{
-    height: 10%;
-  }
+
 /* modals hidden class */
 .admap-modal-hidden, .admap-hover-hidden{
   display: none;
 }
-a, a:hover{
-  color: unset;
-}
+
 /* when toggled to #modal-wrapper prevents hover modals from activating*/
 .modal-wrapper{
   z-index:4;
@@ -824,6 +1019,37 @@ a, a:hover{
     box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
     border-radius:5rem;
   }
+      /*compass drawing*/
+    #compass-img {
+        margin-top: 4vh;
+        margin-right: 1.5vw;
+        width: 12vw;
+        height: auto;
+        position: fixed;
+    }
+    /* compass image fiv for adventure map*/
+    .ad-side-menu-img {
+        flex-basis: 5%;
+        display: block;
+        width: 10vh;
+        height: 30vh;
+        overflow: auto;
+    }
+    /*logo */
+    #ocyan-logo {
+        margin-top: 4vh;
+        margin-left: 1.5vw;
+        z-index: 0;
+        width: 50vw;
+        height: auto;
+        position: fixed;
+    }
+      /* class toggle for ecosystem pages nav menu */
+    .nav-portrait {
+        height: 100vh;
+        overflow: auto;
+        position: fixed;
+    }
   section{
     padding: 0 5% 0 5%;
     margin: 0;
@@ -850,12 +1076,12 @@ a, a:hover{
     min-height: 100vh;
   }
   /* compass image */
-  #menu{
-    min-width: 18vw;
-    min-height: 18vh;
-    max-width: 100%;
-    max-height: 18vh;
-  }
+   #menu {
+        margin-top: 1.5vh;
+        margin-right: 1.5vw;
+        width: 30vw;
+        height: auto;
+    }
   .menu-title{
     font-size: 8vw;
   }
