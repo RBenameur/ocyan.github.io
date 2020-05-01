@@ -341,7 +341,7 @@
 
 .side-menu {
     display: none;
-    flex-basis: 45%;
+    flex-basis: 40%;
     background-color: rgba(19, 64, 116, 0.9);
     box-shadow: 0 -10vw 5vw rgb(19, 64, 116);
     overflow: auto;
