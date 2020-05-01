@@ -175,6 +175,19 @@
 }
 
 
+/*logo */
+
+#ad-ocyan-logo {
+    margin-top: 4vh;
+    margin-left: 1.5vw;
+    z-index: 9;
+    width: 23vw;
+    height: auto;
+    position: fixed;
+    cursor: pointer;
+}
+
+
 /*compass drawing*/
 
 #compass-img {
@@ -536,7 +549,6 @@ section {
     flex-wrap: wrap;
     flex-direction: row;
 }
-
 
 /* subheadings in the animal modals */
 
@@ -1297,3 +1309,4 @@ section {
         display: flex;
     }
 }
+
