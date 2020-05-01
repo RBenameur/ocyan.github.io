@@ -18,10 +18,6 @@ Educational website teaching children about marine ecosystems and animals, helpi
 
 Considering the target of this website, efforts have been made to have a children friendly design, to make it as accessible as possible 
 
-## Prerequisites
-
-No prerequisites, should work on most softwares 
-
 ## Code style
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
