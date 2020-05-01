@@ -1,27 +1,26 @@
-
 //button to access lost city
 let userPoints = JSON.parse(localStorage.getItem("totalPoints"));
 let totalUserPoints = 0;
 
 function checkPoints() {
-    for(let key in userPoints) {
-        totalUserPoints += userPoints[key]; 
-      }
-      //check if user has reached 100 points or passed the first quiz
-      if(totalUserPoints == 100) {
-        alert("allowed");
-        $("#cf-dark").css("fill","#4C9B57");
-        $("#cf-dark2").css("fill","#4C9B57");
-        $("#cf-dark3").css("fill","#4C9B57");
-        $("#cf-light").css("fill","#62D375");
-        $("#l-dark1").css("fill","#4C9B57");
-        $("#l-dark2").css("fill","#4C9B57");
-        $("#l-dark3").css("fill","#4C9B57");
-        $("#l-light").css("fill","#62D375");
-      }
+    for (let key in userPoints) {
+        totalUserPoints += userPoints[key];
+    }
+    //check if user has reached 100 points or passed the first quiz
+    if (totalUserPoints == 100) {
+        $("#cf-dark").css("fill", "#4C9B57");
+        $("#cf-dark2").css("fill", "#4C9B57");
+        $("#cf-dark3").css("fill", "#4C9B57");
+        $("#cf-light").css("fill", "#62D375");
+        $("#l-dark1").css("fill", "#4C9B57");
+        $("#l-dark2").css("fill", "#4C9B57");
+        $("#l-dark3").css("fill", "#4C9B57");
+        $("#l-light").css("fill", "#62D375");
+    }
 }
 
 $(document).ready(function() {
+    $("#explore-anchor").removeAttr("href");
     checkPoints();
     $('#compass-img').on({
         'click': function() {
@@ -292,6 +291,7 @@ $(document).ready(function() {
         $("#admap-sf").addClass("admap-modal");
         $(".marker-flexitem-img").css("background-image", "url(../adventure-map-map/map-images/coralreef.jpg)");
         $(".explore-button-title").text("Explore Coral Reefs");
+        $("#explore-anchor").attr("href", "../coral-reef-ecosystem/coral-reef-ecosystem.html");
         if (ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()) {
             $(".admap-modal").css({
                 "left": "48vh",
@@ -449,21 +449,16 @@ $(document).ready(function() {
         };
     });
     $("#lostcity").click(function() {
-        $("#explore-anchor").attr("class", "access-lost-city");
-        function () {
-            if(totalUserPoints == 100) {
-                $(".access-lost-city").attr("href", "../ocyan-lost-city/lost-city.html");
-            }
-            else {
-                $(".access-lost-city").removeAttr("href");
-            }
-        }
-
+        if (totalUserPoints == 100) {
+            $("#explore-anchor").attr("href", "../ocyan-lost-city/lost-city.html");
+            $(".explore-button-title").text("Explore Ocyan City");
+        } else {
+            $(".explore-button-title").text("Complete 1 quizzes to unlock");
+        };
         $("#modal-wrapper").toggleClass("modal-wrapper");
         $("#admap-sf").removeClass("admap-modal-hidden");
         $("#admap-sf").addClass("admap-modal");
         $(".marker-flexitem-img").css("background-image", "url(../adventure-map-map/map-images/lost-city.png)");
-        $(".explore-button-title").text("Explore Ocyan City");
         $(".admap-modal").css("background-color", "#134074");
         $("a").css({ PointerEvent: "none" });
         if (ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()) {
@@ -480,6 +475,7 @@ $(document).ready(function() {
     });
     // exit buttons on the ecosystem modals
     $("#mapmodal-close").click(function() {
+        $("#explore-anchor").removeAttr("href");
         $(".admap-modal").css("background-color", "rgb(255, 107, 53, 0.8)");
         $("#admap-sf").removeClass("admap-modal");
         $("#admap-sf").addClass("admap-modal-hidden");
