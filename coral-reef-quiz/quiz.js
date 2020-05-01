@@ -206,18 +206,24 @@
         userAnswerList.push(userSelect.value);
     }
 
-    //decrease score if prev answer was correct
-    function checkPrevAnswer(correctAnswer) {
-        //grab userAnswer from previous question after clicking button previous
-        let userPrevAnswer = userAnswerList[userAnswerList.length - 1];
-        if (userPrevAnswer == correctAnswer) {
-            score--;
-        }
-        //remove hint from hints list if prev user answer was wrong
-        else {
-            wrongListHints.splice(-1, 1);
-        }
-    }
+//display score
+function displayResults() {
+  let percentage = (score * 100) / questions.length;
+  let resultTxt = document.querySelector(".result-text").textContent = "You got " +percentage+ "% or "+score+" out of "+questions.length+" questions correct.";
+  //hint which areas the users need to work on
+  let hintContainer = document.querySelector(".hint-container");
+  if (score == 10) {
+    hintContainer.textContent = "Fantastic! You have placed a green marker on this ecosystem in the map. Save your score to unlock the Ocyan Lost City content now!";
+    hintContainer.style.fontSize = "2rem";
+  }
+  else {
+    hintContainer.textContent = "Hint: try revisiting the following...";
+  }
+  let hintList = document.createElement("p");
+  // <br> rendered
+  hintList.innerHTML = `<br><p class="nonbold fade-in">`+wrongListHints.join("<br>")+`</p>`;
+  hintContainer.appendChild(hintList);
+}
 
     //display score
     function displayResults() {
@@ -342,14 +348,9 @@
         });
     });
 
-    //clicking button reset will reset quiz
-    resetBtn.addEventListener("click", function() {
-        resetQuiz();
-        updateProgress();
-    });
-
-    //save score
-    saveScoreBtn.addEventListener("click", function() {
-        updatePointsDataObj();
-    });
+//save score
+saveScoreBtn.addEventListener("click", function() {
+  updatePointsDataObj();
+  turnMarkerGreen();
+});
 })();
