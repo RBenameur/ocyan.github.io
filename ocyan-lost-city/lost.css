@@ -164,11 +164,12 @@ p {
 }
 
 .trash-container {
+  position: absolute;
   height: 60%;
   width: 100vw;
 }
 
 .trash {
-  height: 10em;
-  width: 10em;
+  height: 8em;
+  width: 5em;
 }
