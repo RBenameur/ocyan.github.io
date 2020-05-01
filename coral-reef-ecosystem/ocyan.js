@@ -507,6 +507,9 @@ $(document).ready(function() {
             alert(" I'm sorry, your browser does not support fullscreen mode! Please try a different browser");
         };
     });
+    $('#animation-close').click(function() {
+        screenfull.exit();
+    });
     // On compass image click menu appears
     $('#menu').on({
         'click': function() {
