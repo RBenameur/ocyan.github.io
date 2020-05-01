@@ -325,11 +325,15 @@ ul {
     padding: 0;
     height: fit-content;
     cursor: pointer;
+    text-decoration: none;
+    list-style-type: none;
 }
 
 .advent-list {
     display: none;
     height: 15vh;
+    text-decoration: none;
+    list-style-type: none;
 }
 
 .marine-eco-list {
@@ -343,6 +347,8 @@ li,
     letter-spacing: 0.2vw;
     padding: 2% 2% 2% 2%;
 }
+
+.nav-ul {
     text-decoration: none;
     list-style-type: none;
     color: white;
@@ -558,26 +564,30 @@ section {
     border-radius: 1rem;
 }
 
-.coral-animation-container {
-  }
+.coral-animation-container {}
 
-  /**quiz popup***/
-  #coraltestknowlege {
+
+/**quiz popup***/
+
+#coraltestknowlege {
     z-index: 2;
-  }
+}
 
-  #to-quiz {    /*click button to navigate to quiz*/
+#to-quiz {
+    /*click button to navigate to quiz*/
     z-index: 2;
-  }
+}
 
-  /* coral reef ecosystem page edit */ 
 
-  #whattypes-oalicf{
+/* coral reef ecosystem page edit */
+
+#whattypes-oalicf {
     background: transparent;
     height: 100%;
     width: 100%;
-  }
-  .animation-container{
+}
+
+.animation-container {
     margin: 0;
     padding: 0;
     background-image: url("./coral-reef-background.png");
