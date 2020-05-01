@@ -14,11 +14,11 @@ Educational website teaching children about marine ecosystems and animals, aimed
 
 9-12 years old kids 
 
-# Design Considerations
+## Design Considerations
 
 Considering the target of this website, efforts have been made to have a children friendly design, to make it as accessible as possible 
 
-### Prerequisites
+## Prerequisites
 
 No prerequisites, should work on most softwares 
 
