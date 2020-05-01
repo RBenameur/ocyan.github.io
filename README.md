@@ -1,11 +1,22 @@
 # OCYAN: Hack from Home Hackathon Project
 
-Educational website teaching children about marine ecosystems and animals
+Website created as part of a Hackathon initiated to respond to Covid-19 pandemic related problems 
 
 ## Getting Started
 
-Mix of education and games using pop up modals
+Educational website teaching children about marine ecosystems and animals, aimed at children and their parents/carers currently on lockdown
 
+* Quizz and pop up modals
+
+* Strong environmental focus
+
+## Target
+
+9-12 years old kids 
+
+# Design Considerations
+
+Considering the target of this website, efforts have been made to have a children friendly design, to make it as accessible as possible 
 
 ### Prerequisites
 
