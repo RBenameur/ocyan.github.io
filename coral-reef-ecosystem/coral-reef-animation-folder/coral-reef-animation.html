@@ -1,375 +1,384 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta name="description" content=" this describes the content of my webpage ">
     <meta name="keywords" content=" html">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="../ocyan.css" type="text/css">
- </head>
-  <body id="coral-body" onload="self.scrollTo(300,11100)">
+</head>
+
+<body id="coral-body" onload="self.scrollTo(300,11100)">
     <!-- modals-->
-        <div id="turtle-modal">
-            <span id="tclose">&times;</span>
-            <div id= "st-modal-content">
-                <div class= "fact-file">
-                    <div id= "stmodal-text-container">
-                        <div class="modal-text-flex">
-                            <h2 class = "modal-title"> Sea Turtles </h2>
-                        <p id= "t-textintro">Sea turtles are marine reptiles.They breath air in at the surface and can hold their breath through several hours of diving.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id="turtle-food"> Food <svg id = "food-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "tfood-content" >Depending on the species sea turtles could be carnivores (meat eating), herbivores (plant eating) or omnivores (meat and plant eating). Sea turtles may eat algae, sponges and sea squirts.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id="turtle-habitat"> Habitat <svg id = "habitat-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id= "thabitat-content">Most sea turtles migrate hundreds or thousands of miles between nesting and foraging grounds, where foraging mostly takes place on coral reefs.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id= "turtle-size"> Size <svg id = "size-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "tsize-content">Leatherback turtles, which are the largest of the 7 sea turtle species, can grow to 1.9 metres. Kemp’s ridley and Olive ridley, the smallest species, grow up to 75cm.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id = "turtle-life"> Life expectancy <svg id = "tlife-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id= "tlife-content">Between 35-80 years. Although some individuals are known to have lived past 200 years.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id = "turtle-funfact"> Fun fact <svg id = "tfunfact-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "tfunfact-content">Leatherback turtles can dive to depths of 1000 metres, in search of food.Adult females return to land to lay their eggs after mating.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id= "turtle-important"> Why are they important to coral reefs? <svg id = "timportant-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "timportant-content"> Sea turtles may eat algae, sponges and sea squirts which all compete with coral polyps for space, light and nutrients, helping to promote a healthy coral reef.</p>
-                        </div>
+    <div id="turtle-modal">
+        <span id="tclose">&times;</span>
+        <div id="st-modal-content">
+            <div class="fact-file">
+                <div id="stmodal-text-container">
+                    <div class="modal-text-flex">
+                        <h2 class="modal-title"> Sea Turtles </h2>
+                        <p id="t-textintro">Sea turtles are marine reptiles.They breath air in at the surface and can hold their breath through several hours of diving.</p>
                     </div>
-               </div>
-               <div class= "ff-images">
-                    <img id= "st-img" src="../animation-images/sea-turtle.png" alt="sea turtle">
-               </div>
+                    <div class="modal-text-flex">
+                        <h2 id="turtle-food"> Food <svg id="food-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="tfood-content">Depending on the species sea turtles could be carnivores (meat eating), herbivores (plant eating) or omnivores (meat and plant eating). Sea turtles may eat algae, sponges and sea squirts.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="turtle-habitat"> Habitat <svg id="habitat-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="thabitat-content">Most sea turtles migrate hundreds or thousands of miles between nesting and foraging grounds, where foraging mostly takes place on coral reefs.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="turtle-size"> Size <svg id="size-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="tsize-content">Leatherback turtles, which are the largest of the 7 sea turtle species, can grow to 1.9 metres. Kemp’s ridley and Olive ridley, the smallest species, grow up to 75cm.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="turtle-life"> Life expectancy <svg id="tlife-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="tlife-content">Between 35-80 years. Although some individuals are known to have lived past 200 years.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="turtle-funfact"> Fun fact <svg id="tfunfact-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="tfunfact-content">Leatherback turtles can dive to depths of 1000 metres, in search of food.Adult females return to land to lay their eggs after mating.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="turtle-important"> Why are they important to coral reefs? <svg id="timportant-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="timportant-content"> Sea turtles may eat algae, sponges and sea squirts which all compete with coral polyps for space, light and nutrients, helping to promote a healthy coral reef.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ff-images">
+                <img id="st-img" src="../animation-images/sea-turtle.png" alt="sea turtle">
             </div>
         </div>
-        <div id="shark-modal">
-            <span id="sclose">&times;</span>
-            <div id= "s-modal-content">
-                <div class= "fact-file">
-                    <div id= "smodal-text-container">
-                        <div class="modal-text-flex">
-                            <h2 class = "modal-title"> Reef Sharks </h2>
-                        <p id= "s-textintro">There are 5 types of Reef shark: Blacktip, Whitetip,Grey, Caribbean and Silvertip. These sharks are classified as one of the most important species in the world by WWF, highlighting the importance of the part they play on coral reefs.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id="s-food"> Food <svg id = "sfood-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "sfood-content" >Typically reef sharks hunt crustaceans (crabs, lobsters and shrimps), squid and most reef fishes. </p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id="s-habitat"> Habitat <svg id = "shabitat-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id= "shabitat-content">These sharks live on coral reefs in shallow tropical waters, up to depths of 80 metres.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id= "s-size"> Size <svg id = "ssize-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "ssize-content">Up to 3 metres.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id = "s-life"> Life expectancy <svg id = "slife-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id= "slife-content">12 - 25 years.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id = "s-funfact"> Fun fact <svg id = "sfunfact-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "sfunfact-content">Reef sharks are viviparous, the young develop and grow inside the mother for around 1 year before the mother gives birth.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id= "s-important">Why are they important to coral reefs? <svg id = "simportant-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "simportant-content">They help maintain the balance of the food chain.</p>
-                        </div>
+    </div>
+    <div id="shark-modal">
+        <span id="sclose">&times;</span>
+        <div id="s-modal-content">
+            <div class="fact-file">
+                <div id="smodal-text-container">
+                    <div class="modal-text-flex">
+                        <h2 class="modal-title"> Reef Sharks </h2>
+                        <p id="s-textintro">There are 5 types of Reef shark: Blacktip, Whitetip,Grey, Caribbean and Silvertip. These sharks are classified as one of the most important species in the world by WWF, highlighting the importance of the part they play on coral
+                            reefs.</p>
                     </div>
-               </div>
-               <div class= "ff-images">
-                <img id= "s-img" src="../animation-images/reef-shark.png" alt="reef shark">
+                    <div class="modal-text-flex">
+                        <h2 id="s-food"> Food <svg id="sfood-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="sfood-content">Typically reef sharks hunt crustaceans (crabs, lobsters and shrimps), squid and most reef fishes. </p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="s-habitat"> Habitat <svg id="shabitat-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="shabitat-content">These sharks live on coral reefs in shallow tropical waters, up to depths of 80 metres.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="s-size"> Size <svg id="ssize-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="ssize-content">Up to 3 metres.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="s-life"> Life expectancy <svg id="slife-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="slife-content">12 - 25 years.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="s-funfact"> Fun fact <svg id="sfunfact-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="sfunfact-content">Reef sharks are viviparous, the young develop and grow inside the mother for around 1 year before the mother gives birth.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="s-important">Why are they important to coral reefs? <svg id="simportant-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="simportant-content">They help maintain the balance of the food chain.</p>
+                    </div>
+                </div>
             </div>
+            <div class="ff-images">
+                <img id="s-img" src="../animation-images/reef-shark.png" alt="reef shark">
             </div>
         </div>
-        <div id="lionfish-modal">
-            <span id ="lclose"> &times;</span>
-            <div id= "l-modal-content">
-                <div class= "fact-file">
-                    <div id= "lfmodal-text-container">
-                        <div class="modal-text-flex">
-                            <h2 class = "modal-title"> Lionfish </h2>
-                        <p id = "l-textintro">Lionfish or otherwise known as zebrafish, firefish or scorpion fish. </p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id="l-food"> Food <svg id = "lfood-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "lfood-content" >Lionfish will eat anything that fits into their mouth. Their stomach can expand to 30 times its normal size. </p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id="l-habitat"> Habitat <svg id = "lhabitat-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id= "lhabitat-content">Lionfish are native to the South Pacific and Indian Ocean.They can survive in all marine habitats where temperatures exceed 10 degrees celsius.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id= "l-size"> Size <svg id = "lsize-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "lsize-content">Up to 38 cm.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id = "l-life"> Life expectancy <svg id = "llife-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id= "llife-content">Up to 15 years.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id = "l-funfact"> Fun fact <svg id = "lfunfact-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "lfunfact-content">Female lionfish produce up to 2 million eggs per year. The egg sacs are covered in chemicals that prevent other fish from eating the eggs.Along with their ability to eat anything and high production rate, lionfish can be a huge threat to reefs they’re not native to.<br> Also, Lionfish can dive to depths of 305 metres.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id= "l-important"> Why are they important to coral reefs? <svg id = "limportant-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "limportant-content">Lionfish are extremely well adapted predators. In areas which they are native to, they help control numbers of coral eating organisms such as parrotfish. </p>
-                        </div>
+    </div>
+    <div id="lionfish-modal">
+        <span id="lclose"> &times;</span>
+        <div id="l-modal-content">
+            <div class="fact-file">
+                <div id="lfmodal-text-container">
+                    <div class="modal-text-flex">
+                        <h2 class="modal-title"> Lionfish </h2>
+                        <p id="l-textintro">Lionfish or otherwise known as zebrafish, firefish or scorpion fish. </p>
                     </div>
-               </div>
-               <div class= "ff-images">
-                <img id= "lf-img" src="../animation-images/lionfish.png" alt="lionfish">
+                    <div class="modal-text-flex">
+                        <h2 id="l-food"> Food <svg id="lfood-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="lfood-content">Lionfish will eat anything that fits into their mouth. Their stomach can expand to 30 times its normal size. </p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="l-habitat"> Habitat <svg id="lhabitat-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="lhabitat-content">Lionfish are native to the South Pacific and Indian Ocean.They can survive in all marine habitats where temperatures exceed 10 degrees celsius.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="l-size"> Size <svg id="lsize-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="lsize-content">Up to 38 cm.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="l-life"> Life expectancy <svg id="llife-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="llife-content">Up to 15 years.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="l-funfact"> Fun fact <svg id="lfunfact-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="lfunfact-content">Female lionfish produce up to 2 million eggs per year. The egg sacs are covered in chemicals that prevent other fish from eating the eggs.Along with their ability to eat anything and high production rate, lionfish can be a huge
+                            threat to reefs they’re not native to.<br> Also, Lionfish can dive to depths of 305 metres.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="l-important"> Why are they important to coral reefs? <svg id="limportant-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="limportant-content">Lionfish are extremely well adapted predators. In areas which they are native to, they help control numbers of coral eating organisms such as parrotfish. </p>
+                    </div>
+                </div>
             </div>
+            <div class="ff-images">
+                <img id="lf-img" src="../animation-images/lionfish.png" alt="lionfish">
             </div>
         </div>
-        <div id="triggerfish-modal">
-            <span id ="tfclose"> &times;</span>
-            <div id= "tf-modal-content" >
-                <div class= "fact-file">
-                    <div id= "tfmodal-text-container">
-                        <div class="modal-text-flex">
-                            <h2 class = "modal-title"> Parrotfish </h2>
-                        <p id = "tf-textintro">Parrotfish are colourful fish that are part of the wrasse family. There are 80 identified species of parrotfish.</p>
+    </div>
+    <div id="triggerfish-modal">
+        <span id="tfclose"> &times;</span>
+        <div id="tf-modal-content">
+            <div class="fact-file">
+                <div id="tfmodal-text-container">
+                    <div class="modal-text-flex">
+                        <h2 class="modal-title"> Parrotfish </h2>
+                        <p id="tf-textintro">Parrotfish are colourful fish that are part of the wrasse family. There are 80 identified species of parrotfish.</p>
                     </div>
-                        <div class="modal-text-flex">
-                            <h2 id="tf-food"> Food <svg id = "tffood-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <div class="modal-text-flex">
+                        <h2 id="tf-food"> Food <svg id="tffood-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
                               </svg></h2>
-                            <p id = "tffood-content" >Parrotfish have fused beak like teeth they use to break and grind down rock and dead coral. Parrotfish poop a fine white sand of undigested rock and coral skeleton.</p>
-                            </div>
-                        <div class="modal-text-flex">
-                            <h2 id="tf-habitat"> Habitat <svg id = "tfhabitat-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id= "tfhabitat-content">They can be found within both coral reef and rocky shores ecosystems, as well as seagrass beds, in tropical and subtropical waters.</p>
-                            </div>
-                        <div class="modal-text-flex">
-                            <h2 id= "tf-size"> Size <svg id = "tfsize-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "tfsize-content">Up to 120cm.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id = "tf-life"> Life expectancy <svg id = "tflife-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id= "tflife-content">Up to 7 years.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id = "tf-funfact"> Fun fact <svg id = "tffunfact-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "tffunfact-content">Parrotfish can change sex multiple times through their lives.<br>Some species of parrotfish produce a mucus bubble, which they make using an organ in their head during the night. Scientists believe this mucus stops predators from smelling and finding the parrotfish.</p>
-                                </div>
-                        <div class="modal-text-flex">
-                            <h2 id= "tf-important"> Why are they important to coral reefs? <svg id = "tfimportant-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "tfimportant-content"> Although parrotfish do eat living coral, they prefer a diet of algae and dead coral. By grazing away at algae and dead coral parrotfish prevent algae from over growing and smothering live coral.</p>
-                            </div>
+                        <p id="tffood-content">Parrotfish have fused beak like teeth they use to break and grind down rock and dead coral. Parrotfish poop a fine white sand of undigested rock and coral skeleton.</p>
                     </div>
-               </div>
-               <div class= "ff-images">
-                <img id= "tf-img" src="../animation-images/parrotfish.png" alt="triggerfish">
+                    <div class="modal-text-flex">
+                        <h2 id="tf-habitat"> Habitat <svg id="tfhabitat-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="tfhabitat-content">They can be found within both coral reef and rocky shores ecosystems, as well as seagrass beds, in tropical and subtropical waters.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="tf-size"> Size <svg id="tfsize-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="tfsize-content">Up to 120cm.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="tf-life"> Life expectancy <svg id="tflife-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="tflife-content">Up to 7 years.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="tf-funfact"> Fun fact <svg id="tffunfact-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="tffunfact-content">Parrotfish can change sex multiple times through their lives.<br>Some species of parrotfish produce a mucus bubble, which they make using an organ in their head during the night. Scientists believe this mucus stops predators from
+                            smelling and finding the parrotfish.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="tf-important"> Why are they important to coral reefs? <svg id="tfimportant-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="tfimportant-content"> Although parrotfish do eat living coral, they prefer a diet of algae and dead coral. By grazing away at algae and dead coral parrotfish prevent algae from over growing and smothering live coral.</p>
+                    </div>
+                </div>
             </div>
+            <div class="ff-images">
+                <img id="tf-img" src="../animation-images/parrotfish.png" alt="triggerfish">
             </div>
         </div>
-        <div id="clownfish-modal">
-            <span id="cfclose"> &times;</span>
-            <div id= "cf-modal-content">
-                <div class= "fact-file">
-                    <div id= "cfmodal-text-container">
-                        <div class="modal-text-flex">
-                            <h2 class = "modal-title"> Clownfish and Sea Anenomes </h2>
-                        <p id = "cf-textintro">Clown fish or otherwise known as anemone fish live with anemone, in warm tropical waters. Together they form a beneficial (symbiotic) relationship where the poisonous fish eating anemone provides the clown fish with protection from other fish whilst the crown fish cleans the anemone by eating dead tentacles and parasites.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id="cf-food"> Food <svg id = "cffood-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "cffood-content" >Clownfish are omnivores, they eat both plants and animals such as algae, small crustaceans (e.g. shrimps) and mollusks. <br>Anemone are carnivores, they lure in small fish or shrimp and use their stinging cells to paralysis and then eat their prey. </p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id="cf-habitat"> Habitat <svg id = "cfhabitat-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id= "cfhabitat-content">Clownfish and anemones live in tropical waters. The Clownfish coats its skin a mucus that protects it from the anemones sting.  </p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id= "cf-size"> Size <svg id = "cfsize-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "cfsize-content">Clownfish can grow up to 18 cm.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id = "cf-life"> Life expectancy <svg id = "cflife-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id= "cflife-content">Clownfish can live up to 10 years.</p>
-                            </div>
-                        <div class="modal-text-flex">
-                            <h2 id = "cf-funfact"> Fun fact <svg id = "cffunfact-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "cffunfact-content">All clownfish are born male. When the dominant female dies, the largest male transforms into a female.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id= "cf-important"> Why are they important to coral reefs? <svg id = "cfimportant-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "cfimportant-content"> They can feed on organisms such as algae that compete with coral polyps for food, space and nutrients.</p>
-                        </div>
+    </div>
+    <div id="clownfish-modal">
+        <span id="cfclose"> &times;</span>
+        <div id="cf-modal-content">
+            <div class="fact-file">
+                <div id="cfmodal-text-container">
+                    <div class="modal-text-flex">
+                        <h2 class="modal-title"> Clownfish and Sea Anenomes </h2>
+                        <p id="cf-textintro">Clown fish or otherwise known as anemone fish live with anemone, in warm tropical waters. Together they form a beneficial (symbiotic) relationship where the poisonous fish eating anemone provides the clown fish with protection
+                            from other fish whilst the crown fish cleans the anemone by eating dead tentacles and parasites.</p>
                     </div>
-               </div>
-               <div class= "ff-images">
-                <img id= "cf-img" src="../animation-images/clownfish-with-anemone.png" alt="clownfish with sea anoneme">
+                    <div class="modal-text-flex">
+                        <h2 id="cf-food"> Food <svg id="cffood-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="cffood-content">Clownfish are omnivores, they eat both plants and animals such as algae, small crustaceans (e.g. shrimps) and mollusks. <br>Anemone are carnivores, they lure in small fish or shrimp and use their stinging cells to paralysis and
+                            then eat their prey. </p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="cf-habitat"> Habitat <svg id="cfhabitat-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="cfhabitat-content">Clownfish and anemones live in tropical waters. The Clownfish coats its skin a mucus that protects it from the anemones sting. </p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="cf-size"> Size <svg id="cfsize-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="cfsize-content">Clownfish can grow up to 18 cm.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="cf-life"> Life expectancy <svg id="cflife-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="cflife-content">Clownfish can live up to 10 years.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="cf-funfact"> Fun fact <svg id="cffunfact-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="cffunfact-content">All clownfish are born male. When the dominant female dies, the largest male transforms into a female.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="cf-important"> Why are they important to coral reefs? <svg id="cfimportant-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="cfimportant-content"> They can feed on organisms such as algae that compete with coral polyps for food, space and nutrients.</p>
+                    </div>
+                </div>
             </div>
+            <div class="ff-images">
+                <img id="cf-img" src="../animation-images/clownfish-with-anemone.png" alt="clownfish with sea anoneme">
             </div>
         </div>
-        <div id="crab-modal">
-            <span id ="cclose">&times;</span>
-            <div id= "c-modal-content" >
-                <div class= "fact-file">
-                    <div id= "cmodal-text-container">
-                        <div class="modal-text-flex">
-                            <h2 class = "modal-title"> Guard Crabs </h2>
-                        <p id= "c-textintro">Guard crabs are one of many species of guard crabs protecting their coral homes.They are found living on hard, branching coral across the indo-pacific area.</p>
+    </div>
+    <div id="crab-modal">
+        <span id="cclose">&times;</span>
+        <div id="c-modal-content">
+            <div class="fact-file">
+                <div id="cmodal-text-container">
+                    <div class="modal-text-flex">
+                        <h2 class="modal-title"> Guard Crabs </h2>
+                        <p id="c-textintro">Guard crabs are one of many species of guard crabs protecting their coral homes.They are found living on hard, branching coral across the indo-pacific area.</p>
                     </div>
-                        <div class="modal-text-flex">
-                            <h2 id="c-food"> Food <svg id = "cfood-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <div class="modal-text-flex">
+                        <h2 id="c-food"> Food <svg id="cfood-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
                               </svg></h2>
-                            <p id = "cfood-content" >Guard crabs eat mucus released by coral polyps as well as eat some of the polyps.</p> 
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id="c-habitat"> Habitat <svg id = "chabitat-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id= "chabitat-content">On branched corals. They have a beneficial (symbiotic) relationship where the guard crab keeps the coral clean and protects the coral from predators such as Crown of Thorns Starfish whilst the branches of the coral provide shelter for the crab from predators.</p>                            
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id= "c-size"> Size <svg id = "csize-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "csize-content">Up to 5 cm.</p>
-                            </div>
-                        <div class="modal-text-flex">
-                            <h2 id = "c-life"> Life expectancy <svg id = "clife-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id= "clife-content">Unknown.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id = "c-funfact"> Fun fact <svg id = "cfunfact-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "cfunfact-content">Using their legs, guard crabs massage their hosts polyps until they release slimy mucus the crab eats.</p>
-                        </div>
-                        <div class="modal-text-flex">
-                            <h2 id= "c-important"> Why are they important to coral reefs? <svg id = "cimportant-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-                              </svg></h2>
-                            <p id = "cimportant-content">They protect the coral polyps from predators, maintaining the foundation of a coral reef ecosystem.</p>
-                        </div>
+                        <p id="cfood-content">Guard crabs eat mucus released by coral polyps as well as eat some of the polyps.</p>
                     </div>
-               </div>
-               <div class= "ff-images">
-                <img id= "c-img" src="../animation-images/guard-crab.png" alt="crab">
+                    <div class="modal-text-flex">
+                        <h2 id="c-habitat"> Habitat <svg id="chabitat-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="chabitat-content">On branched corals. They have a beneficial (symbiotic) relationship where the guard crab keeps the coral clean and protects the coral from predators such as Crown of Thorns Starfish whilst the branches of the coral provide shelter
+                            for the crab from predators.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="c-size"> Size <svg id="csize-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="csize-content">Up to 5 cm.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="c-life"> Life expectancy <svg id="clife-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="clife-content">Unknown.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="c-funfact"> Fun fact <svg id="cfunfact-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="cfunfact-content">Using their legs, guard crabs massage their hosts polyps until they release slimy mucus the crab eats.</p>
+                    </div>
+                    <div class="modal-text-flex">
+                        <h2 id="c-important"> Why are they important to coral reefs? <svg id="cimportant-arrow" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                              </svg></h2>
+                        <p id="cimportant-content">They protect the coral polyps from predators, maintaining the foundation of a coral reef ecosystem.</p>
+                    </div>
+                </div>
             </div>
+            <div class="ff-images">
+                <img id="c-img" src="../animation-images/guard-crab.png" alt="crab">
             </div>
         </div>
-      <div class= "coral-animation-container">
+    </div>
+    <div class="coral-animation-container">
         <div class="ca-container">
-            <div class= "coral-animation-empty"></div>
-            <div class= "coral-animation-animal">
-                <img class= "animal-st " src="../animation-images/animations/turtle.png" alt="sea turtle">
+            <div class="coral-animation-empty"></div>
+            <div class="coral-animation-animal">
+                <img class="animal-st " src="../animation-images/animations/turtle.png" alt="sea turtle">
             </div>
-            <div class= "coral-animation-empty"></div>
-            <div class= "coral-animation-empty"></div>
+            <div class="coral-animation-empty"></div>
+            <div class="coral-animation-empty"></div>
         </div>
         <div class="ca-container">
-            <div class= "coral-animation-empty"></div>
-            <div class= "coral-animation-empty"></div>
-            <div class= "coral-animation-shark">
-                <img class= "animal-rs" src="../animation-images/animations/shark.png" alt="Reef shark">
+            <div class="coral-animation-empty"></div>
+            <div class="coral-animation-empty"></div>
+            <div class="coral-animation-shark">
+                <img class="animal-rs" src="../animation-images/animations/shark.png" alt="Reef shark">
             </div>
         </div>
         <div class="ca-container">
-            <div class= "coral-animation-empty">
-               
-            </div>
-            <div class= "coral-animation-animal">
-                <img class= "animal-lf" src="../animation-images/animations/lionfish.png" alt="Lionfish">
+            <div class="coral-animation-empty">
 
             </div>
-            <div class= "coral-animation-empty">
-               
+            <div class="coral-animation-animal">
+                <img class="animal-lf" src="../animation-images/animations/lionfish.png" alt="Lionfish">
+
             </div>
-            <div class= "coral-animation-animal">
-                <img class= "animal-tf" src="../animation-images/animations/parrotfish1.png"  alt="Triggerfish">
+            <div class="coral-animation-empty">
+
+            </div>
+            <div class="coral-animation-animal">
+                <img class="animal-tf" src="../animation-images/animations/parrotfish1.png" alt="Triggerfish">
             </div>
         </div>
         <div class="ca-container">
-            <div class= "coral-animation-animal">
+            <div class="coral-animation-animal">
 
             </div>
-            <div class= "coral-animation-animal">
-                <img class= "animal-cf" src="../animation-images/animations/clownfish.png" alt="Clownfish">
-                <img class= "animal-cfa" src="../animation-images/animations/anemone.png" alt = "Clownfish with sea anemone">
+            <div class="coral-animation-animal">
+                <img class="animal-cf" src="../animation-images/animations/clownfish.png" alt="Clownfish">
+                <img class="animal-cfa" src="../animation-images/animations/anemone.png" alt="Clownfish with sea anemone">
             </div>
-            <div class= "coral-animation-animal">
-                
+            <div class="coral-animation-animal">
+
             </div>
-            <div class= "coral-animation-animal">
-                <img class= "animal-c" src="../animation-images/animations/crab.png" alt="Crab">
+            <div class="coral-animation-animal">
+                <img class="animal-c" src="../animation-images/animations/crab.png" alt="Crab">
             </div>
-            <div class= "coral-animation-empty"></div>
+            <div class="coral-animation-empty"></div>
         </div>
-      </div>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="../ocyan.js"></script>
-  </body>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../ocyan.js"></script>
+</body>
+
 </html>
