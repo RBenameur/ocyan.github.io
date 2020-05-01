@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
     //on click of the turtle graphic
     $(".animal-st").click(function() {
@@ -551,7 +550,7 @@ $(document).ready(function() {
             $(".nav-ul").css("height", "550vh");
         } else {
             $(".advent-list").css("height", "fit-content");
-            $(".nav-ul").css("height", "45vh");
+            $(".nav-ul").css("height", "100vh");
         };
         $(".advent-list").animate({ "height": 'toggle' });
     });
