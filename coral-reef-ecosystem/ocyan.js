@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
     //on click of the turtle graphic
     $(".animal-st").click(function() {
