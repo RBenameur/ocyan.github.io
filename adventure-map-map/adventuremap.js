@@ -41,7 +41,7 @@ $(document).ready(function() {
     // On compass image click menu appears
     $("#compass-img").click(function() {
         $("#admap-menu").toggleClass("#admap-menu-closed");
-        $("#admap-menu").toggleClass('admap-menu-open');
+        $("#admap-menu").toggleClass('#admap-menu-open');
         $(".side-menu").animate({
             "width": 'toggle',
         });
