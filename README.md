@@ -16,7 +16,7 @@ Educational website teaching children about marine ecosystems and animals, helpi
 
 ## Design Considerations
 
-Considering the target of this website, efforts have been made to have a children friendly design, to make it as accessible as possible 
+Considering the target of this website, efforts have been made to keep the design children friendly, to make it as accessible as possible 
 
 ## Code style
 
