@@ -1,389 +1,652 @@
 /* desktop */
-  *{
+
+
+/* text size */
+
+.main-text {
+    font-size: 18px;
+}
+
+.subheading-main {
+    font-size: 26px;
+}
+
+.youtube-iframe {
+    width: 100%;
+    height: 60vh;
+}
+
+* {
     font-family: Arial, Helvetica, sans-serif;
-  }
+}
+
+
 /*adventure map page*/
-#hydrothermal:hover, #polar:hover, #coralreef:hover, #kelp:hover, #rockyshore:hover, #sandybeach:hover, #mangrove:hover, #saltmarsh:hover, #deepsea:hover, #lostcity:hover{
-  width: 5%;
-  height: auto;
-  transition: ease-in;
-}
+
+
 /* <body> in adventure map page */
-#admap-body{
-  background: #54CEF7;
+
+#admap-body {
+    background: #54CEF7;
 }
+
+
 /* the adventure map */
-#svg66{
-  width: 100vw;
-  height:100vh;
-  overflow: hidden;
-  background: #54CEF7;
-  z-index: 2;
-  }
-/* modals hidden class */
-.admap-modal-hidden, .admap-hover-hidden{
-  display: none;
-}
-a, a:hover{
-  color: unset;
-}
-/* when toggled to #modal-wrapper prevents hover modals from activating*/
-.modal-wrapper{
-  z-index:4;
-  width:100vw;
-  height:100vh;
-  position: absolute;
-  left:0;
-  top:0;
-}
-/* clickable modals */
-.admap-modal{
-  z-index:4;
-  top:0;
-  left:0;
-  position: absolute;
-  padding:1vh 1vw;
-  width: 30vw; 
-  height: 45vh; 
-  overflow: hidden; 
-  border-radius: 1rem;
-  background-color:rgb(255,107,53,0.8);
-  box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
-}
-/* modals on hover*/
-.admap-modal-hover{
-  z-index:2;
-  top:0;
-  left:0;
-  position: absolute;
-  padding:1vh 1vw;
-  width: 30vw; 
-  height: 45vh; 
-  overflow: hidden; 
-  border-radius: 1rem;
-  background-color:rgb(255,107,53,0.8);
-  box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
-}
-/* modal: flexbox */
-.marker-flexbox{
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  height: 90%;
-  width: 100%;
-  padding-bottom: 1%;
-}
-/* modal: flex item, img at background */
-.marker-flexitem-img{
-  align-self: center;
-  flex: 58%;
-  height: 58%;
-  width: 70%;
-  border-radius: 1rem;
-  box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
-  background-repeat: no-repeat;
-}
-/* modal button flex item*/
-.marker-flexitem{
-  flex: 30%;
-  height: 30%;
-}
-/* button to enter ecosystem */
-.explore-button{
-  vertical-align: middle;
-  margin:3% 1.5% 4% 1.5%;
-  padding: 1.5%;
-  text-align:center;
-  background-color:#E9D758;
-  box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
-  border-radius:5rem;
-}
-.explore-button-title{
-  font-size: 2vw;
-}
-/* menu for adventure map */
-.admap-menu{
-  display: flex;
-  position: fixed;
-  z-index: 13;
-  justify-content: flex-end;
-  width: 100%;
-  height: auto;
-}
-/* coral reef ecosystem page*/
-body{
-  margin:0;
-  background: linear-gradient( #A6E3FB , #134074);
-  height: auto;
-  width: 100vw;
-  overflow-y: scroll;
-}
-#coral-body{
-  margin:0;
-  height: 200vh;
-  width: 100vw;
-  overflow-y: scroll;
-  }
-  /* class for body to stop scrolling when on the menu*/
-  .body-fixed{
+
+#svg66 {
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
-  }
-  /* coral side images */
-  #side-bar{
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: -1;
-  }
-  /* styling for all arrows to rotate on click*/
-  .rotate{ 
-  transform: rotate(180deg);
-  }
-  /* apply to all navigation menus*/
-  nav {
-  display: flex;
-  position: fixed;
-  z-index: 13;
-  justify-content: flex-end;
-  width: 100%;
-  height: auto;
-  }
-  /* compass image div (flex item)*/
-  .ad-side-menu-img, .side-menu-img{
-  flex-basis: 10%;
-  display: block;
-  width: 15vw;
-  height: 18vh;
-  overflow:auto;
-  }
-  /* menu options and links  (div - flex item)*/
-  .side-menu{
-  display: none;
-  flex-basis: 30%;
-  background-color: rgba(19, 64, 116, 0.9);
-  box-shadow:0 -10vw 5vw rgb(19, 64, 116);
-  overflow: auto;
-  }
-  /* compass image */
-  #menu{
-  width: 100%;
-  height: auto;
-  }
-  .menu-title{
-  font-size: 5vw;
-  text-align: center;
-  letter-spacing: 1vw;
-  border-bottom: 1vh  rgb(19, 64, 116);
-  color: white;
-  }
-  ul{
-  padding: 0;
-  height:fit-content;
-  }
-  .advent-list{
-  display: none;
-  height: 15vh;
-  }
-  .marine-eco-list{
-  display: none;
-  height: fit-content;
-  }
-  li, .marine-eco-menu{
-  font-size: 2vw;
-  letter-spacing: 0.2vw;
-  padding:2% 2% 2% 2%;
-  text-decoration: none;
-  list-style-type: none;
-  color:white;
-  overflow: auto;
-  text-align: center;
-  }
-  li:hover, .marine-eco-menu:hover {
-  color:#A6E3FB ;
-  }
-  a:hover{
-    text-decoration: none;
-  }
-  section{
+    background: #54CEF7;
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+/* modals hidden class */
+
+.admap-modal-hidden,
+.admap-hover-hidden {
+    display: none;
+}
+
+
+/* when toggled to #modal-wrapper prevents hover modals from activating*/
+
+.modal-wrapper {
+    z-index: 4;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+/* clickable modals */
+
+.admap-modal {
+    z-index: 4;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding: 1vh 1vw;
+    width: 30vw;
+    height: 45vh;
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: rgb(255, 107, 53, 0.8);
+    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+}
+
+
+/* modals on hover*/
+
+.admap-modal-hover {
+    z-index: 2;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding: 1vh 1vw;
+    width: 30vw;
+    height: 45vh;
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: rgb(255, 107, 53, 0.8);
+    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+
+/* modal: flexbox */
+
+.marker-flexbox {
+    display: flex;
+    flex-direction: column;
     margin: 0;
-    padding:0 25% 0 25%;
+    height: 90%;
+    width: 100%;
+    padding-bottom: 1%;
+}
+
+
+/* modal: flex item, img at background */
+
+.marker-flexitem-img {
+    align-self: center;
+    flex: 58%;
+    height: 58%;
+    width: 70%;
+    border-radius: 1rem;
+    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+}
+
+
+/* modal button flex item*/
+
+.marker-flexitem {
+    flex: 30%;
+    height: 30%;
+}
+
+
+/* button to enter ecosystem */
+
+.explore-button {
+    vertical-align: middle;
+    margin: 1.8vw 1.5% 4% 1.5%;
+    padding: 1.5%;
+    text-align: center;
+    background-color: #E9D758;
+    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+
+/* ecosystem modal  titles */
+
+.explore-button-title {
+    font-size: 2vw;
+}
+
+
+/* <nav> for adventure map */
+
+.admap-menu-closed {
+    display: flex;
+    position: fixed;
+    z-index: 13;
+    justify-content: flex-end;
+    width: 100%;
+    height: 10vh;
+}
+
+
+/* toggle class for adventure map open menu */
+
+.admap-menu-open {
+    height: 100vw;
+    overflow: auto;
+    display: flex;
+    position: fixed;
+    z-index: 13;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100vh;
+}
+
+
+/*logo */
+
+#ad-ocyan-logo {
+    margin-top: 4vh;
+    margin-left: 1.5vw;
+    z-index: 9;
+    width: 23vw;
+    height: auto;
+    position: fixed;
+    cursor: pointer;
+}
+
+
+/*compass drawing*/
+
+#compass-img {
+    margin-top: 4vh;
+    margin-right: 1.5vw;
+    width: 12vw;
+    height: auto;
+    position: fixed;
+    cursor: pointer;
+}
+
+
+/* compass image fiv for adventure map*/
+
+.ad-side-menu-img {
+    flex-basis: 12%;
+    display: block;
+    width: auto;
+    height: 20vh;
+    overflow: auto;
+    cursor: pointer;
+}
+
+
+/* menu options and links  (div - flex item)*/
+
+.side-menu {
+    display: none;
+    flex-basis: 60%;
+    background-color: rgba(19, 64, 116, 0.9);
+    box-shadow: 0 -10vw 5vw rgb(19, 64, 116);
+    overflow: auto;
+    height: 100vw;
+}
+
+
+/* hover effect */
+
+#compass-img:hover {
+    filter: blur(2px);
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+a,
+a:hover {
+    color: unset;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* coral reef ecosystem page*/
+
+body {
+    margin: 0;
+    background: linear-gradient( #A6E3FB, #134074);
+    height: auto;
+    width: 100vw;
+    overflow-y: scroll;
+}
+
+
+/* class for body to stop scrolling when on the menu*/
+
+.body-fixed {
+    overflow: hidden;
+}
+
+
+/* coral side images */
+
+#side-bar {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+
+/* <nav> for ecosystems */
+
+#ecosystem-nav {
+    z-index: 5;
+}
+
+
+/* styling for all arrows to rotate on click*/
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+
+/* apply to all navigation menus except adventure map*/
+
+.nav-main-div {
+    display: flex;
+    position: fixed;
+    z-index: 13;
+    justify-content: flex-end;
+    width: 100%;
+    height: 0vh;
+    z-index: 5;
+}
+
+
+/* compass image div (flex item)*/
+
+.side-menu-img {
+    flex-basis: 14%;
+    display: block;
+    width: 15vw;
+    height: 25vh;
+    overflow: auto;
+}
+
+
+/*logo */
+
+#ocyan-logo {
+    margin-top: 4vh;
+    margin-left: 1.5vw;
+    z-index: 4;
+    width: 23vw;
+    height: auto;
+    position: fixed;
+    cursor: pointer;
+}
+
+
+/* compass image */
+
+#menu {
+    margin-top: 2.5vh;
+    margin-right: 1.5vw;
+    width: 14vw;
+    height: auto;
+    cursor: pointer;
+}
+
+.menu-title {
+    margin-top: 2.5vw;
+    font-size: 6vw;
+    text-align: center;
+    letter-spacing: 1vw;
+    border-bottom: 1vh rgb(19, 64, 116);
+    color: white;
+}
+
+ul {
+    padding: 0;
+    height: fit-content;
+    cursor: pointer;
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+}
+
+.advent-list {
+    display: none;
+    height: 15vh;
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+}
+
+.marine-eco-list {
+    display: none;
+    height: fit-content;
+    color: white;
+}
+
+li,
+.marine-eco-menu {
+    font-size: 3.5vw;
+    letter-spacing: 0.2vw;
+    padding: 2% 2% 2% 2%;
+    color: white;
+}
+
+.nav-ul {
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    overflow: auto;
+    text-align: center;
+    cursor: pointer;
+    height: 100vh;
+}
+
+li:hover,
+.marine-eco-menu:hover {
+    color: #A6E3FB;
+    cursor: pointer;
+}
+
+section {
+    margin: 0;
+    padding: 8% 25% 0 25%;
     width: 100%;
     height: auto;
-  }
+}
 
-  /**quiz popup***/
-  #coraltestknowlege {
-    z-index: 2;
-  }
 
-  #to-quiz {    /*click button to navigate to quiz*/
-    z-index: 2;
-  }
+/* coral reef ecosystem page edit */
 
-  /* coral reef ecosystem page edit */ 
+#coral-body {
+    margin: 0;
+    height: 150vh;
+    width: 100vw;
+    overflow-y: scroll;
+    background: #54CEF7;
+}
 
-  #whattypes-oalicf{
+.coral-background {
+    position: absolute;
+    top: 50vh;
+    left: 0;
+    width: 100vw;
+    height: 150vh;
+}
+
+#whattypes-oalicf {
     background: transparent;
     height: 100%;
     width: 100%;
-  }
-  .animation-container{
+}
+
+.animation-container {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 60vh; 
-    background-color: transparent; 
+    height: 60vh;
+    background-color: transparent;
     position: relative;
     border-radius: 5rem;
-  }
-  #play-button {
+}
+
+#play-button {
     position: absolute;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0,0,0, 0.4);
+    background-color: rgb(0, 0, 0, 0.4);
     border: 0;
-    z-index: 12;
+    z-index: 3;
     border-radius: 5rem;
-  }
-  #instruction{
-  margin: 5% 10% 0 10%;
-  width: 80%;
-  background-color:#FF6B35;
-  border-radius: 1rem;
-  padding: 1%;
-  font: 2vw;
-  box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
-  }
-  .iframe-container {
-    margin:0;
+    cursor: pointer;
+}
+
+#instruction {
+    margin: 5% 10% 0 10%;
+    width: 80%;
+    background-color: #FF6B35;
+    border-radius: 1rem;
+    padding: 1%;
+    font: 2vw;
+    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+}
+
+.iframe-container {
+    margin: 0;
     padding: 0;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     background-color: transparent;
     position: absolute;
-    z-index: 11;
+    z-index: 2;
     border-radius: 5rem;
-  }
-  #coral-iframe {
-     border: 0;
-     padding: 0;
-     height: 100%;
-     left: 0;
-     top: 0;
-     width: 100%;
-     border-radius: 5rem;
-     background-color: transparent;
-  }
-  /* animation page edit */ 
-  /* The Modal (background) */
-  #turtle-modal, #shark-modal, #lionfish-modal, #triggerfish-modal, #clownfish-modal, #crab-modal{
-  display: none; 
-  position: fixed;
-  z-index: 998; 
-  margin: 10vh 8vw 10vh 8vw; 
-  padding:2%;
-  width:84vw; 
-  height: 80vh; 
-  overflow: hidden; 
-  border-radius: 5rem;
-  background-color:rgb(255,107,53,0.8);
-  box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
-  }
-  /* This class is added when animal animation is clicked */
-  .modal-content{
-  display: flex;
-  flex-direction: column-reverse;
-  flex-wrap: nowrap;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  border: unset;
-  overflow: auto;
-  }
+}
+
+#coral-iframe {
+    border: 0;
+    padding: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-radius: 5rem;
+    background-color: transparent;
+}
+
+
+/* animation page edit */
+
+
+/* The Modal (background) */
+
+#turtle-modal,
+#shark-modal,
+#lionfish-modal,
+#triggerfish-modal,
+#clownfish-modal,
+#crab-modal {
+    display: none;
+    position: fixed;
+    z-index: 998;
+    margin: 10vh 8vw 10vh 8vw;
+    padding: 2%;
+    width: 84vw;
+    height: 80vh;
+    overflow: hidden;
+    border-radius: 5rem;
+    background-color: rgb(255, 107, 53, 0.8);
+    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+
+/* This class is added when animal animation is clicked */
+
+.modal-content {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: unset;
+    overflow: auto;
+}
+
+
 /* this class is added to the exit button in animal modals */
-.modalclose{
-  color:black;
-  float: right;
-  font-size:3vw;
-  font-weight:bold;
-  margin: 0% 2% 0 0 ;
+
+.modalclose {
+    color: black;
+    float: right;
+    font-size: 3vw;
+    font-weight: bold;
+    margin: 0% 2% 0 0;
+    cursor: pointer;
 }
-.ff-images{
-  display: flex;
-  flex:28%;
-  height: 50vh;
-  padding: 1%;
-  background-color: transparent;
-  justify-content: center;
-  width: 100%;
+
+.ff-images {
+    display: flex;
+    flex: 28%;
+    height: 50vh;
+    padding: 1%;
+    background-color: transparent;
+    justify-content: center;
+    width: 100%;
 }
-.fact-file{
-  flex:68%;
-  padding: 1%;
-  background-color: transparent;
-  margin-bottom:5%;
-  width: 100%;
-  }
-.modal-img{
-  height: 100%;
-  width: 75%;
-  border-radius: 5rem;
-  box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+
+.fact-file {
+    flex: 68%;
+    padding: 1%;
+    background-color: transparent;
+    margin-bottom: 5%;
+    width: 100%;
 }
-.modal-text-container{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+
+.modal-img {
+    height: 100%;
+    width: 75%;
+    border-radius: 5rem;
+    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
 }
+
+.modal-text-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
 /* subheadings in the animal modals */
-.modal-text-title{
-  font-size:3vw;
-  margin:1.5%;
-  text-align:center;
-  background-color:rgb(255,107,53,0.8);
-  box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
-  border-radius:5rem;
+
+.modal-text-title {
+    font-size: 3vw;
+    margin: 1.5%;
+    text-align: center;
+    background-color: rgb(255, 107, 53, 0.8);
+    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    border-radius: 5rem;
 }
+
+
 /* first paragraph in animal modals */
-.modal-textintro{
-  display: block;
-  height: auto;
-  padding: 2%;
-  margin: 1.5%;
-  font-size: 2vw;
-  width: auto;
-  background-color: #5CC8FF;
-  border-radius: 1rem;
+
+.modal-textintro {
+    display: block;
+    height: auto;
+    padding: 2%;
+    margin: 1.5%;
+    font-size: 2vw;
+    width: auto;
+    background-color: #5CC8FF;
+    border-radius: 1rem;
 }
-.modal-text{
-  display: block;
-  height: auto;
-  padding: 2%;
-  margin: 1.5%;
-  font-size: 2vw;
-  width: auto;
-  background-color: #5CC8FF;
-  border-radius: 1rem;
+
+.modal-text {
+    display: block;
+    height: auto;
+    padding: 2%;
+    margin: 1.5%;
+    font-size: 2vw;
+    width: auto;
+    background-color: #5CC8FF;
+    border-radius: 1rem;
 }
-.coral-animation-container{
-  margin: 0;
-  padding: 0;
-  background-image: url("./coral-reef-background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  }
-  .ca-container{
+
+.coral-animation-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200vh;
+}
+
+
+/**quiz popup***/
+
+#coraltestknowlege {
+    z-index: 2;
+}
+
+#to-quiz {
+    /*click button to navigate to quiz*/
+    z-index: 2;
+}
+
+
+/* coral reef ecosystem page edit */
+
+#coral-body {
+    background-image: url(./coral-reef-background.png);
+}
+
+#whattypes-oalicf {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+}
+
+.animation-container {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.ca-container {
     margin: 0;
     width: 100%;
     height: 25%;
@@ -393,498 +656,671 @@ body{
     align-items: center;
     justify-content: space-evenly;
     background-color: transparent;
-  }
-  .coral-animation-empty{
-    background-color: transparent;
-    width: 25%;
-    flex: 0 2 25%;
-  }
-  .coral-animation-animal{
-    background-color: transparent;
-    width: 25%;
-    flex: 0 1 25%;
-    display: flex;
-    flex-direction: column;
-  }
-  .coral-animation-shark{
-    background-color: transparent;
-    width: 50%;
-    flex: 0 1 50%;
-    display: flex;
-  }
-  
-  /* Define the animals */
-  .animal-st {width:20vw;height:auto;top:10px;left:0;} /* sea turle */
-  .animal-lf {max-width: 10vw;height:auto;top:10px;left:0;} /* lionfish */
-  .animal-rs{max-width:40vw;height:auto;left:0;}   /* reef shark */
-  .animal-tf{max-width:20vw;height:auto;top:10px;left:0;}  /* triggerfish */
-  .animal-cf {max-width:20vw;height:auto;top:10px;left:0;} /* Clownfish */
-  .animal-cfa{width:20vw;height:auto;top:10px;left:0;} /* Clownfish and anemone */
-  .animal-c {width:10vw;height:auto;margin-top: 60%;left:0;} /* Crab */
-  
-  /* Define the animations for the coral animation animals */
-  .animal-st, .animal-lf, .animal-rs, .animal-tf, .animal-cf, .animal-cfa, .animal-c{
-  animation-name: floating;
-  -webkit-animation-name: floating;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-timing-function: ease-in-out;
-  }
-  .animal-st{animation-duration: 13s;}
-  .animal-lf{animation-duration: 10s;}
-  .animal-rs{animation-duration: 12s;}
-  .animal-tf{animation-duration: 7s;}
-  .animal-cf {animation-duration: 8s;}
-  .animal-cfa{animation: unset;}
-  .animal-c {animation-duration: 6s;}
-  
-  @keyframes floating {
-  0% {
-    transform: translate(0%,0%);	
-  }
-  25% {
-    transform: translate(0%,20%);	
-  }	
-  50% {
-    transform: translate(0%,5%);	
-  }	
-  75% {
-    transform: translate(0%,15%);	
-  }	
-  100% {
-    transform: translate(0%,0%);
-  }	
-  }
-  /* on hover animation stops */
-  .animal-st:hover, .animal-lf:hover, .animal-rs:hover, .animal-tf:hover, .animal-cf:hover, .animal-c:hover{
-    animation-play-state: paused
-  }
-/* tablet screen portrait */
-@media screen and (min-width : 700px) and (max-width: 1200px) and (orientation: portrait){
-  /* adventure map */
- #admap-body{
-    margin:0;
-    overflow:hidden;
 }
-  /* div for adventure map to rotate screen if screen.orientation.lock does not work */
-.wrapper{
-    transform: rotate(90deg);
-    transform-origin:bottom left;
-    position:absolute;
-    top: -100vw;
-    left: 0;
-    height:100vw;
-    width:100vh;
-    background-color: #54CEF7;;
-    overflow:hidden;
-  }
-  /* narrower <nav> to allow access to click coral reef ecosystem*/
-  nav{
-  height: 15%;
-  }
-  /* toggle class for adventure map open menu */
-  .admap-menu-open{
-    height: 100vw;
-    overflow:auto;
-  }
-  /* toggle class for menu on all other pages */
-  .nav-portrait{
-    height: 100vh;
-    overflow:auto;
-    position: fixed;
-  }
-  /* compass menu image div on adventure map page */
-  .ad-side-menu-img{
-    flex-basis: 20%;
-    width: 10vw;
-    height: 40vw;
-    overflow:auto;
-  }
-  /* adventure map image */
-  #svg66{
-    position: relative;
-    height:100vw;
-    width:100vh;
-    overflow: hidden;
-    /*top:-30vw;*/
-  }
-/* modals hidden class */
-.admap-modal-hidden, .admap-hover-hidden{
-  display: none;
-}
-a, a:hover{
-  color: unset;
-}
-/* when toggled to #modal-wrapper prevents hover modals from activating*/
-.modal-wrapper{
-  z-index:4;
-  width:100vh;
-  height:100vw;
-  position: absolute;
-  left:0;
-  top:0;
-}
-/* clickable modals */
-.admap-modal{
-  z-index:4;
-  top:0;
-  left:0;
-  position: absolute;
-  padding:1vw 1vh;
-  width: 30vh; 
-  height: 45vw; 
-  overflow: hidden; 
-  border-radius: 1rem;
-  background-color:rgb(255,107,53,0.8);
-  box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
-}
-/* modal: flexbox */
-.marker-flexbox{
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  height: 90%;
-  width: 100%;
-  padding-bottom: 1%;
-}
-/* modals on hover*/
-.admap-modal-hover{
-  z-index:2;
-  top:0;
-  left:0;
-  position: absolute;
-  padding:1vw 1vh;
-  width: 30vh; 
-  height: 45vw; 
-  overflow: hidden; 
-  border-radius: 1rem;
-  background-color:rgb(255,107,53,0.8);
-  box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
-}
-  /* flex item, img at background */
-  .marker-flexitem-img{
-    height: 58%;
-    width: 70%;
-  }
-  .explore-button{
-    vertical-align: middle;
-    margin-top: 5vw;
-    padding: 1.5%;
-    text-align:center;
-    background-color:#E9D758;
-    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
-    border-radius:5rem;
-  }
-  /* coral side images */
-  #side-bar{
-    display:none;
-    }
-    section{
-      padding: 0 5% 0 5%;
-      margin: 0;
-      width: 100%;
-    }
-    #menu{
-      width:80%;
-      height: auto;
-      overflow: hidden;
-    }
-   .side-menu-img{
-      flex-basis: 20%;
-      width: 10vw;
-      height: 40vh;
-      overflow:auto;
-    }
-    .side-menu{
-    display: none;
-    flex-basis: 60%;
-    height: 400vh;
-    min-height: 100vh;
-    }
-    .menu-title{
-    font-size: 8vw;
-    }
-    li, .marine-eco-menu{
-    font-size: 4vw;
-    letter-spacing: 0.5vw;
-    padding-bottom:5%;
-    }
-    }
-/* tablet landscape*/
-@media screen and (min-width : 700px) and (max-width: 1390px) and (orientation: landscape){
- /* .wrapper{
-    position:absolute;
-    left: 0;
-    height:100vh;
-    width:100vw;
-    background-color: #54CEF7;
-    overflow:hidden;
-  }*/
- .side-menu{
-    display: none;
-    flex-basis: 60%;
-    height: 400vh;
-    min-height: 100vh;
-  }
-  section{
-    padding: 0 17.5% 0% 17.5%;
-    margin: 0;
-    width: 100%;
-  }
-  .menu-title{
-    font-size: 8vw;
-   }
-  li, .marine-eco-menu{
-    font-size: 4vw;
-    letter-spacing: 0.5vw;
-  }
- .animation-container{
-    height: 80vh; 
-  }
-}
-/* mobile screen and landscape orientation */
-@media screen and (min-width: 0px) and (max-width: 700px) and (orientation: landscape) {
-  /*.wrapper{
-    position:absolute;
-    left: 0;
-    height:100vh;
-    width:100vw;
-    background-color: #54CEF7;
-    overflow:hidden;
-  }*/
-  section{
-    padding: 0 18% 0 18%;
-    margin: 0;
-    width: 100%;
-  }
-  /* compass image div (flex item)*/
-  .side-menu-img{
-  flex-basis: 20%;
-  width: 10vw;
-  height: 40vh;
-  overflow:auto;
-  }
-  /* menu options and links  (div - flex item)*/
-  .side-menu{
-  display: none;
-  flex-basis: 60%;
-  height: 400vh;
-  min-height: 400vh;
-  overflow: auto;
-  }
-  .menu-title{
-   font-size: 8vw;
-  }
-  li, .marine-eco-menu{
-  font-size: 4vw;
-  letter-spacing: 0.5vw;
-}
-  /* coral reef ecosystem page edit */ 
- .animation-container{
-    height: 80vh; 
-  }
-  /* animation page edit */ 
-  /* The Modal (background) */
-  #turtle-modal, #shark-modal, #lionfish-modal, #triggerfish-modal, #clownfish-modal, #crab-modal{
-     border-radius: 1rem;
-  }
-  .modal-img{
-    height: 100%;
-    width: 75%;
-    border-radius: 1rem;
-  }
-  .coral-animation-empty{
-    background-color: transparent;
-    width: 12.5%;
-    flex: 0 2 12.5%;
-  }
-  .coral-animation-animal{
-    background-color: transparent;
-    width: 50%;
-    flex: 0 1 50%;
-    display: flex;
-    flex-direction: column;
-  }
-  .coral-animation-shark{
-    background-color: transparent;
-    width: 50%;
-    flex: 0 1 50%;
-    display: flex;
-  }
-  }
 
-@media screen and (min-width:0px) and (max-width: 700px) and (orientation: portrait){
-  /* adventure map body*/
-  #admap-body{
-    margin:0;
-    overflow:hidden;
-  }
-  /* div for adventure map to rotate screen if screen.orientation.lock does not work */
-  .wrapper{
-    transform: rotate(90deg);
-    transform-origin:bottom left;
-    position:absolute;
-    top: -100vw;
-    left: 0;
-    height:100vw;
-    width:100vh;
-    background-color:#54CEF7;;
-    overflow:hidden;
-  }
-  /* <nav> for adventure map toggle class*/
-  .admap-menu-open{
-    height: 100vw;
-    overflow:auto;
-  }
-  /* <nav> for ecosystems */
-  #ecosystem-nav{
-    position: fixed;
-  }
-  /* class toggle for ecosystem pages nav menu */
-  .nav-portrait{
-    height: 100vh;
-    overflow:auto;
-    position: fixed;
-  }
-  /* adventure map svg*/
-  #svg66{
-    position: relative;
-    height:100vw;
-    width:100vh;
-  }
-  nav{
-    height: 10%;
-  }
-/* modals hidden class */
-.admap-modal-hidden, .admap-hover-hidden{
-  display: none;
-}
-a, a:hover{
-  color: unset;
-}
-/* when toggled to #modal-wrapper prevents hover modals from activating*/
-.modal-wrapper{
-  z-index:4;
-  width:100vh;
-  height:100vw;
-  position: absolute;
-  left:0;
-  top:0;
-}
-/* clickable modals */
-.admap-modal{
-  z-index:4;
-  top:0;
-  left:0;
-  position: absolute;
-  padding:1vw 1vh;
-  width: 30vh; 
-  height: 45vw; 
-  overflow: hidden; 
-  border-radius: 1rem;
-  background-color:rgb(255,107,53,0.8);
-  box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
-}
-/* modal: flexbox */
-.marker-flexbox{
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  height: 90%;
-  width: 100%;
-  padding-bottom: 1%;
-}
-/* modals on hover*/
-.admap-modal-hover{
-  z-index:2;
-  top:0;
-  left:0;
-  position: absolute;
-  padding:1vw 1vh;
-  width: 30vh; 
-  height: 45vw; 
-  overflow: hidden; 
-  border-radius: 1rem;
-  background-color:rgb(255,107,53,0.8);
-  box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
-}
-  /* flex item, img at background */
-  .marker-flexitem-img{
-    height: 70%;
-    width: 58%;
-  }
-  .explore-button{
-    vertical-align: middle;
-    font-size:3vw;
-    margin-top: 5vw;
-    padding: 1.5%;
-    text-align:center;
-    background-color:#E9D758;
-    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
-    border-radius:5rem;
-  }
-  section{
-    padding: 0 5% 0 5%;
-    margin: 0;
-    width: 100%;
-  }
-  /* nav bar menu list */
-  #side-bar{
-    display: none;
-  }
-  /* compass image div (flex item)*/
-    .side-menu-img{
-    flex-basis: 30%;
-    display: block;
-    min-width: 18vw;
-    min-height: 18vh;
-    display:flex;
-    justify-content: flex-end;
-  }
-  /* menu options and links  (div - flex item)*/
-    .side-menu{
-    display: none;
-    flex-basis: 70%;
-    height: 200vh;
-    min-height: 100vh;
-  }
-  /* compass image */
-  #menu{
-    min-width: 18vw;
-    min-height: 18vh;
-    max-width: 100%;
-    max-height: 18vh;
-  }
-  .menu-title{
-    font-size: 8vw;
-  }
-  li, .marine-eco-menu{
-  font-size: 4vw;
-  letter-spacing: 0.5vw;
-  padding-bottom:5%;
-  }
-  /* coral reef ecosystem page edit */ 
-  .animation-container{
-    height: 60vh; 
-  }
-  /* animation page edit */ 
-  .coral-animation-empty{
+.coral-animation-empty {
     background-color: transparent;
     width: 25%;
     flex: 0 2 25%;
-  }
-  .coral-animation-animal{
+}
+
+.coral-animation-animal {
     background-color: transparent;
     width: 25%;
     flex: 0 1 25%;
     display: flex;
     flex-direction: column;
-  }
-  .coral-animation-shark{
+}
+
+.coral-animation-shark {
     background-color: transparent;
     width: 50%;
     flex: 0 1 50%;
     display: flex;
-  }
+}
+
+
+/* Define the animals */
+
+.animal-st {
+    width: 20vw;
+    height: auto;
+    top: 10px;
+    left: 0;
+}
+
+
+/* sea turle */
+
+.animal-lf {
+    max-width: 10vw;
+    height: auto;
+    top: 10px;
+    left: 0;
+}
+
+
+/* lionfish */
+
+.animal-rs {
+    max-width: 40vw;
+    height: auto;
+    left: 0;
+}
+
+
+/* reef shark */
+
+.animal-tf {
+    max-width: 20vw;
+    height: auto;
+    top: 10px;
+    left: 0;
+}
+
+
+/* triggerfish */
+
+.animal-cf {
+    max-width: 20vw;
+    height: auto;
+    top: 10px;
+    left: 0;
+}
+
+
+/* Clownfish */
+
+.animal-cfa {
+    width: 20vw;
+    height: auto;
+    top: 10px;
+    left: 0;
+}
+
+
+/* Clownfish and anemone */
+
+.animal-c {
+    width: 10vw;
+    height: auto;
+    margin-top: 60%;
+    left: 0;
+}
+
+
+/* Crab */
+
+
+/* Define the animations for the coral animation animals */
+
+.animal-st,
+.animal-lf,
+.animal-rs,
+.animal-tf,
+.animal-cf,
+.animal-cfa,
+.animal-c {
+    animation-name: floating;
+    -webkit-animation-name: floating;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+}
+
+.animal-st {
+    animation-duration: 13s;
+}
+
+.animal-lf {
+    animation-duration: 10s;
+}
+
+.animal-rs {
+    animation-duration: 12s;
+}
+
+.animal-tf {
+    animation-duration: 7s;
+}
+
+.animal-cf {
+    animation-duration: 8s;
+}
+
+.animal-cfa {
+    animation: unset;
+}
+
+.animal-c {
+    animation-duration: 6s;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    25% {
+        transform: translate(0%, 20%);
+    }
+    50% {
+        transform: translate(0%, 5%);
+    }
+    75% {
+        transform: translate(0%, 15%);
+    }
+    100% {
+        transform: translate(0%, 0%);
+    }
+}
+
+
+/* on hover animation stops */
+
+.animal-st:hover,
+.animal-lf:hover,
+.animal-rs:hover,
+.animal-tf:hover,
+.animal-cf:hover,
+.animal-c:hover {
+    animation-play-state: paused
+}
+
+
+/* tablet screen portrait */
+
+@media screen and (min-width: 700px) and (max-width: 1200px) and (orientation: portrait) {
+    /* adventure map */
+    #admap-body {
+        margin: 0;
+        overflow: hidden;
+    }
+    /* div for adventure map to rotate screen if screen.orientation.lock does not work */
+    .wrapper {
+        transform: rotate(90deg);
+        transform-origin: bottom left;
+        position: absolute;
+        top: -100vw;
+        left: 0;
+        height: 100vw;
+        width: 100vh;
+        background-color: #54CEF7;
+        ;
+        overflow: hidden;
+    }
+    /*logo */
+    #ad-ocyan-logo {
+        margin-top: 2vw;
+        margin-left: 1.5vh;
+        z-index: 9;
+        width: 30vh;
+        height: auto;
+        position: fixed;
+        cursor: pointer;
+    }
+    /*compass drawing*/
+    #compass-img {
+        margin-top: 2vh;
+        margin-right: 1.5vw;
+        width: 20vw;
+        height: auto;
+        position: fixed;
+        cursor: pointer;
+    }
+    /* compass image fiv for adventure map*/
+    .ad-side-menu-img {
+        display: block;
+        width: 30vw;
+        height: 30vh;
+        overflow: auto;
+        flex-basis: 15%;
+    }
+    /* adventure map image */
+    #svg66 {
+        position: relative;
+        height: 100vw;
+        width: 100vh;
+        overflow: hidden;
+        /*top:-30vw;*/
+        cursor: pointer;
+    }
+    /* when toggled to #modal-wrapper prevents hover modals from activating*/
+    .modal-wrapper {
+        z-index: 4;
+        width: 100vh;
+        height: 100vw;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    /* modals hidden class */
+    .admap-modal-hidden,
+    .admap-hover-hidden {
+        display: none;
+    }
+    /* clickable modals */
+    .admap-modal {
+        z-index: 4;
+        top: 0;
+        left: 0;
+        position: absolute;
+        padding: 1vw 1vh;
+        width: 30vh;
+        height: 45vw;
+        overflow: hidden;
+        border-radius: 1rem;
+        background-color: rgb(255, 107, 53, 0.8);
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    }
+    /* modal: flexbox */
+    .marker-flexbox {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        height: 90%;
+        width: 100%;
+        padding-bottom: 1%;
+    }
+    /* modals on hover*/
+    .admap-modal-hover {
+        z-index: 2;
+        top: 0;
+        left: 0;
+        position: absolute;
+        padding: 1vw 1vh;
+        width: 30vh;
+        height: 45vw;
+        overflow: hidden;
+        border-radius: 1rem;
+        background-color: rgb(255, 107, 53, 0.8);
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+    }
+    /* flex item, img at background */
+    .marker-flexitem-img {
+        height: 58%;
+        width: 70%;
+    }
+    .explore-button {
+        vertical-align: middle;
+        margin-top: 5vh;
+        padding: 1.5%;
+        text-align: center;
+        background-color: #E9D758;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+        border-radius: 5rem;
+        cursor: pointer;
+    }
+    /* adventure map */
+    /* toggle class for menu on all other pages */
+    .nav-portrait {
+        height: 100vh;
+        overflow: auto;
+        position: fixed;
+    }
+    /* coral side images */
+    #side-bar {
+        display: none;
+    }
+    section {
+        padding: 15% 5% 0 5%;
+        margin: 0;
+        width: 100%;
+    }
+    /*logo */
+    #ocyan-logo {
+        margin-top: 2vh;
+        margin-left: 1.5vw;
+        z-index: 0;
+        width: 40vw;
+        height: auto;
+        position: fixed;
+    }
+    #menu {
+        margin-top: 2.5vh;
+        margin-right: 1.5vw;
+        width: 18vw;
+        height: auto;
+    }
+    .side-menu-img {
+        flex-basis: 20%;
+        width: 15vw;
+        height: 25vh;
+    }
+    .side-menu {
+        display: none;
+        flex-basis: 80%;
+        height: 400vh;
+        min-height: 100vh;
+    }
+    .menu-title {
+        font-size: 8vw;
+    }
+    li,
+    .marine-eco-menu {
+        font-size: 4vw;
+        letter-spacing: 0.5vw;
+        padding-bottom: 5%;
+    }
+}
+
+
+/* tablet landscape*/
+
+@media screen and (min-width: 700px) and (max-width: 1390px) and (orientation: landscape) {
+    /* .wrapper{
+    position:absolute;
+    left: 0;
+    height:100vh;
+    width:100vw;
+    background-color: #54CEF7;
+    overflow:hidden;
+  }*/
+    .side-menu {
+        display: none;
+        flex-basis: 60%;
+        height: 400vh;
+        min-height: 100vh;
+    }
+    section {
+        padding: 10% 17.5% 0% 17.5%;
+        margin: 0;
+        width: 100%;
+    }
+    .menu-title {
+        font-size: 8vw;
+    }
+    li,
+    .marine-eco-menu {
+        font-size: 4vw;
+        letter-spacing: 0.5vw;
+    }
+    .animation-container {
+        height: 80vh;
+    }
+    .explore-button {
+        vertical-align: middle;
+        margin-top: 4vh;
+        padding: 1.5%;
+        text-align: center;
+        background-color: #E9D758;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+        border-radius: 5rem;
+        cursor: pointer;
+    }
+}
+
+
+/* mobile screen and landscape orientation */
+
+@media screen and (min-width: 0px) and (max-width: 700px) and (orientation: landscape) {
+    /*.wrapper{
+    position:absolute;
+    left: 0;
+    height:100vh;
+    width:100vw;
+    background-color: #54CEF7;
+    overflow:hidden;
+  }*/
+    section {
+        padding: 0 18% 0 18%;
+        margin: 0;
+        width: 100%;
+    }
+    /* compass image div (flex item)*/
+    .side-menu-img {
+        flex-basis: 15%;
+        width: 10vw;
+        height: 40vh;
+        overflow: auto;
+    }
+    /* menu options and links  (div - flex item)*/
+    .side-menu {
+        display: none;
+        flex-basis: 70%;
+        height: 400vh;
+        min-height: 400vh;
+        overflow: auto;
+    }
+    .menu-title {
+        font-size: 8vw;
+    }
+    li,
+    .marine-eco-menu {
+        font-size: 4vw;
+        letter-spacing: 0.5vw;
+    }
+    /* coral reef ecosystem page edit */
+    .animation-container {
+        height: 80vh;
+    }
+    /* animation page edit */
+    /* The Modal (background) */
+    #turtle-modal,
+    #shark-modal,
+    #lionfish-modal,
+    #triggerfish-modal,
+    #clownfish-modal,
+    #crab-modal {
+        border-radius: 1rem;
+    }
+    .modal-img {
+        height: 100%;
+        width: 75%;
+        border-radius: 1rem;
+    }
+    .coral-animation-empty {
+        background-color: transparent;
+        width: 12.5%;
+        flex: 0 2 12.5%;
+    }
+    .coral-animation-animal {
+        background-color: transparent;
+        width: 50%;
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    .coral-animation-shark {
+        background-color: transparent;
+        width: 50%;
+        flex: 0 1 50%;
+        display: flex;
+    }
+}
+
+@media screen and (min-width:0px) and (max-width: 700px) and (orientation: portrait) {
+    /* adventure map*/
+    /*logo */
+    #ad-ocyan-logo {
+        margin-top: 2vh;
+        margin-left: 1.5vw;
+        z-index: 9;
+        width: 50vw;
+        height: auto;
+        position: fixed;
+    }
+    /* div for adventure map to rotate screen if screen.orientation.lock does not work */
+    .wrapper {
+        transform: rotate(90deg);
+        transform-origin: bottom left;
+        position: absolute;
+        top: -100vw;
+        left: 0;
+        height: 100vw;
+        width: 100vh;
+        background-color: #54CEF7;
+        ;
+        overflow: hidden;
+    }
+    /* <nav> for adventure map toggle class*/
+    .admap-menu-open {
+        height: 100vw;
+        overflow: auto;
+    }
+    /* adventure map svg*/
+    #svg66 {
+        position: relative;
+        height: 100vw;
+        width: 100vh;
+    }
+    /* modals hidden class */
+    .admap-modal-hidden,
+    .admap-hover-hidden {
+        display: none;
+    }
+    /* when toggled to #modal-wrapper prevents hover modals from activating*/
+    .modal-wrapper {
+        z-index: 4;
+        width: 100vh;
+        height: 100vw;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    /* clickable modals */
+    .admap-modal {
+        z-index: 4;
+        top: 0;
+        left: 0;
+        position: absolute;
+        padding: 1vw 1vh;
+        width: 30vh;
+        height: 45vw;
+        overflow: hidden;
+        border-radius: 1rem;
+        background-color: rgb(255, 107, 53, 0.8);
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    }
+    /* modal: flexbox */
+    .marker-flexbox {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        height: 90%;
+        width: 100%;
+        padding-bottom: 1%;
+    }
+    /* modals on hover*/
+    .admap-modal-hover {
+        z-index: 2;
+        top: 0;
+        left: 0;
+        position: absolute;
+        padding: 1vw 1vh;
+        width: 30vh;
+        height: 45vw;
+        overflow: hidden;
+        border-radius: 1rem;
+        background-color: rgb(255, 107, 53, 0.8);
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    }
+    /* flex item, img at background */
+    .marker-flexitem-img {
+        height: 70%;
+        width: 58%;
+    }
+    .explore-button {
+        vertical-align: middle;
+        font-size: 3vw;
+        margin-top: 5vw;
+        padding: 1.5%;
+        text-align: center;
+        background-color: #E9D758;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+        border-radius: 5rem;
+    }
+    /*compass drawing*/
+    #compass-img {
+        margin-top: 4vh;
+        margin-right: 1.5vw;
+        width: 12vw;
+        height: auto;
+        position: fixed;
+    }
+    /* compass image fiv for adventure map*/
+    .ad-side-menu-img {
+        flex-basis: 5%;
+        display: block;
+        width: 10vh;
+        height: 30vh;
+        overflow: auto;
+    }
+    /*logo */
+    #ocyan-logo {
+        margin-top: 4vh;
+        margin-left: 1.5vw;
+        z-index: 0;
+        width: 50vw;
+        height: auto;
+        position: fixed;
+    }
+    /* class toggle for ecosystem pages nav menu */
+    .nav-portrait {
+        height: 100vh;
+        overflow: auto;
+        position: fixed;
+    }
+    section {
+        padding: 25% 5% 0 5%;
+        margin: 0;
+        width: 100%;
+    }
+    /* nav bar menu list */
+    #side-bar {
+        display: none;
+    }
+    /* compass image div (flex item)*/
+    .side-menu-img {
+        flex-basis: 30%;
+        display: block;
+        display: block;
+    }
+    /* menu options and links  (div - flex item)*/
+    .side-menu {
+        display: none;
+        flex-basis: 70%;
+        height: 200vh;
+        min-height: 100vh;
+    }
+    /* compass image */
+    #menu {
+        margin-top: 1.5vh;
+        margin-right: 1.5vw;
+        width: 30vw;
+        height: auto;
+    }
+    .menu-title {
+        font-size: 8vw;
+    }
+    li,
+    .marine-eco-menu {
+        font-size: 4vw;
+        letter-spacing: 0.5vw;
+        padding-bottom: 5%;
+    }
+    /* coral reef ecosystem page edit */
+    .animation-container {
+        height: 60vh;
+    }
+    /* animation page edit */
+    .coral-animation-empty {
+        background-color: transparent;
+        width: 25%;
+        flex: 0 2 25%;
+    }
+    .coral-animation-animal {
+        background-color: transparent;
+        width: 25%;
+        flex: 0 1 25%;
+        display: flex;
+        flex-direction: column;
+    }
+    .coral-animation-shark {
+        background-color: transparent;
+        width: 50%;
+        flex: 0 1 50%;
+        display: flex;
+    }
 }
