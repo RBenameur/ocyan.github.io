@@ -25,7 +25,7 @@ Keep an eye out for updates! 👀
 
 * [Github](https://github.com/) 
 
-## Contributing and collaborating
+## Contributing 
 
 Thank you for your interest in our project, please contact us at ocyanproject@gmail.com if you would like to contribute! 
 
