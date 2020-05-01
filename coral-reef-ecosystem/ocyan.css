@@ -342,6 +342,7 @@ li,
     font-size: 3.5vw;
     letter-spacing: 0.2vw;
     padding: 2% 2% 2% 2%;
+}
     text-decoration: none;
     list-style-type: none;
     color: white;
@@ -558,6 +559,25 @@ section {
 }
 
 .coral-animation-container {
+  }
+
+  /**quiz popup***/
+  #coraltestknowlege {
+    z-index: 2;
+  }
+
+  #to-quiz {    /*click button to navigate to quiz*/
+    z-index: 2;
+  }
+
+  /* coral reef ecosystem page edit */ 
+
+  #whattypes-oalicf{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+  }
+  .animation-container{
     margin: 0;
     padding: 0;
     background-image: url("./coral-reef-background.png");
