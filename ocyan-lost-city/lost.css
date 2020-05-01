@@ -189,9 +189,17 @@ p {
   width: 3em;
 }
 
+/*make sure user's name is capitalised*/
+.changeName {
+  text-transform: capitalize;
+}
+
 
 /*Medium devices (tablets)*/
 @media (max-width: 767.98px) {
   .trash-container {display: none;}
+  #mascot-swim {
+    right: .8em;
+    top: 12em;
   }
 }

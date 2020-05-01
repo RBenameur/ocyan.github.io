@@ -5,7 +5,14 @@ const epilogueBtn = document.getElementById("epilogue-btn");
 const closeEpilogueBtn = document.querySelector(".exit-epilogue");
 let scrollBar = window.innerWidth - document.body.offsetWidth;
 const trash = document.querySelectorAll(".trash");
+const userNameInput = localStorage.getItem("username");
 
+//input user's name into the story
+$(document).ready(function(){
+  $(".changeName").each(function() {
+    $(this).text(""+userNameInput+"");
+  });
+});
 
 //randomly place trash
 $(trash).each(function () {
@@ -21,7 +28,7 @@ $(trash).each(function () {
 //parallax on mascot
 window.addEventListener("scroll", function(e) {
   var swimmingMascot = document.getElementById("mascot-swim");
-  var swimRate = 0 - window.pageYOffset / -30;
+  var swimRate = (0 - window.pageYOffset / -50) + 192;
   swimmingMascot.style.top = swimRate + "px";
 }); 
 
