@@ -152,7 +152,7 @@ p {
   padding: 3em;
 }
 
-/**background elements**/ 
+/**background elements parallax**/ 
 #mascot-swim {
   position: fixed;
   right: 13em;
@@ -163,3 +163,12 @@ p {
   z-index: 20;
 }
 
+.trash-container {
+  height: 60%;
+  width: 100vw;
+}
+
+.trash {
+  height: 10em;
+  width: 10em;
+}

@@ -1,4 +1,35 @@
+
+//button to access lost city
+const accessLostCity = document.getElementById("lost-city-access");   //id on lost-city button 
+let userPoints = JSON.parse(localStorage.getItem("totalPoints"));
+let totalUserPoints = 0;
+
+function checkPoints() {
+    console.log( "window loaded" );
+    for(let key in userPoints) {
+        totalUserPoints += userPoints[key]; 
+      }
+      //check if user has reached 100 points or passed the first quiz
+      if(totalUserPoints == 100) {
+        alert("access unlocked");
+        $("#cf-dark").css("fill","#4C9B57");
+        $("#cf-dark2").css("fill","#4C9B57");
+        $("#cf-dark3").css("fill","#4C9B57");
+        $("#cf-light").css("fill","#62D375");
+        $("#l-dark1").css("fill","#4C9B57");
+        $("#l-dark2").css("fill","#4C9B57");
+        $("#l-dark3").css("fill","#4C9B57");
+        $("#l-light").css("fill","#62D375");
+        accessLostCity.setAttribute("href", "../ocyan-lost-city/lost-city.html");
+      }
+      else {
+        alert("access denied");  // paste here code for the modal saying it doesn't allow access
+      }
+      return totalUserPoints;
+}
+
 $(document).ready(function() {
+    checkPoints();
     $('#compass-img').on({
         'click': function() {
             var src = ($(this).attr('src') === '../navigation-menu-folder/navigation-menu-w.png') ?
