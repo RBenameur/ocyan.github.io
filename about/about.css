@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,body {
+  height: 100vh;
+  width: 100vw;
+  font-size: 13px;
+}
+
+.about-ocyan {
+  display: block;
+  height: 100%;
+  width: 74vw;
+  background-image: url("emptyabout.png");
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+  z-index: -3;
+}
+
+
+#side-bar {
+  z-index: 3 !important;
+}
+
+.about-text {
+  position: absolute;
+  top: 19em;
+  left:22em;
+  width: 30vw;
+}
+
+.about-title {
+  position: absolute;
+  top: 5.2em;
+  left:11em;
+  font-weight: bold;
+}
