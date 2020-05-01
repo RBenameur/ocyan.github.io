@@ -4,7 +4,7 @@ Website created as part of a Hackathon initiated to respond to Covid-19 pandemic
 
 ## Getting Started
 
-Educational website teaching children about marine ecosystems and animals, aimed at children and their parents/carers currently on lockdown
+Educational website teaching children about marine ecosystems and animals, helping with homeschooling during current lockdown
 
 * Quizz and pop up modals
 
