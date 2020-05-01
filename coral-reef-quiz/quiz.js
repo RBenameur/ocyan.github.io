@@ -228,13 +228,14 @@ function displayResults() {
   //hint which areas the users need to work on
   let hintContainer = document.querySelector(".hint-container");
   if (score == 10) {
-    hintContainer.textContent = "Fantastic job! You've placed a flag/green marker on this ecoystem in the map";
+    hintContainer.textContent = "Fantastic! You have placed a green marker on this ecosystem in the map. Save your score to unlock the Ocyan Lost City content now!";
+    hintContainer.style.fontSize = "2rem";
   }
   else {
     hintContainer.textContent = "Hint: try revisiting the following...";
   }
   let hintList = document.createElement("p");
-  //innerHTML so <br> is rendered
+  // <br> rendered
   hintList.innerHTML = `<br><p class="nonbold fade-in">`+wrongListHints.join("<br>")+`</p>`;
   hintContainer.appendChild(hintList);
 }
@@ -354,5 +355,6 @@ resetBtn.addEventListener("click", function() {
 //save score
 saveScoreBtn.addEventListener("click", function() {
   updatePointsDataObj();
+  turnMarkerGreen();
 });
 })();
