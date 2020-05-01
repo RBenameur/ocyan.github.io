@@ -1,17 +1,15 @@
 
 //button to access lost city
-const accessLostCity = document.getElementById("lost-city-access");   //id on lost-city button 
 let userPoints = JSON.parse(localStorage.getItem("totalPoints"));
 let totalUserPoints = 0;
 
 function checkPoints() {
-    console.log( "window loaded" );
     for(let key in userPoints) {
         totalUserPoints += userPoints[key]; 
       }
       //check if user has reached 100 points or passed the first quiz
       if(totalUserPoints == 100) {
-        alert("access unlocked");
+        alert("allowed");
         $("#cf-dark").css("fill","#4C9B57");
         $("#cf-dark2").css("fill","#4C9B57");
         $("#cf-dark3").css("fill","#4C9B57");
@@ -20,12 +18,7 @@ function checkPoints() {
         $("#l-dark2").css("fill","#4C9B57");
         $("#l-dark3").css("fill","#4C9B57");
         $("#l-light").css("fill","#62D375");
-        accessLostCity.setAttribute("href", "../ocyan-lost-city/lost-city.html");
       }
-      else {
-        alert("access denied");  // paste here code for the modal saying it doesn't allow access
-      }
-      return totalUserPoints;
 }
 
 $(document).ready(function() {
@@ -456,6 +449,16 @@ $(document).ready(function() {
         };
     });
     $("#lostcity").click(function() {
+        $("#explore-anchor").attr("class", "access-lost-city");
+        function () {
+            if(totalUserPoints == 100) {
+                $(".access-lost-city").attr("href", "../ocyan-lost-city/lost-city.html");
+            }
+            else {
+                $(".access-lost-city").removeAttr("href");
+            }
+        }
+
         $("#modal-wrapper").toggleClass("modal-wrapper");
         $("#admap-sf").removeClass("admap-modal-hidden");
         $("#admap-sf").addClass("admap-modal");
