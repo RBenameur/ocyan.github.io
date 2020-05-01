@@ -1,197 +1,207 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
-html, body {
-  position: relative;
-  height: auto;
-  line-height: 2;
-  font-size: 16px;
-  /*font-weight: bold;*/
+html,
+body {
+    position: relative;
+    height: auto;
+    line-height: 2;
+    font-size: 16px;
+    /*font-weight: bold;*/
 }
 
 .sea-gradient {
-  height: 100%;
-  background-color: red;
-  background: linear-gradient( #A6E3FB,#007EA7,#007EA7, #29539B, #134074, #134074, #191970, #09C6F9, #09C6F9);
-  background-repeat: no-repeat;
-  width: 100vw;
-  z-index: -3;
+    height: 100%;
+    background-color: red;
+    background: linear-gradient( #A6E3FB, #007EA7, #007EA7, #29539B, #134074, #134074, #191970, #09C6F9, #09C6F9);
+    background-repeat: no-repeat;
+    width: 100vw;
+    z-index: -3;
 }
 
 p {
-  font-size: 1.2em;
+    font-size: 1.2em;
 }
 
 .absolute {
-  position: absolute;
-  top: 0;
-  left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .center {
-  margin: 0 auto;
-  text-align: center;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .push-down {
-  margin-top: 20em;
+    margin-top: 20em;
 }
+
+
 /*background of story*/
+
 #story {
-  position: relative;
-  width: 80%;
-  height: auto;
-  color: #000;
-  margin: 4em auto;
-  padding-left: 2em;
-  padding-right: 1.5em;
-  padding-bottom : 2em;
-  background-color: rgba(255,255,255,.7);
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
+    position: relative;
+    width: 80%;
+    height: auto;
+    color: #000;
+    margin: 4em auto;
+    padding-left: 2em;
+    padding-right: 1.5em;
+    padding-bottom: 2em;
+    background-color: rgba(255, 255, 255, .7);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 #story::before {
-  position: absolute;
-  top: -6em;
-  right: 0;
-  content: '';
-  width: 100%;
-  height: 6em;
-  padding-bottom: 3em;
-  background-color: rgba(255,255,255,.7);
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
-  z-index: -1;
+    position: absolute;
+    top: -6em;
+    right: 0;
+    content: '';
+    width: 100%;
+    height: 6em;
+    padding-bottom: 3em;
+    background-color: rgba(255, 255, 255, .7);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    z-index: -1;
 }
 
-#story-title  {
-  width: 80%;
-  height: 2em;
-  padding-top: 2em;
-  margin: 0 auto;
-  text-align: center;
+#story-title {
+    width: 80%;
+    height: 2em;
+    padding-top: 2em;
+    margin: 0 auto;
+    text-align: center;
 }
 
 #lost-city {
-  max-height: 600px;
-  width: 100%;
-  margin: 0 auto;
-  padding-top: m;
+    max-height: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: m;
 }
 
 #lost-city-img {
-  display: block;
-  height: 80vh;
-  width: 100%;
-  z-index: -1;
+    display: block;
+    height: 80vh;
+    width: 100%;
+    z-index: -1;
 }
 
+
 /**Epilogue**/
+
 
 /**source:https://www.eggradients.com/category/ocean-gradient**/
 
 #epilogue-btn {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
 
 #ending {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100vw;
-  padding-top: 35em;
-  background-color: rgba(0,0,0,.6);
-  overflow-y: auto;
-  font-weight: 300;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+    padding-top: 35em;
+    background-color: rgba(0, 0, 0, .6);
+    overflow-y: auto;
+    font-weight: 300;
 }
 
-.epilogue-container  {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex;
-  align-items: flex;
-  height: auto;
-  width: 60vw;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  background-color: #e6e6e6;
+.epilogue-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex;
+    align-items: flex;
+    height: auto;
+    width: 60vw;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-color: #e6e6e6;
 }
 
 .exit-epilogue {
-  position: absolute;
-  top: .2em;
-  right: .4em;
-  height: 1em;
-  width: 1em;
-  font-size: 3em;
-  font-weight:bold;
-  text-align: center;
-  transform: rotate(45deg);
-  cursor: pointer;
+    position: absolute;
+    top: .2em;
+    right: .4em;
+    height: 1em;
+    width: 1em;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    transform: rotate(45deg);
+    cursor: pointer;
 }
 
 .epilogue-img-container {
-  height: 40%;
-  width: 100%;
+    height: 40%;
+    width: 100%;
 }
 
 .ending-img {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 .epilogue-txt {
-  padding: 0 3em 3em 3em;
+    padding: 0 3em 3em 3em;
 }
 
-/**background elements parallax**/ 
+
+/**background elements parallax**/
+
 #mascot-swim {
-  position: fixed;
-  right: 13em;
-  top: 12em;
-  display: block;
-  height: 6em;
-  width: 3em;
-  z-index: 20;
+    position: fixed;
+    right: 13em;
+    top: 12em;
+    display: block;
+    height: 6em;
+    width: 3em;
+    z-index: 2;
 }
 
 .trash-container {
-  position: absolute;
-  left:0;
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
-  width: 100vw;
-  padding-top: 10em;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100vw;
+    padding-top: 10em;
 }
 
 .trash {
-  height: 8em;
-  width: 5em;
+    height: 8em;
+    width: 5em;
 }
 
 .trash-right,
 .trash-left {
-  width: 30%;
+    width: 30%;
 }
 
 .thin {
-  width: 3em;
+    width: 3em;
 }
 
 
 /*Medium devices (tablets)*/
+
 @media (max-width: 767.98px) {
-  .trash-container {display: none;}
-  }
+    .trash-container {
+        display: none;
+    }
 }
