@@ -260,13 +260,6 @@ function resetQuiz() {
   submitBtn.style.display = "none";
 }
 
-
-function turnMarkerGreen() {
-  if (score*10 == 100) {
-    console.log("yay");
-  }
-}
-
 //update points to local storage
 function updatePointsDataObj () {
   pointsData.coralQuiz = score *10;
