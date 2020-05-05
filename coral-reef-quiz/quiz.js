@@ -111,7 +111,7 @@
             correctAnswer: 'd'
         },
         {
-            question: "Q9. How many plastic bags are there?",
+            question: "Q9. How many plastic bags are there on the coral reef content page?",
             img: "https://images.unsplash.com/photo-1533713692156-f70938dc0d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80",
             hint: "-Count and click on the plastic bags on the coral reef page",
             a: "5",
@@ -121,7 +121,7 @@
             correctAnswer: 'b'
         },
         {
-            question: "Q10. How many plastic bottles are there?",
+            question: "Q10. How many plastic bottles are there on the coral reef content page?",
             img: "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80",
             hint: "-Count and click on the bottles on the coral reef page",
             a: "6*",
@@ -213,7 +213,7 @@ function displayResults() {
   //hint which areas the users need to work on
   let hintContainer = document.querySelector(".hint-container");
   if (score == 10) {
-    hintContainer.textContent = "Fantastic! You have placed a green marker on this ecosystem in the map. Save your score to unlock the Ocyan Lost City content now!";
+    hintContainer.textContent = "Fantastic! You have placed a green marker on this ecosystem in the map. Save your score to unlock the Ocyan City content now and then visit the X on the map!";
     hintContainer.style.fontSize = "2rem";
   }
   else {
@@ -224,24 +224,6 @@ function displayResults() {
   hintList.innerHTML = `<br><p class="nonbold fade-in">`+wrongListHints.join("<br>")+`</p>`;
   hintContainer.appendChild(hintList);
 }
-
-    //display score
-    function displayResults() {
-        let percentage = (score * 100) / questions.length;
-        let resultTxt = document.querySelector(".result-text").textContent = "You got " + percentage + "% or " + score + " out of " + questions.length + " questions correct.";
-        //hint which areas the users need to work on
-        let hintContainer = document.querySelector(".hint-container");
-        if (score == 10) {
-            hintContainer.textContent = "Fantastic job! You've placed a flag/green marker on this ecoystem in the map";
-        } else {
-            hintContainer.textContent = "Hint: try revisiting the following...";
-        }
-        let hintList = document.createElement("p");
-        //innerHTML so <br> is rendered
-        hintList.innerHTML = `<br><p class="nonbold fade-in">` + wrongListHints.join("<br>") + `</p>`;
-        hintContainer.appendChild(hintList);
-    }
-
     //update progress bar and question status
     function updateProgress() {
         const questionStatus = document.querySelector(".question-num");
@@ -265,7 +247,7 @@ function displayResults() {
     //update points to local storage
     function updatePointsDataObj() {
         pointsData.coralQuiz = score * 10;
-        localStorage.setItem("totalPoints", JSON.stringify(pointsData))
+        localStorage.setItem("totalPoints", JSON.stringify(pointsData));
         console.log(JSON.stringify(pointsData));
     }
 
@@ -348,9 +330,13 @@ function displayResults() {
         });
     });
 
+//reset quiz
+resetBtn.addEventListener("click", function() {
+    resetQuiz();
+});
+    
 //save score
 saveScoreBtn.addEventListener("click", function() {
   updatePointsDataObj();
-  turnMarkerGreen();
 });
 })();
