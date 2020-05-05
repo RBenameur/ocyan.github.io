@@ -1,5 +1,9 @@
 /* desktop */
 
+#animation-close {
+    cursor: pointer;
+}
+
 .instructions-open {
     position: fixed;
     margin-left: 17.5vw;

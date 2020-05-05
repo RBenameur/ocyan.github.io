@@ -1,10 +1,18 @@
 $(document).ready(function() {
+
+    const userNameInput = localStorage.getItem("username");
+
+    //input user's name into instructions
+    $(".changeName").text("" + userNameInput + ",");
+
+    // instructions pop up
     $("#map-instructions-close").click(function() {
         $("#instructions-div").removeClass("instructions-open");
         $("#instructions-div").addClass("instructions-closed");
         $("#instructions-button").removeClass("instructions-button-closed");
         $("#instructions-button").addClass("instructions-button-open");
     });
+    // instructions button
     $("#instructions-button").click(function() {
         $("#instructions-div").removeClass("instructions-closed");
         $("#instructions-div").addClass("instructions-open");
