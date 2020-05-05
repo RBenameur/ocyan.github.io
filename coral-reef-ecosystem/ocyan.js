@@ -509,8 +509,9 @@ $(document).ready(function() {
     });
 
     $("#animation-close").click(function() {
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
+        if (parent.window.document.exitFullscreen) {
+            parent.window.document.exitFullscreen();
+            alert("exit")
         } else if (document.mozCancelFullScreen) { /* Firefox */
             document.mozCancelFullScreen();
         } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
