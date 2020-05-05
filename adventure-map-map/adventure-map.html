@@ -10,6 +10,19 @@
 
 <body id="admap-body">
     <div class='wrapper'>
+        <div id="instructions-div" class="instructions-open">
+            <span id="map-instructions-close">&times;</span>
+            <h2 class="instructions-title">Adventure Map Instructions</h2>
+            <div class="speech">
+                <p id="instructions-text"> Hello <span class="changeName">Explorer </span></p>
+                <p id="instructions-text"> Dotted around the <b>Adventure Map</b> you'll find orange location pins. Hover and click on them to navigate to a <b>marine ecosystem</b>.</p>
+                <p id="instructions-text"> Test your knowledge by completing each ecosystem <b>quiz</b> to earn your green location pin and get one step closer to unlocking the <b>top secret X location</b>. </p>
+            </div>
+            <img class="instructions-mascot" src="../landing-mascot.png" alt="Ocyan mascot">
+        </div>
+        <div id="instructions-button" class="instructions-button-closed">
+            <h2 class="instructions-button-title">Instructions</h2>
+        </div>
         <a href="../adventure-map-map/adventure-map.html"><img id="ad-ocyan-logo" src="../navigation-menu-folder/logo-pellet.png" alt="Ocyan logo"></a>
         <nav id="admap-menu" class="admap-menu-closed">
             <div class="ad-side-menu-img"><img id="compass-img" src="../navigation-menu-folder/navigation-menu-w.png" alt="menu"></div>
@@ -17,17 +30,9 @@
                 <h2 class="menu-title"> Menu</h2>
                 <ul class="nav-ul">
                     <li>About Us</li>
-                    <li id="adventure-map" class="marine-eco-menu"><span> Adventure Map </span><svg id="am-icon" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
-          </svg>
-                        <ul class="advent-list">
-                            <li class="advent-li">Instructions</li>
-                            </a>
-                            <a href="adventure-map.html">
-                                <li class="advent-li">Adventure Map</li>
-                            </a>
-                        </ul>
-                    </li>
+                    <a href="adventure-map.html">
+                        <li class="advent-li">Adventure Map</li>
+                    </a>
                     <li> What is a Marine Ecosystem</li>
                     <li id="marine-ecosystem" class="marine-eco-menu"><span> Marine Ecosystems </span> <svg id="me-icon" class="bi bi-chevron-compact-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>

@@ -1,5 +1,116 @@
 /* desktop */
 
+.instructions-open {
+    position: fixed;
+    margin-left: 17.5vw;
+    margin-top: 17.5vh;
+    z-index: 998;
+    width: 65vw;
+    height: 65vh;
+    background-image: url(../prelanding-bkgd.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 65vw 65vh;
+    border-radius: 1rem;
+    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+}
+
+.instructions-closed {
+    position: fixed;
+    margin-left: 15vw;
+    margin-top: 17.5vh;
+    z-index: -1;
+    width: 70vw;
+    height: 65vh;
+    border-radius: 1rem;
+}
+
+#map-instructions-close {
+    position: absolute;
+    top: 1vh;
+    left: 60vw;
+    z-index: 999;
+    color: black;
+    font-size: 3vw;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#instructions-text {
+    font-size: 1.3vw;
+    margin-left: 3%;
+    margin-right: 2.5%;
+    width: 80%;
+}
+
+.instructions-mascot {
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    width: 35%;
+}
+
+.instructions-title {
+    width: 50%;
+    margin: 5% 25% 5% 5%;
+    height: 12%;
+    font-size: 2.3vw;
+    background-color: white;
+    border-radius: 1rem;
+    text-align: center;
+    justify-content: center;
+    padding: 1%;
+}
+
+.instructions-button-title {
+    font-size: 2.3vw;
+}
+
+.instructions-button-open {
+    position: fixed;
+    z-index: 5;
+    vertical-align: middle;
+    margin: 6vh 1.5% 4% 42vw;
+    padding: 1.5%;
+    text-align: center;
+    background-color: #E9D758;
+    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    cursor: pointer;
+    border: unset;
+    width: 16vw;
+    height: 10vh;
+}
+
+.instructions-button-closed {
+    position: fixed;
+    z-index: -1;
+    vertical-align: middle;
+    margin: 6vh 1.5% 4% 42vw;
+    padding: 1.5%;
+    text-align: center;
+    background-color: #E9D758;
+    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    cursor: pointer;
+    border: unset;
+    width: 16vw;
+    height: 10vh;
+}
+
+.speech {
+    width: 50%;
+    padding: 5%;
+    height: 45vh;
+    position: relative;
+    top: 0;
+    background-image: url(../speechbubble.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 28vw 45vh;
+    border-radius: 1rem;
+}
+
 #animation-close {
     font-size: 5vw;
     position: fixed;
@@ -120,6 +231,7 @@
 
 #admap-body {
     background: #54CEF7;
+    overflow: hidden;
 }
 
 
@@ -470,14 +582,6 @@ ul {
     padding: 0;
     height: fit-content;
     cursor: pointer;
-    text-decoration: none;
-    list-style-type: none;
-    color: white;
-}
-
-.advent-list {
-    display: none;
-    height: 15vh;
     text-decoration: none;
     list-style-type: none;
     color: white;

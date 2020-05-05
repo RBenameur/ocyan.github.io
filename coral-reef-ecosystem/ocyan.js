@@ -541,19 +541,6 @@ $(document).ready(function() {
         };
     });
     // On some menu options click additional options appear and arrow rotates
-    $("#adventure-map").click(function() {
-        $(".advent-li").css({ "font-size": "2vw", "padding-bottom": "2%" });
-        $(".nav-ul").css("height", "fit-content");
-        $("#am-icon").toggleClass("rotate");
-        if (ScreenOrientation.type === "landscape-primary" || ScreenOrientation.type === "landscape-secondary" || $(window).height() < $(window).width() && $(window).height() < 800) {
-            $(".advent-list").css("height", "fit-content");
-            $(".nav-ul").css("height", "550vh");
-        } else {
-            $(".advent-list").css("height", "fit-content");
-            $(".nav-ul").css("height", "100vh");
-        };
-        $(".advent-list").animate({ "height": 'toggle' });
-    });
     $("#marine-ecosystem").click(function() {
         $(".marine-eco-li").css({ "font-size": "2vw", "padding-bottom": "2%" });
         $(".nav-ul").css("height", "fit-content");
