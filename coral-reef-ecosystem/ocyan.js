@@ -507,6 +507,18 @@ $(document).ready(function() {
             alert(" I'm sorry, your browser does not support fullscreen mode! Please try a different browser");
         };
     });
+
+    $("#animation-close").click(function() {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) { /* Firefox */
+            document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { /* IE/Edge */
+            document.msExitFullscreen();
+        }
+    });
     // On compass image click menu appears
     $('#menu').on({
         'click': function() {
@@ -536,8 +548,8 @@ $(document).ready(function() {
             });
             $("ul").css("height", "450vh");
         } else {
-            $(".side-menu").css("height", "100vh");
-            $("ul").css("height", "100vh");
+            $(".side-menu").css("height", "400vh");
+            $("ul").css("height", "400vh");
         };
     });
     // On some menu options click additional options appear and arrow rotates
