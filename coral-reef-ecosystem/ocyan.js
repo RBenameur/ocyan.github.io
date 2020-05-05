@@ -509,9 +509,9 @@ $(document).ready(function() {
     });
 
     $("#animation-close").click(function() {
-        if (parent.window.document.exitFullscreen) {
-            parent.window.document.exitFullscreen();
-            alert("exit")
+        if (("#coral-iframe").exitFullscreen) {
+            ("#coral-iframe").exitFullscreen();
+            alert("exit");
         } else if (document.mozCancelFullScreen) { /* Firefox */
             document.mozCancelFullScreen();
         } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
