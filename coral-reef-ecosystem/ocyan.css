@@ -1,5 +1,119 @@
 /* desktop */
 
+.instructions-open {
+    position: fixed;
+    margin-left: 17.5vw;
+    margin-top: 17.5vh;
+    z-index: 998;
+    width: 65vw;
+    height: 65vh;
+    background-image: url(../prelanding-bkgd.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 65vw 65vh;
+    border-radius: 1rem;
+    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+}
+
+.instructions-closed {
+    position: fixed;
+    margin-left: 15vw;
+    margin-top: 17.5vh;
+    z-index: -1;
+    width: 70vw;
+    height: 65vh;
+    border-radius: 1rem;
+}
+
+#map-instructions-close {
+    position: absolute;
+    top: 1vh;
+    left: 60vw;
+    z-index: 999;
+    color: black;
+    font-size: 3vw;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#instructions-text {
+    font-size: 1.3vw;
+    margin-left: 3%;
+    margin-right: 2.5%;
+    width: 80%;
+}
+
+.instructions-mascot {
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    width: 35%;
+}
+
+.instructions-title {
+    width: 50%;
+    margin: 5% 25% 2.5% 25%;
+    height: 12%;
+    font-size: 2.3vw;
+    background-color: white;
+    border-radius: 1rem;
+    text-align: center;
+    justify-content: center;
+    padding: 1%;
+}
+
+.instructions-button-title {
+    font-size: 2.3vw;
+    letter-spacing: 0.1vw;
+}
+
+.instructions-button-open {
+    position: fixed;
+    z-index: 5;
+    vertical-align: middle;
+    margin: 0 1.5% 4% 42vw;
+    padding: 1%;
+    text-align: center;
+    background-color: #E9D758;
+    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    cursor: pointer;
+    border: unset;
+    width: 16vw;
+    height: 8vh;
+}
+
+.instructions-button-closed {
+    position: fixed;
+    z-index: -1;
+    vertical-align: middle;
+    margin: 0 1.5% 4% 42vw;
+    padding: 1.5%;
+    text-align: center;
+    background-color: #E9D758;
+    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    cursor: pointer;
+    border: unset;
+    width: 16vw;
+    height: 8vh;
+}
+
+.speech {
+    width: 50%;
+    margin-left: 5%;
+    padding: 5%;
+    height: 45vh;
+    position: relative;
+    top: 0;
+    background-image: url(../speechbubble.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 28vw 45vh;
+    border-radius: 1rem;
+}
+
 #animation-close {
     font-size: 5vw;
     position: fixed;
@@ -120,6 +234,7 @@
 
 #admap-body {
     background: #54CEF7;
+    overflow: hidden;
 }
 
 
@@ -279,7 +394,7 @@
 .admap-menu-closed {
     display: flex;
     position: fixed;
-    z-index: 13;
+    z-index: 4;
     justify-content: flex-end;
     width: 100%;
     height: 10vh;
@@ -334,6 +449,7 @@
     height: 20vh;
     overflow: auto;
     cursor: pointer;
+    z-index: 13;
 }
 
 
@@ -470,14 +586,6 @@ ul {
     padding: 0;
     height: fit-content;
     cursor: pointer;
-    text-decoration: none;
-    list-style-type: none;
-    color: white;
-}
-
-.advent-list {
-    display: none;
-    height: 15vh;
     text-decoration: none;
     list-style-type: none;
     color: white;
@@ -953,6 +1061,95 @@ section {
 /* tablet screen portrait */
 
 @media screen and (min-width: 700px) and (max-width: 1200px) and (orientation: portrait) {
+    .instructions-button-title {
+        font-size: 2.3vh;
+        letter-spacing: 0.1vh;
+    }
+    .instructions-button-open {
+        position: fixed;
+        z-index: 5;
+        vertical-align: middle;
+        margin: 0 1.5% 4% 42vh;
+        padding: 1%;
+        text-align: center;
+        background-color: #E9D758;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        cursor: pointer;
+        border: unset;
+        width: 16vh;
+        height: 8vw;
+    }
+    .instructions-button-closed {
+        position: fixed;
+        z-index: -1;
+        vertical-align: middle;
+        margin: 0 1.5% 4% 42vw;
+        padding: 1.5%;
+        text-align: center;
+        background-color: #E9D758;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+        border-radius: 1rem;
+        cursor: pointer;
+        border: unset;
+        width: 16vh;
+        height: 8vw;
+    }
+    #map-instructions-close {
+        position: absolute;
+        top: 1vw;
+        left: 60vh;
+        z-index: 999;
+        color: black;
+        font-size: 3vh;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    #instructions-text {
+        font-size: 1.3vh;
+        margin-left: 3%;
+        margin-right: 2.5%;
+        width: 80%;
+    }
+    .instructions-title {
+        width: 50%;
+        margin: 5% 25% 2.5% 25%;
+        height: 12%;
+        font-size: 2.3vh;
+        background-color: white;
+        border-radius: 1rem;
+        text-align: center;
+        justify-content: center;
+        padding: 1%;
+    }
+    .instructions-open {
+        position: fixed;
+        margin-left: 17.5vh;
+        margin-top: 15vw;
+        z-index: 998;
+        width: 65vh;
+        height: 70vw;
+        background-image: url(../prelanding-bkgd.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 65vh 70vw;
+        border-radius: 1rem;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    }
+    .speech {
+        width: 50%;
+        margin-left: 5%;
+        padding: 5%;
+        height: 50vw;
+        position: relative;
+        top: 0;
+        background-image: url(../speechbubble.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 28vh 50vw;
+        border-radius: 1rem;
+    }
     #take-quiz,
     .learn-more-title {
         font-size: 30px;
@@ -1136,6 +1333,33 @@ section {
 /* tablet landscape*/
 
 @media screen and (min-width: 700px) and (max-width: 1390px) and (orientation: landscape) {
+    .instructions-open {
+        position: fixed;
+        margin-left: 17.5vw;
+        margin-top: 15vh;
+        z-index: 998;
+        width: 65vw;
+        height: 70vh;
+        background-image: url(../prelanding-bkgd.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 65vw 70vh;
+        border-radius: 1rem;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    }
+    .speech {
+        width: 50%;
+        margin-left: 5%;
+        padding: 5%;
+        height: 50vh;
+        position: relative;
+        top: 0;
+        background-image: url(../speechbubble.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 28vw 50vh;
+        border-radius: 1rem;
+    }
     #take-quiz,
     .learn-more-title {
         font-size: 30px;
@@ -1178,6 +1402,33 @@ section {
 /* mobile screen and landscape orientation */
 
 @media screen and (min-width: 0px) and (max-width: 700px) and (orientation: landscape) {
+    .instructions-open {
+        position: fixed;
+        margin-left: 17.5vw;
+        margin-top: 15vh;
+        z-index: 998;
+        width: 65vw;
+        height: 70vh;
+        background-image: url(../prelanding-bkgd.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 65vw 70vh;
+        border-radius: 1rem;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    }
+    .speech {
+        width: 50%;
+        margin-left: 5%;
+        padding: 5%;
+        height: 50vh;
+        position: relative;
+        top: 0;
+        background-image: url(../speechbubble.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 28vw 50vh;
+        border-radius: 1rem;
+    }
     #take-quiz,
     .learn-more-title {
         font-size: 30px;
@@ -1250,6 +1501,95 @@ section {
 }
 
 @media screen and (min-width:0px) and (max-width: 700px) and (orientation: portrait) {
+    .instructions-button-title {
+        font-size: 2.3vh;
+        letter-spacing: 0.1vh;
+    }
+    .instructions-button-open {
+        position: fixed;
+        z-index: 5;
+        vertical-align: middle;
+        margin: 0 1.5% 4% 42vh;
+        padding: 1%;
+        text-align: center;
+        background-color: #E9D758;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        cursor: pointer;
+        border: unset;
+        width: 16vh;
+        height: 8vw;
+    }
+    .instructions-button-closed {
+        position: fixed;
+        z-index: -1;
+        vertical-align: middle;
+        margin: 0 1.5% 4% 42vw;
+        padding: 1.5%;
+        text-align: center;
+        background-color: #E9D758;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+        border-radius: 1rem;
+        cursor: pointer;
+        border: unset;
+        width: 16vh;
+        height: 8vw;
+    }
+    #map-instructions-close {
+        position: absolute;
+        top: 1vw;
+        left: 60vh;
+        z-index: 999;
+        color: black;
+        font-size: 3vh;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    #instructions-text {
+        font-size: 1.3vh;
+        margin-left: 3%;
+        margin-right: 2.5%;
+        width: 80%;
+    }
+    .instructions-title {
+        width: 50%;
+        margin: 5% 25% 2.5% 25%;
+        height: 12%;
+        font-size: 2.3vh;
+        background-color: white;
+        border-radius: 1rem;
+        text-align: center;
+        justify-content: center;
+        padding: 1%;
+    }
+    .instructions-open {
+        position: fixed;
+        margin-left: 17.5vh;
+        margin-top: 15vw;
+        z-index: 998;
+        width: 65vh;
+        height: 70vw;
+        background-image: url(../prelanding-bkgd.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 65vh 70vw;
+        border-radius: 1rem;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    }
+    .speech {
+        width: 50%;
+        margin-left: 5%;
+        padding: 5%;
+        height: 50vw;
+        position: relative;
+        top: 0;
+        background-image: url(../speechbubble.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 28vh 50vw;
+        border-radius: 1rem;
+    }
     #take-quiz,
     .learn-more-title {
         font-size: 30px;
