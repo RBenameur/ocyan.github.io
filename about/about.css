@@ -4,37 +4,169 @@
 }
 
 html,body {
-  height: 100vh;
+  position: relative;
+  height: 100%;
   width: 100vw;
-  font-size: 13px;
+  font-size: 16px;
+  overflow: auto;
+  background-image: url("prelanding-bkgd.png");
+  background-position: center;
+  background-size: cover;
+  z-index: -2;
 }
 
 .about-ocyan {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100%;
-  width: 74vw;
-  background-image: url("emptyabout.png");
-  background-position: center;
-  background-size: cover;
-  margin: 0 auto;
-  z-index: -3;
+  width: 100%;
+  font-size: 1em;
 }
 
+.about-bottom {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3em;
+}
 
-#side-bar {
-  z-index: 3 !important;
+.about-mascot {
+  height: 30em;
+  max-width: 20em;
 }
 
 .about-text {
+  position: relative;
+  padding: 2em;
+  background-color: #fff;
+  height: auto;
+  max-width: 60%;
+  border-radius: 15px;
+}
+
+/*speech bubble*/
+
+.about-text::before {
   position: absolute;
-  top: 19em;
-  left:22em;
-  width: 30vw;
+  top: 8%;
+  right: -15%;
+  content: '';
+  height: 5em;
+  width: 8em;
+  background-color: #fff;
+  border-radius: 100%;
+  z-index: -3;
+}
+
+.about-text::after {
+  position: absolute;
+  top: 15.5%;
+  right: -16%;
+  content: '';
+  height: 5em;
+  width: 9em;
+  background-image: url("prelanding-bkgd.png");
+  border-radius: 100%;
+  transform: rotate(-22deg);
+  z-index: -3;
+}
+
+.about-text p {
+  margin-bottom: 0;
+  margin-top: 1em;
 }
 
 .about-title {
-  position: absolute;
-  top: 5.2em;
-  left:11em;
+  min-width: 60%;
+  margin-bottom: 1em;
+  padding: .3em;
+  margin-top: 2.5em;
+  border-radius: 20px;
+  background-color: #fff;
   font-weight: bold;
+}
+
+.about-title h1 {
+  margin: 0;
+  padding: 0;;
+}
+
+
+/*************Media Queries**************/
+
+/*portrait mode phones*/
+@media (max-width: 600px){
+  .about-ocyan {
+    padding-top: 17em;
+    margin-top: 17em;
+    margin-left: 2em;
+  }
+
+  .about-mascot {
+    height: 12em;
+    max-width: 5em;
+    margin-top: 2em;
+    margin-left: 2em;
+  }
+  .about-text::before {
+    top: 6%;
+    right: -15%;
+  }
+  
+  .about-text::after {
+    top: 9.5%;
+    right: -17%;
+  }
+  #menu {
+    margin-left: 2em;
+  }
+}
+
+.about-bold {font-weight: bold;}
+
+
+/*landscape mode phones*/
+@media (max-width: 767.98px) {
+  html, body {font-size: 14px;}
+  #side-bar {display: none;}
+
+  .about-ocyan {
+    padding-top: 22em;
+    margin-top: 18em;
+  }
+
+#menu {
+  width: 15vw;
+  height: 18vh;
+  margin-left: .4em;
+}
+.about-text::before {
+  top: 6%;
+  right: -15%;
+}
+
+.about-text::after {
+  top: 9.5%;
+  right: -17%;
+}
+#ocyan-logo {width: 20%;}
+.about-title {font-size: medium;}
+}
+
+
+/*landscape tablets*/
+@media (max-width: 1023px)  {
+  .about-ocyan {
+    margin-top: 17em;
+    margin-left: 2em;
+  }
+  .about-text {font-size: medium;}
+
+  .about-mascot {
+    height: 18em;
+    max-width: 8em;
+    margin-top: 2em;
+    margin-left: 2em;
+  }
 }
