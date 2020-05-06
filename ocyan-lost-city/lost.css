@@ -1,111 +1,107 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-html,
-body {
+  }
+  
+  html, body {
     position: relative;
     height: auto;
     line-height: 2;
     font-size: 16px;
     /*font-weight: bold;*/
-}
-
-.sea-gradient {
+  }
+  
+  /*make sure user's name is capitalised*/
+  .changeName {
+    text-transform: capitalize;
+  }
+  
+  
+  /******Story Content*****/
+  
+  .sea-gradient {
     height: 100%;
     background-color: red;
-    background: linear-gradient( #A6E3FB, #007EA7, #007EA7, #29539B, #134074, #134074, #191970, #09C6F9, #09C6F9);
+    background: linear-gradient( #A6E3FB,#007EA7,#007EA7, #29539B, #134074, #134074, #191970, #09C6F9, #09C6F9);
     background-repeat: no-repeat;
     width: 100vw;
     z-index: -3;
-}
-
-p {
+  }
+  
+  p {
     font-size: 1.2em;
-}
-
-.absolute {
+  }
+  
+  .absolute {
     position: absolute;
     top: 0;
     left: 0;
-}
-
-.center {
+  }
+  
+  .center {
     margin: 0 auto;
     text-align: center;
-}
-
-.push-down {
+  }
+  
+  .push-down {
     margin-top: 20em;
-}
-
-
-/*background of story*/
-
-#story {
+  }
+  /*background of story*/
+  #story {
     position: relative;
     width: 80%;
     height: auto;
     color: #000;
     margin: 4em auto;
-    padding-left: 2em;
-    padding-right: 1.5em;
-    padding-bottom: 2em;
-    background-color: rgba(255, 255, 255, .7);
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-}
-
-#story::before {
+    padding: 2em 1.5em 2em 2em;
+    background-color: rgba(255,255,255,.7);
+    border-radius: 15px;
+  }
+  
+  .big-letter {
     position: absolute;
-    top: -6em;
-    right: 0;
-    content: '';
-    width: 100%;
-    height: 6em;
-    padding-bottom: 3em;
-    background-color: rgba(255, 255, 255, .7);
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    z-index: -1;
-}
-
-#story-title {
+    top: -.3em;
+    left: .4em;
+    font-size: 3em;
+  }
+  
+  .space-letter {
+    margin-left: 6.5%;
+  }
+  
+  #story-title  {
     width: 80%;
     height: 2em;
-    padding-top: 2em;
     margin: 0 auto;
+    font-size: 4em;
     text-align: center;
-}
-
-#lost-city {
+  }
+  
+  #lost-city {
     max-height: 600px;
     width: 100%;
     margin: 0 auto;
     padding-top: m;
-}
-
-#lost-city-img {
+  }
+  
+  #lost-city-img {
     display: block;
     height: 80vh;
     width: 100%;
     z-index: -1;
-}
-
-
-/**Epilogue**/
-
-
-/**source:https://www.eggradients.com/category/ocean-gradient**/
-
-#epilogue-btn {
+  }
+  
+  /**Epilogue**/
+  
+  /**source:https://www.eggradients.com/category/ocean-gradient**/
+  
+  #epilogue-btn {
     display: block;
     margin: 0 auto;
     text-align: center;
-}
-
-#ending {
+  }
+  
+  #ending {
     position: fixed;
     top: 0;
     left: 0;
@@ -115,12 +111,12 @@ p {
     height: 100%;
     width: 100vw;
     padding-top: 35em;
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0,0,0,.6);
     overflow-y: auto;
     font-weight: 300;
-}
-
-.epilogue-container {
+  }
+  
+  .epilogue-container  {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -131,84 +127,106 @@ p {
     margin-top: 2em;
     margin-bottom: 2em;
     background-color: #e6e6e6;
-}
-
-.exit-epilogue {
+  }
+  
+  .exit-epilogue {
     position: absolute;
     top: .2em;
     right: .4em;
     height: 1em;
     width: 1em;
     font-size: 3em;
-    font-weight: bold;
+    font-weight:bold;
     text-align: center;
     transform: rotate(45deg);
     cursor: pointer;
-}
-
-.epilogue-img-container {
+  }
+  
+  .epilogue-img-container {
     height: 40%;
     width: 100%;
-}
-
-.ending-img {
+  }
+  
+  .ending-img {
     height: 100%;
     width: 100%;
-}
-
-.epilogue-txt {
+  }
+  
+  .epilogue-txt {
     padding: 0 3em 3em 3em;
-}
-
-
-/**background elements parallax**/
-
-#mascot-swim {
+  }
+  
+  /**background elements parallax**/ 
+  #mascot-swim {
     position: fixed;
     right: 13em;
     top: 12em;
     display: block;
     height: 6em;
     width: 3em;
-    z-index: 2;
-}
-
-.trash-container {
+    z-index: 20;
+  }
+  
+  .trash-container {
     position: absolute;
-    left: 0;
+    left:0;
     display: flex;
     justify-content: space-between;
     height: 100%;
     width: 100vw;
     padding-top: 10em;
-}
-
-.trash {
+  }
+  
+  .trash {
     height: 8em;
     width: 5em;
-}
-
-.trash-right,
-.trash-left {
-    width: 30%;
-}
-
-.thin {
-    width: 3em;
-}
-
-/*make sure user's name is capitalised*/
-.changeName {
-  text-transform: capitalize;
-}
-
-
-/*Medium devices (tablets)*/
-
-@media (max-width: 767.98px) {
-  .trash-container {display: none;}
-  #mascot-swim {
-    right: .8em;
-    top: 12em;
   }
-}
+  
+  .trash-right,
+  .trash-left {
+    width: 30%;
+  }
+  
+  .thin {
+    width: 3em;
+  }
+  
+  
+  /***************Media Queries*****************/
+  
+  @media (max-width: 1145px) {
+    .space-letter {
+      margin-left: 8%;
+    }
+  }
+  
+  @media (max-width: 908px) {
+    .space-letter {
+      margin-left: 13%;
+    }
+  }
+  
+  /*Medium devices (tablets)*/
+  @media (max-width: 767.98px) {
+    .trash-container {display: none;}
+    #mascot-swim {
+      right: .8em;
+      top: 12em;
+    }
+  
+    #ending  {
+      padding-top: 60em;
+    }
+  
+    .epilogue-container {
+      width: 88vw;
+      margin-bottom: 24em;
+    }
+  
+    .exit-epilogue {
+      position: absolute;
+      top: -0.3em;
+      right: .2em;
+      font-size: 3em;
+    }
+  }
