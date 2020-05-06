@@ -12,28 +12,28 @@
     
     .finished {
         width: 100%;
-        height: auto;
+        height: fit-content;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
     }
     
     .finished-item {
-        width: 50%;
+        width: 100%;
         height: fit-content;
     }
     
     .finished-img1 {
         transform: rotate(15deg);
-        width: 50%;
-        margin-left: 25%;
+        width: 30%;
+        margin-top: -30%;
     }
     
     .finished-img2 {
-        margin-top: 25%;
-        width: 80%;
+        margin-top: -5%;
+        width: 50%;
         height: auto;
-        margin-left: 10%;
+        margin-left: 50%;
     }
     
     .finished-text {
@@ -41,10 +41,18 @@
         width: 100%;
         padding: 8%;
         font-size: 24px;
-        background-image: url(../speechbubble.png);
-        background-position: center;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
+        background-color: white;
+        border-radius: 1rem;
+    }
+    
+    .finished-text:after {
+        content: '';
+        border: 20px solid transparent;
+        border-right: 20px solid white;
+        border-top: 20px solid white;
+        position: absolute;
+        bottom: 58vh;
+        left: 45vw;
     }
     
     #animation-close {
@@ -152,17 +160,25 @@
     }
     
     .speech {
-        width: 50%;
+        width: 45%;
         margin-left: 5%;
-        padding: 5%;
+        padding: 2.5%;
         height: 48vh;
         position: relative;
         top: 0;
-        background-image: url(../speechbubble.png);
-        background-repeat: no-repeat;
-        background-position: center;
+        background-color: white;
         background-size: 28vw 48vh;
         border-radius: 1rem;
+    }
+    
+    .speech:after {
+        content: '';
+        border: 20px solid transparent;
+        border-left: 20px solid white;
+        border-bottom: 20px solid white;
+        position: absolute;
+        bottom: 35vh;
+        left: 28vw;
     }
     
     #animation-close {
@@ -1096,9 +1112,6 @@
             height: 50vw;
             position: relative;
             top: 0;
-            background-image: url(../speechbubble.png);
-            background-repeat: no-repeat;
-            background-position: center;
             background-size: 28vh 50vw;
             border-radius: 1rem;
         }
@@ -1289,39 +1302,9 @@
             padding-bottom: 5%;
         }
     }
+    /* tablet landscape*/
     
-    @media screen and (min-width: 1100px) and (max-width: 1390px) and (orientation: landscape) {
-        .finished-item {
-            width: 50%;
-            height: fit-content;
-        }
-        .finished-img1 {
-            transform: rotate(15deg);
-            width: 40%;
-            margin-left: 25%;
-            margin-bottom: 10%;
-        }
-        @media screen and (min-width: 700px) and (max-width: 1100) and (orientation: landscape) {
-            .finished-item {
-                width: 100%;
-                height: fit-content;
-            }
-            .finished-img1 {
-                transform: rotate(15deg);
-                width: 40%;
-                margin-left: 0;
-                margin-bottom: 10%;
-            }
-        }
-        /* tablet landscape*/
-        @media screen and (min-width: 700px) and (max-width: 1390px) and (orientation: landscape) {
-            .finished-img2 {
-                margin-top: 0;
-                width: 80%;
-                height: auto;
-                margin-left: 10%;
-            }
-        }
+    @media screen and (min-width: 700px) and (max-width: 1390px) and (orientation: landscape) {
         .instructions-open {
             position: fixed;
             margin-left: 17.5vw;
@@ -1343,9 +1326,6 @@
             height: 50vh;
             position: relative;
             top: 0;
-            background-image: url(../speechbubble.png);
-            background-repeat: no-repeat;
-            background-position: center;
             background-size: 28vw 50vh;
             border-radius: 1rem;
         }
@@ -1389,22 +1369,6 @@
     /* mobile screen and landscape orientation */
     
     @media screen and (min-width: 0px) and (max-width: 700px) and (orientation: landscape) {
-        .finished-item {
-            width: 100%;
-            height: fit-content;
-        }
-        .finished-img2 {
-            margin-top: 0;
-            width: 80%;
-            height: auto;
-            margin-left: 10%;
-        }
-        .finished-img1 {
-            transform: rotate(15deg);
-            width: 40%;
-            margin-left: 0;
-            margin-bottom: 10%;
-        }
         .instructions-open {
             position: fixed;
             margin-left: 17.5vw;
@@ -1426,10 +1390,6 @@
             height: 50vh;
             position: relative;
             top: 0;
-            background-image: url(../speechbubble.png);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 28vw 50vh;
             border-radius: 1rem;
         }
         #take-quiz,
@@ -1515,22 +1475,6 @@
     }
     
     @media screen and (min-width:0px) and (max-width: 700px) and (orientation: portrait) {
-        .finished-img2 {
-            margin-top: 0;
-            width: 80%;
-            height: auto;
-            margin-left: 10%;
-        }
-        .finished-img1 {
-            transform: rotate(15deg);
-            width: 40%;
-            margin-left: 0;
-            margin-bottom: 10%;
-        }
-        .finished-item {
-            width: 100%;
-            height: fit-content;
-        }
         .instructions-button-title {
             font-size: 2.3vh;
             letter-spacing: 0.1vh;
