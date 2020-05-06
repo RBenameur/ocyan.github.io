@@ -224,7 +224,6 @@ function displayResults() {
   hintList.innerHTML = `<br><p class="nonbold fade-in">`+wrongListHints.join("<br>")+`</p>`;
   hintContainer.appendChild(hintList);
 }
-<<<<<<< HEAD
 
     //display score
     function displayResults() {
@@ -244,8 +243,6 @@ function displayResults() {
         hintContainer.appendChild(hintList);
     }
 
-=======
->>>>>>> master
     //update progress bar and question status
     function updateProgress() {
         const questionStatus = document.querySelector(".question-num");
