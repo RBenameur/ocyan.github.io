@@ -1,5 +1,45 @@
 /* desktop */
 
+.finished {
+    width: 100%;
+    height: 100vh;
+}
+
+.finished-img1 {
+    position: relative;
+    top: -53vh;
+    left: 5%;
+    transform: rotate(15deg);
+    width: 35%;
+}
+
+.finished-img2 {
+    position: relative;
+    top: 10vh;
+    left: 28vw;
+    width: 50%;
+}
+
+.finished-text {
+    width: 60%;
+    position: relative;
+    top: -45vh;
+    left: 0;
+    padding: 3%;
+    font-size: 1.8vw;
+    background-image: url(../speechbubble.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#lets-go {
+    width: 20vw;
+    position: relative;
+    top: -68vh;
+    left: 45%;
+}
+
 #animation-close {
     cursor: pointer;
 }
@@ -10,11 +50,11 @@
     margin-top: 17.5vh;
     z-index: 998;
     width: 65vw;
-    height: 65vh;
+    height: 68vh;
     background-image: url(../prelanding-bkgd.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 65vw 65vh;
+    background-size: 65vw 68vh;
     border-radius: 1rem;
     box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
 }
@@ -108,13 +148,13 @@
     width: 50%;
     margin-left: 5%;
     padding: 5%;
-    height: 45vh;
+    height: 48vh;
     position: relative;
     top: 0;
     background-image: url(../speechbubble.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 28vw 45vh;
+    background-size: 28vw 48vh;
     border-radius: 1rem;
 }
 
@@ -250,7 +290,7 @@
     overflow: hidden;
     background: #54CEF7;
     z-index: 2;
-    cursor: pointer;
+    cursor: url("../adventure-map-map/map-images/cursor.cur"), default;
 }
 
 
@@ -493,9 +533,8 @@ a:hover {
 body {
     margin: 0;
     background: linear-gradient( #A6E3FB, #134074);
-    height: auto;
+    height: 1215vh;
     width: 100vw;
-    overflow-y: scroll;
 }
 
 
@@ -546,7 +585,7 @@ body {
 /* compass image div (flex item)*/
 
 .side-menu-img {
-    flex-basis: 14%;
+    flex-basis: 12%;
     display: block;
     width: 15vw;
     height: 25vh;
@@ -570,9 +609,9 @@ body {
 /* compass image */
 
 #menu {
-    margin-top: 2.5vh;
+    margin-top: 3vh;
     margin-right: 1.5vw;
-    width: 14vw;
+    width: 12vw;
     height: auto;
     cursor: pointer;
 }
@@ -603,7 +642,7 @@ ul {
 
 li,
 .marine-eco-menu {
-    font-size: 3vw;
+    font-size: 2.5vw;
     letter-spacing: 0.2vw;
     padding: 2% 2% 2% 2%;
     color: white;
@@ -640,15 +679,7 @@ section {
     height: 150vh;
     width: 100vw;
     overflow-y: scroll;
-    background: #54CEF7;
-}
-
-.coral-background {
-    position: absolute;
-    top: 50vh;
-    left: 0;
-    width: 100vw;
-    height: 150vh;
+    background: #A6E3FB;
 }
 
 #whattypes-oalicf {
@@ -840,6 +871,10 @@ section {
     flex-direction: column;
     width: 100%;
     height: 200vh;
+    background-image: url(../coral-reef-ecosystem/coral-reef-background.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 
@@ -856,10 +891,6 @@ section {
 
 
 /* coral reef ecosystem page edit */
-
-#coral-body {
-    background-image: url(./coral-reef-background.png);
-}
 
 #whattypes-oalicf {
     background: transparent;
@@ -988,6 +1019,7 @@ section {
 
 /* Define the animations for the coral animation animals */
 
+.finished-img1,
 .animal-st,
 .animal-lf,
 .animal-rs,
@@ -1001,6 +1033,10 @@ section {
     -webkit-animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     -webkit-animation-timing-function: ease-in-out;
+}
+
+.finished-img1 {
+    animation-duration: 14s;
 }
 
 .animal-st {
@@ -1388,11 +1424,11 @@ section {
         letter-spacing: 0.5vw;
     }
     .animation-container {
-        height: 80vh;
+        height: 100vh;
     }
     .explore-button {
         vertical-align: middle;
-        margin-top: 4vh;
+        margin-top: 2vh;
         padding: 1.5%;
         text-align: center;
         background-color: #E9D758;
@@ -1467,7 +1503,17 @@ section {
     }
     /* coral reef ecosystem page edit */
     .animation-container {
-        height: 80vh;
+        height: 100vh;
+    }
+    .explore-button {
+        vertical-align: middle;
+        margin-top: 2vh;
+        padding: 1.5%;
+        text-align: center;
+        background-color: #E9D758;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+        border-radius: 5rem;
+        cursor: pointer;
     }
     /* animation page edit */
     /* The Modal (background) */
