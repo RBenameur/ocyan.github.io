@@ -1392,14 +1392,24 @@ section {
     }
 }
 
+@media screen and (min-width: 900px) and (max-width: 1390px) and (orientation: landscape) {
+    .finished-item {
+        width: 50%;
+        height: fit-content;
+    }
+}
 
-/* tablet landscape*/
-
-@media screen and (min-width: 700px) and (max-width: 1390px) and (orientation: landscape) {
+@media screen and (min-width: 700px) and (max-width: 900) and (orientation: landscape) {
     .finished-item {
         width: 100%;
         height: fit-content;
     }
+}
+
+
+/* tablet landscape*/
+
+@media screen and (min-width: 700px) and (max-width: 1390px) and (orientation: landscape) {
     .finished-img2 {
         margin-top: 0;
         width: 80%;
