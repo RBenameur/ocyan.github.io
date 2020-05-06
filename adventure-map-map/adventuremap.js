@@ -105,12 +105,17 @@ $(document).ready(function() {
             $(".admap-modal-hover").css("background-color", "rgb(255, 107, 53, 0.8)");
             if (ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()) {
                 $(".admap-modal-hover").css({
-                    "left": "48vh",
+                    "left": "50vh",
+                    "top": "13vw",
+                });
+            } else if (ScreenOrientation.type === "landscape-primary" || ScreenOrientation.type === "landscape-secondary" || $(window).height() < $(window).width() && $(window).width() < 900) {
+                $(".admap-modal-hover").css({
+                    "left": "40vh",
                     "top": "13vw",
                 });
             } else {
                 $(".admap-modal-hover").css({
-                    "left": "48vw",
+                    "left": "40vw",
                     "top": "13vh",
                 });
             };
@@ -130,12 +135,12 @@ $(document).ready(function() {
             if (ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()) {
                 $(".admap-modal-hover").css({
                     "left": "30.5vh",
-                    "top": "35vw",
+                    "top": "18vw",
                 });
             } else {
                 $(".admap-modal-hover").css({
                     "left": "30.5vw",
-                    "top": "35vh",
+                    "top": "18vh",
                 });
             };
         }, function() {
@@ -153,12 +158,12 @@ $(document).ready(function() {
             $(".explore-button-title").text("Explore Kelp Forests");
             if (ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()) {
                 $(".admap-modal-hover").css({
-                    "left": "13vh",
+                    "left": "30vh",
                     "top": "23vw",
                 });
             } else {
                 $(".admap-modal-hover").css({
-                    "left": "13vw",
+                    "left": "30vw",
                     "top": "23vh",
                 });
             };
@@ -201,12 +206,12 @@ $(document).ready(function() {
             $(".admap-modal-hover").css("background-color", "rgb(255, 107, 53, 0.8)");
             if (ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()) {
                 $(".admap-modal-hover").css({
-                    "left": "15vh",
+                    "left": "18vh",
                     "top": "30vw",
                 });
             } else {
                 $(".admap-modal-hover").css({
-                    "left": "15vw",
+                    "left": "18vw",
                     "top": "30vh",
                 });
             };
@@ -225,13 +230,13 @@ $(document).ready(function() {
             $(".explore-button-title").text("Explore Hydrothermal Vents");
             if (ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()) {
                 $(".admap-modal-hover").css({
-                    "left": "6vw",
-                    "top": "30vh",
+                    "left": "40vw",
+                    "top": "28vh",
                 });
             } else {
                 $(".admap-modal-hover").css({
-                    "left": "6vw",
-                    "top": "30vh",
+                    "left": "40vw",
+                    "top": "28vh",
                 });
             };
         }, function() {
@@ -249,13 +254,13 @@ $(document).ready(function() {
             $(".explore-button-title").text("Explore Saltmarshes");
             if (ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()) {
                 $(".admap-modal-hover").css({
-                    "left": "13vh",
-                    "top": "20vw",
+                    "left": "5vh",
+                    "top": "29vw",
                 });
             } else {
                 $(".admap-modal-hover").css({
-                    "left": "13vw",
-                    "top": "20vh",
+                    "left": "5vw",
+                    "top": "29vh",
                 });
             };
         }, function() {
@@ -273,12 +278,12 @@ $(document).ready(function() {
             $(".explore-button-title").text("Explore Rocky Shores");
             if (ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()) {
                 $(".admap-modal-hover").css({
-                    "left": "35vh",
+                    "left": "55vh",
                     "top": "24vw",
                 });
             } else {
                 $(".admap-modal-hover").css({
-                    "left": "35vw",
+                    "left": "55vw",
                     "top": "24vh",
                 });
             };
@@ -297,12 +302,17 @@ $(document).ready(function() {
             $(".explore-button-title").text("Explore Mangrove Forests");
             if (ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()) {
                 $(".admap-modal-hover").css({
-                    "left": "38vh",
+                    "left": "35vh",
+                    "top": "13vw",
+                });
+            } else if (ScreenOrientation.type === "landscape-primary" || ScreenOrientation.type === "landscape-secondary" || $(window).height() < $(window).width() && $(window).width() < 900) {
+                $(".admap-modal-hover").css({
+                    "left": "25vh",
                     "top": "13vw",
                 });
             } else {
                 $(".admap-modal-hover").css({
-                    "left": "38vw",
+                    "left": "35vw",
                     "top": "13vh",
                 });
             };
@@ -319,15 +329,20 @@ $(document).ready(function() {
             $(".admap-modal-hover").css("background-color", "#134074");
             if (ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()) {
                 $(".admap-modal-hover").css({
-                    "left": "55vh",
-                    "top": "30vw",
+                    "left": "30vh",
+                    "top": "20vw",
+                });
+            } else if (ScreenOrientation.type === "landscape-primary" || ScreenOrientation.type === "landscape-secondary" || $(window).height() < $(window).width() && $(window).width() < 900) {
+                $(".admap-modal-hover").css({
+                    "left": "25vh",
+                    "top": "13vw",
                 });
             } else {
                 $(".admap-modal-hover").css({
-                    "left": "55vw",
-                    "top": "30vh",
+                    "left": "30vw",
+                    "top": "20vh",
                 });
-            };
+            }
         }, function() {
             $("#admap-hover").removeClass("admap-modal-hover");
             $("#admap-hover").addClass("admap-hover-hidden");
@@ -348,12 +363,17 @@ $(document).ready(function() {
         });
         if (ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()) {
             $(".admap-modal").css({
-                "left": "48vh",
+                "left": "50vh",
+                "top": "13vw",
+            });
+        } else if (ScreenOrientation.type === "landscape-primary" || ScreenOrientation.type === "landscape-secondary" || $(window).height() < $(window).width() && $(window).width() < 900) {
+            $(".admap-modal").css({
+                "left": "40vh",
                 "top": "13vw",
             });
         } else {
             $(".admap-modal").css({
-                "left": "48vw",
+                "left": "40vw",
                 "top": "13vh",
             });
         };
@@ -374,12 +394,12 @@ $(document).ready(function() {
         if (ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()) {
             $(".admap-modal").css({
                 "left": "30.5vh",
-                "top": "35vw",
+                "top": "18vw",
             });
         } else {
             $(".admap-modal").css({
                 "left": "30.5vw",
-                "top": "35vh",
+                "top": "18vh",
             });
         };
     });
@@ -397,12 +417,12 @@ $(document).ready(function() {
         });
         if (ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()) {
             $(".admap-modal").css({
-                "left": "13vh",
+                "left": "30vh",
                 "top": "23vw",
             });
         } else {
             $(".admap-modal").css({
-                "left": "13vw",
+                "left": "30vw",
                 "top": "23vh",
             });
         };
@@ -445,12 +465,12 @@ $(document).ready(function() {
         });
         if (ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()) {
             $(".admap-modal").css({
-                "left": "15vh",
+                "left": "18vh",
                 "top": "30vw",
             });
         } else {
             $(".admap-modal").css({
-                "left": "15vw",
+                "left": "18vw",
                 "top": "30vh",
             });
         };
@@ -469,13 +489,13 @@ $(document).ready(function() {
         });
         if (ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()) {
             $(".admap-modal").css({
-                "left": "6vh",
-                "top": "30vw",
+                "left": "40vh",
+                "top": "28vw",
             });
         } else {
             $(".admap-modal").css({
-                "left": "6vw",
-                "top": "30vh",
+                "left": "40vw",
+                "top": "28vh",
             });
         };
     });
@@ -493,13 +513,13 @@ $(document).ready(function() {
         });
         if (ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()) {
             $(".admap-modal").css({
-                "left": "13vh",
-                "top": "20vw",
+                "left": "5vh",
+                "top": "29vw",
             });
         } else {
             $(".admap-modal").css({
-                "left": "13vw",
-                "top": "20vh",
+                "left": "5vw",
+                "top": "29vh",
             });
         };
     });
@@ -517,12 +537,12 @@ $(document).ready(function() {
         });
         if (ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()) {
             $(".admap-modal").css({
-                "left": "35vh",
+                "left": "55vh",
                 "top": "24vw",
             });
         } else {
             $(".admap-modal").css({
-                "left": "35vw",
+                "left": "55vw",
                 "top": "24vh",
             });
         };
@@ -541,12 +561,17 @@ $(document).ready(function() {
         });
         if (ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()) {
             $(".admap-modal").css({
-                "left": "38vh",
+                "left": "35vh",
+                "top": "13vw",
+            });
+        } else if (ScreenOrientation.type === "landscape-primary" || ScreenOrientation.type === "landscape-secondary" || $(window).height() < $(window).width() && $(window).width() < 900) {
+            $(".admap-modal").css({
+                "left": "25vh",
                 "top": "13vw",
             });
         } else {
             $(".admap-modal").css({
-                "left": "38vw",
+                "left": "35vw",
                 "top": "13vh",
             });
         };
@@ -566,13 +591,18 @@ $(document).ready(function() {
         $("a").css({ PointerEvent: "none" });
         if (ScreenOrientation.type === "portrait-primary" || ScreenOrientation.type === "portrait-secondary" || $(window).height() > $(window).width()) {
             $(".admap-modal").css({
-                "left": "55vh",
-                "top": "30vw",
+                "left": "30vh",
+                "top": "20vw",
+            });
+        } else if (ScreenOrientation.type === "landscape-primary" || ScreenOrientation.type === "landscape-secondary" || $(window).height() < $(window).width() && $(window).width() < 900) {
+            $(".admap-modal").css({
+                "left": "25vh",
+                "top": "13vw",
             });
         } else {
             $(".admap-modal").css({
-                "left": "55vw",
-                "top": "30vh",
+                "left": "30vw",
+                "top": "20vh",
             });
         }
     });
