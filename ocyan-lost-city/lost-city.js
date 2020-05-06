@@ -16,8 +16,8 @@ $(document).ready(function(){
 
 //randomly place trash
 $(trash).each(function () {
-  let floatTop = Math.floor(Math.random() * 420);
-  let floatLeft = Math.floor(Math.random() * 250);
+  let floatTop = Math.floor(Math.random() * 300);
+  let floatLeft = Math.floor(Math.random() * 300);
 
   $(this).css({
     "margin-left": floatLeft,
@@ -41,8 +41,6 @@ epilogueBtn.addEventListener("click", function() {
     overflow: 'hidden'
   });
   document.getElementById("ocyan-logo").style.width = 16 + "%";
-  document.getElementById("menu").style.width = 15 + "vw";
-  document.getElementById("menu").style.height = 18 + "vh";
 });
 
 //close the epilogue

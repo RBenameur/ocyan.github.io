@@ -185,40 +185,13 @@ legend {
 
 .option-text {
     margin-left: 1em;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 label.option-container {
     display: block;
     height: auto;
-    min-height: 2em;
-    padding: 1em;
     min-width: 16vw;
-    background-color: #0074D9;
-    color: #fff;
-}
-
-label.option-container:hover {
-    color: #1D3461;
-    background-color:orange;
-    border: none;
-    box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.75);
-}
-
-
-.option-container:focus-within {
-    color: #1D3461;
-    background-color: orange;
-    box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.75);
-    font-weight: bold;
-}
-
-#question {
-    font-size: 1.5rem;
 }
 
 .button-container {
@@ -334,6 +307,7 @@ label.option-container:hover {
     align-items: center;
     justify-content: center;
     height: auto;
+    /*74em*/
     width: 70vw;
     margin-top: 12em;
     margin-bottom: 4em;
@@ -384,32 +358,11 @@ label.option-container:hover {
     height: 1.8em;
     width: 4em;
     background-color: rgba(255, 255, 255, .7);
-    color: green;
-    font-weight: bold;
+    color: black;
     text-align: center;
     cursor: default;
 }
 
-/*let user know that the reset btn resets the score to 0*/
-
-#reset {
-    position: relative;
-}
-
-#reset:hover::after {
-    position: absolute;
-    top: .8em;
-    left: 8.6em;
-    content: 'This will reset your score to 0.';
-    height: auto;
-    width: 6em;
-    background-color: rgba(255, 255, 255, .7);
-    color: red;
-    font-size: .8em;
-    font-weight: bold;
-    text-align: center;
-    cursor: default;
-}
 
 /******************************************/
 
