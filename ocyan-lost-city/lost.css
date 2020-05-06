@@ -12,6 +12,14 @@ body {
     /*font-weight: bold;*/
 }
 
+/*make sure user's name is capitalised*/
+.changeName {
+  text-transform: capitalize;
+}
+
+
+/******Story Content*****/
+
 .sea-gradient {
     height: 100%;
     background-color: red;
@@ -44,39 +52,33 @@ p {
 /*background of story*/
 
 #story {
-    position: relative;
-    width: 80%;
-    height: auto;
-    color: #000;
-    margin: 4em auto;
-    padding-left: 2em;
-    padding-right: 1.5em;
-    padding-bottom: 2em;
-    background-color: rgba(255, 255, 255, .7);
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
+  position: relative;
+  width: 80%;
+  height: auto;
+  color: #000;
+  margin: 4em auto;
+  padding: 2em 1.5em 2em 2em;
+  background-color: rgba(255,255,255,.7);
+  border-radius: 15px;
 }
 
-#story::before {
-    position: absolute;
-    top: -6em;
-    right: 0;
-    content: '';
-    width: 100%;
-    height: 6em;
-    padding-bottom: 3em;
-    background-color: rgba(255, 255, 255, .7);
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    z-index: -1;
+.big-letter {
+  position: absolute;
+  top: -.3em;
+  left: .4em;
+  font-size: 3em;
 }
 
-#story-title {
-    width: 80%;
-    height: 2em;
-    padding-top: 2em;
-    margin: 0 auto;
-    text-align: center;
+.space-letter {
+  margin-left: 6.5%;
+}
+
+#story-title  {
+  width: 80%;
+  height: 2em;
+  margin: 0 auto;
+  font-size: 4em;
+  text-align: center;
 }
 
 #lost-city {
@@ -197,11 +199,20 @@ p {
     width: 3em;
 }
 
-/*make sure user's name is capitalised*/
-.changeName {
-  text-transform: capitalize;
+
+/***************Media Queries*****************/
+
+@media (max-width: 1145px) {
+  .space-letter {
+    margin-left: 8%;
+  }
 }
 
+@media (max-width: 908px) {
+  .space-letter {
+    margin-left: 13%;
+  }
+}
 
 /*Medium devices (tablets)*/
 
@@ -210,5 +221,21 @@ p {
   #mascot-swim {
     right: .8em;
     top: 12em;
+  }
+
+  #ending  {
+    padding-top: 60em;
+  }
+
+  .epilogue-container {
+    width: 88vw;
+    margin-bottom: 24em;
+  }
+
+  .exit-epilogue {
+    position: absolute;
+    top: -0.3em;
+    right: .2em;
+    font-size: 3em;
   }
 }
