@@ -1,4 +1,9 @@
 $(document).ready(function() {
+    const userNameInput = localStorage.getItem("username");
+
+    //input user's name into instructions
+    $(".changeName").text("" + userNameInput + "");
+
     //on click of the turtle graphic
     $(".animal-st").click(function() {
         // modal displays
@@ -509,16 +514,8 @@ $(document).ready(function() {
     });
 
     $("#animation-close").click(function() {
-        if (("#coral-iframe").exitFullscreen) {
-            ("#coral-iframe").exitFullscreen();
-            alert("exit");
-        } else if (document.mozCancelFullScreen) { /* Firefox */
-            document.mozCancelFullScreen();
-        } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
-            document.webkitExitFullscreen();
-        } else if (document.msExitFullscreen) { /* IE/Edge */
-            document.msExitFullscreen();
-        }
+        const userNameInput = localStorage.getItem("username");
+        alert("Well done " + userNameInput + ", take the coral reef quiz to test your knowledge superstar!");
     });
     // On compass image click menu appears
     $('#menu').on({
@@ -574,3 +571,4 @@ $(document).ready(function() {
     });
 
 });
+v4wx
