@@ -1,43 +1,52 @@
 /* desktop */
 
+
+/*make sure user's name is capitalised*/
+
+.changeName {
+    text-transform: capitalize;
+}
+
+#lets-go {
+    width: 50%;
+    margin-left: 25%;
+}
+
 .finished {
     width: 100%;
-    height: 100vh;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.finished-item {
+    width: 50%;
+    height: fit-content;
 }
 
 .finished-img1 {
-    position: relative;
-    top: -53vh;
-    left: 5%;
     transform: rotate(15deg);
-    width: 35%;
+    width: 50%;
+    margin-left: 25%;
 }
 
 .finished-img2 {
-    position: relative;
-    top: 10vh;
-    left: 28vw;
-    width: 50%;
+    margin-top: 25%;
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
 }
 
 .finished-text {
-    width: 60%;
-    position: relative;
-    top: -45vh;
-    left: 0;
-    padding: 3%;
-    font-size: 1.8vw;
+    margin-top: 5%;
+    width: 100%;
+    padding: 8%;
+    font-size: 24px;
     background-image: url(../speechbubble.png);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-}
-
-#lets-go {
-    width: 20vw;
-    position: relative;
-    top: -68vh;
-    left: 45%;
 }
 
 #animation-close {
@@ -538,7 +547,7 @@ a:hover {
 body {
     margin: 0;
     background: linear-gradient( #A6E3FB, #134074);
-    height: 1215vh;
+    height: fit-content;
     width: 100vw;
 }
 
@@ -1387,6 +1396,22 @@ section {
 /* tablet landscape*/
 
 @media screen and (min-width: 700px) and (max-width: 1390px) and (orientation: landscape) {
+    .finished-item {
+        width: 100%;
+        height: fit-content;
+    }
+    .finished-img2 {
+        margin-top: 0;
+        width: 80%;
+        height: auto;
+        margin-left: 10%;
+    }
+    .finished-img1 {
+        transform: rotate(15deg);
+        width: 40%;
+        margin-left: 0;
+        margin-bottom: 10%;
+    }
     .instructions-open {
         position: fixed;
         margin-left: 17.5vw;
@@ -1456,6 +1481,22 @@ section {
 /* mobile screen and landscape orientation */
 
 @media screen and (min-width: 0px) and (max-width: 700px) and (orientation: landscape) {
+    .finished-item {
+        width: 100%;
+        height: fit-content;
+    }
+    .finished-img2 {
+        margin-top: 0;
+        width: 80%;
+        height: auto;
+        margin-left: 10%;
+    }
+    .finished-img1 {
+        transform: rotate(15deg);
+        width: 40%;
+        margin-left: 0;
+        margin-bottom: 10%;
+    }
     .instructions-open {
         position: fixed;
         margin-left: 17.5vw;
@@ -1566,6 +1607,22 @@ section {
 }
 
 @media screen and (min-width:0px) and (max-width: 700px) and (orientation: portrait) {
+    .finished-img2 {
+        margin-top: 0;
+        width: 80%;
+        height: auto;
+        margin-left: 10%;
+    }
+    .finished-img1 {
+        transform: rotate(15deg);
+        width: 40%;
+        margin-left: 0;
+        margin-bottom: 10%;
+    }
+    .finished-item {
+        width: 100%;
+        height: fit-content;
+    }
     .instructions-button-title {
         font-size: 2.3vh;
         letter-spacing: 0.1vh;
