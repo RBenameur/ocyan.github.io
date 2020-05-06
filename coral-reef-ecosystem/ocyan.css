@@ -1,5 +1,163 @@
 /* desktop */
 
+.finished {
+    width: 100%;
+    height: 100vh;
+}
+
+.finished-img1 {
+    position: relative;
+    top: -53vh;
+    left: 5%;
+    transform: rotate(15deg);
+    width: 35%;
+}
+
+.finished-img2 {
+    position: relative;
+    top: 10vh;
+    left: 28vw;
+    width: 50%;
+}
+
+.finished-text {
+    width: 60%;
+    position: relative;
+    top: -45vh;
+    left: 0;
+    padding: 3%;
+    font-size: 1.8vw;
+    background-image: url(../speechbubble.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#lets-go {
+    width: 20vw;
+    position: relative;
+    top: -68vh;
+    left: 45%;
+}
+
+#animation-close {
+    cursor: pointer;
+}
+
+.instructions-open {
+    position: fixed;
+    margin-left: 17.5vw;
+    margin-top: 17.5vh;
+    z-index: 998;
+    width: 65vw;
+    height: 68vh;
+    background-image: url(../prelanding-bkgd.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 65vw 68vh;
+    border-radius: 1rem;
+    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+}
+
+.instructions-closed {
+    position: fixed;
+    margin-left: 15vw;
+    margin-top: 17.5vh;
+    z-index: -1;
+    width: 70vw;
+    height: 65vh;
+    border-radius: 1rem;
+}
+
+#map-instructions-close {
+    position: absolute;
+    top: 1vh;
+    left: 60vw;
+    z-index: 999;
+    color: black;
+    font-size: 3vw;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#instructions-text {
+    font-size: 1.3vw;
+    margin-left: 3%;
+    margin-right: 2.5%;
+    width: 80%;
+}
+
+.instructions-mascot {
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    width: 35%;
+}
+
+.instructions-title {
+    width: 50%;
+    margin: 5% 25% 2.5% 25%;
+    height: 12%;
+    font-size: 2.3vw;
+    background-color: white;
+    border-radius: 1rem;
+    text-align: center;
+    justify-content: center;
+    padding: 1%;
+}
+
+.instructions-button-title {
+    font-size: 2.3vw;
+    letter-spacing: 0.1vw;
+}
+
+.instructions-button-open {
+    position: fixed;
+    z-index: 5;
+    vertical-align: middle;
+    margin: 0 1.5% 4% 42vw;
+    padding: 1%;
+    text-align: center;
+    background-color: #E9D758;
+    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    cursor: pointer;
+    border: unset;
+    width: 16vw;
+    height: 8vh;
+}
+
+.instructions-button-closed {
+    position: fixed;
+    z-index: -1;
+    vertical-align: middle;
+    margin: 0 1.5% 4% 42vw;
+    padding: 1.5%;
+    text-align: center;
+    background-color: #E9D758;
+    box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    cursor: pointer;
+    border: unset;
+    width: 16vw;
+    height: 8vh;
+}
+
+.speech {
+    width: 50%;
+    margin-left: 5%;
+    padding: 5%;
+    height: 48vh;
+    position: relative;
+    top: 0;
+    background-image: url(../speechbubble.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 28vw 48vh;
+    border-radius: 1rem;
+}
+
 #animation-close {
     font-size: 5vw;
     position: fixed;
@@ -120,6 +278,7 @@
 
 #admap-body {
     background: #54CEF7;
+    overflow: hidden;
 }
 
 
@@ -131,7 +290,7 @@
     overflow: hidden;
     background: #54CEF7;
     z-index: 2;
-    cursor: pointer;
+    cursor: url("../adventure-map-map/map-images/cursor.cur"), default;
 }
 
 
@@ -162,9 +321,12 @@
     top: 0;
     left: 0;
     position: absolute;
-    padding: 1vh 1vw;
-    width: 30vw;
-    height: 45vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 0;
+    padding-bottom: 4vh;
+    width: auto;
+    height: auto;
     overflow: hidden;
     border-radius: 1rem;
     background-color: rgb(255, 107, 53, 0.8);
@@ -179,9 +341,12 @@
     top: 0;
     left: 0;
     position: absolute;
-    padding: 1vh 1vw;
-    width: 30vw;
-    height: 45vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 0;
+    padding-bottom: 4vh;
+    width: auto;
+    height: auto;
     overflow: hidden;
     border-radius: 1rem;
     background-color: rgb(255, 107, 53, 0.8);
@@ -206,9 +371,8 @@
 
 .marker-flexitem-img {
     align-self: center;
-    flex: 58%;
-    height: 58%;
-    width: 70%;
+    height: 250px;
+    width: 375px;
     border-radius: 1rem;
     box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
     background-repeat: no-repeat;
@@ -279,7 +443,7 @@
 .admap-menu-closed {
     display: flex;
     position: fixed;
-    z-index: 13;
+    z-index: 4;
     justify-content: flex-end;
     width: 100%;
     height: 10vh;
@@ -334,6 +498,7 @@
     height: 20vh;
     overflow: auto;
     cursor: pointer;
+    z-index: 13;
 }
 
 
@@ -373,9 +538,8 @@ a:hover {
 body {
     margin: 0;
     background: linear-gradient( #A6E3FB, #134074);
-    height: auto;
+    height: 1215vh;
     width: 100vw;
-    overflow-y: scroll;
 }
 
 
@@ -426,7 +590,7 @@ body {
 /* compass image div (flex item)*/
 
 .side-menu-img {
-    flex-basis: 14%;
+    flex-basis: 12%;
     display: block;
     width: 15vw;
     height: 25vh;
@@ -450,9 +614,9 @@ body {
 /* compass image */
 
 #menu {
-    margin-top: 2.5vh;
+    margin-top: 3vh;
     margin-right: 1.5vw;
-    width: 14vw;
+    width: 12vw;
     height: auto;
     cursor: pointer;
 }
@@ -475,14 +639,6 @@ ul {
     color: white;
 }
 
-.advent-list {
-    display: none;
-    height: 15vh;
-    text-decoration: none;
-    list-style-type: none;
-    color: white;
-}
-
 .marine-eco-list {
     display: none;
     height: fit-content;
@@ -491,7 +647,7 @@ ul {
 
 li,
 .marine-eco-menu {
-    font-size: 3vw;
+    font-size: 2.5vw;
     letter-spacing: 0.2vw;
     padding: 2% 2% 2% 2%;
     color: white;
@@ -528,15 +684,7 @@ section {
     height: 150vh;
     width: 100vw;
     overflow-y: scroll;
-    background: #54CEF7;
-}
-
-.coral-background {
-    position: absolute;
-    top: 50vh;
-    left: 0;
-    width: 100vw;
-    height: 150vh;
+    background: #A6E3FB;
 }
 
 #whattypes-oalicf {
@@ -728,6 +876,10 @@ section {
     flex-direction: column;
     width: 100%;
     height: 200vh;
+    background-image: url(../coral-reef-ecosystem/coral-reef-background.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 
@@ -744,10 +896,6 @@ section {
 
 
 /* coral reef ecosystem page edit */
-
-#coral-body {
-    background-image: url(./coral-reef-background.png);
-}
 
 #whattypes-oalicf {
     background: transparent;
@@ -876,6 +1024,7 @@ section {
 
 /* Define the animations for the coral animation animals */
 
+.finished-img1,
 .animal-st,
 .animal-lf,
 .animal-rs,
@@ -889,6 +1038,10 @@ section {
     -webkit-animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     -webkit-animation-timing-function: ease-in-out;
+}
+
+.finished-img1 {
+    animation-duration: 14s;
 }
 
 .animal-st {
@@ -953,6 +1106,95 @@ section {
 /* tablet screen portrait */
 
 @media screen and (min-width: 700px) and (max-width: 1200px) and (orientation: portrait) {
+    .instructions-button-title {
+        font-size: 2.3vh;
+        letter-spacing: 0.1vh;
+    }
+    .instructions-button-open {
+        position: fixed;
+        z-index: 5;
+        vertical-align: middle;
+        margin: 0 1.5% 4% 42vh;
+        padding: 1%;
+        text-align: center;
+        background-color: #E9D758;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        cursor: pointer;
+        border: unset;
+        width: 16vh;
+        height: 8vw;
+    }
+    .instructions-button-closed {
+        position: fixed;
+        z-index: -1;
+        vertical-align: middle;
+        margin: 0 1.5% 4% 42vw;
+        padding: 1.5%;
+        text-align: center;
+        background-color: #E9D758;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+        border-radius: 1rem;
+        cursor: pointer;
+        border: unset;
+        width: 16vh;
+        height: 8vw;
+    }
+    #map-instructions-close {
+        position: absolute;
+        top: 1vw;
+        left: 60vh;
+        z-index: 999;
+        color: black;
+        font-size: 3vh;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    #instructions-text {
+        font-size: 1.3vh;
+        margin-left: 3%;
+        margin-right: 2.5%;
+        width: 80%;
+    }
+    .instructions-title {
+        width: 50%;
+        margin: 5% 25% 2.5% 25%;
+        height: 12%;
+        font-size: 2.3vh;
+        background-color: white;
+        border-radius: 1rem;
+        text-align: center;
+        justify-content: center;
+        padding: 1%;
+    }
+    .instructions-open {
+        position: fixed;
+        margin-left: 17.5vh;
+        margin-top: 15vw;
+        z-index: 998;
+        width: 65vh;
+        height: 70vw;
+        background-image: url(../prelanding-bkgd.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 65vh 70vw;
+        border-radius: 1rem;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    }
+    .speech {
+        width: 50%;
+        margin-left: 5%;
+        padding: 5%;
+        height: 50vw;
+        position: relative;
+        top: 0;
+        background-image: url(../speechbubble.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 28vh 50vw;
+        border-radius: 1rem;
+    }
     #take-quiz,
     .learn-more-title {
         font-size: 30px;
@@ -1031,9 +1273,12 @@ section {
         top: 0;
         left: 0;
         position: absolute;
-        padding: 1vw 1vh;
-        width: 30vh;
-        height: 45vw;
+        padding-left: 3vh;
+        padding-right: 3vh;
+        padding-top: 0;
+        padding-bottom: 4vh;
+        width: auto;
+        height: auto;
         overflow: hidden;
         border-radius: 1rem;
         background-color: rgb(255, 107, 53, 0.8);
@@ -1050,28 +1295,34 @@ section {
     }
     /* modals on hover*/
     .admap-modal-hover {
-        z-index: 2;
+        z-index: 4;
         top: 0;
         left: 0;
         position: absolute;
-        padding: 1vw 1vh;
-        width: 30vh;
-        height: 45vw;
+        padding-left: 3vh;
+        padding-right: 3vh;
+        padding-top: 0;
+        padding-bottom: 4vw;
+        width: auto;
+        height: auto;
         overflow: hidden;
         border-radius: 1rem;
         background-color: rgb(255, 107, 53, 0.8);
         box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
-        cursor: pointer;
     }
     /* flex item, img at background */
     .marker-flexitem-img {
-        height: 58%;
-        width: 70%;
+        align-self: center;
+        height: 250px;
+        width: 375px;
+        border-radius: 1rem;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+        background-repeat: no-repeat;
     }
     .explore-button {
         vertical-align: middle;
         margin-top: 5vh;
-        padding: 1.5%;
+        padding: 1%;
         text-align: center;
         background-color: #E9D758;
         box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
@@ -1136,6 +1387,33 @@ section {
 /* tablet landscape*/
 
 @media screen and (min-width: 700px) and (max-width: 1390px) and (orientation: landscape) {
+    .instructions-open {
+        position: fixed;
+        margin-left: 17.5vw;
+        margin-top: 15vh;
+        z-index: 998;
+        width: 65vw;
+        height: 70vh;
+        background-image: url(../prelanding-bkgd.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 65vw 70vh;
+        border-radius: 1rem;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    }
+    .speech {
+        width: 50%;
+        margin-left: 5%;
+        padding: 5%;
+        height: 50vh;
+        position: relative;
+        top: 0;
+        background-image: url(../speechbubble.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 28vw 50vh;
+        border-radius: 1rem;
+    }
     #take-quiz,
     .learn-more-title {
         font-size: 30px;
@@ -1160,11 +1438,11 @@ section {
         letter-spacing: 0.5vw;
     }
     .animation-container {
-        height: 80vh;
+        height: 100vh;
     }
     .explore-button {
         vertical-align: middle;
-        margin-top: 4vh;
+        margin-top: 2vh;
         padding: 1.5%;
         text-align: center;
         background-color: #E9D758;
@@ -1178,6 +1456,33 @@ section {
 /* mobile screen and landscape orientation */
 
 @media screen and (min-width: 0px) and (max-width: 700px) and (orientation: landscape) {
+    .instructions-open {
+        position: fixed;
+        margin-left: 17.5vw;
+        margin-top: 15vh;
+        z-index: 998;
+        width: 65vw;
+        height: 70vh;
+        background-image: url(../prelanding-bkgd.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 65vw 70vh;
+        border-radius: 1rem;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    }
+    .speech {
+        width: 50%;
+        margin-left: 5%;
+        padding: 5%;
+        height: 50vh;
+        position: relative;
+        top: 0;
+        background-image: url(../speechbubble.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 28vw 50vh;
+        border-radius: 1rem;
+    }
     #take-quiz,
     .learn-more-title {
         font-size: 30px;
@@ -1212,7 +1517,18 @@ section {
     }
     /* coral reef ecosystem page edit */
     .animation-container {
-        height: 80vh;
+        height: 100vh;
+    }
+    .explore-button {
+        vertical-align: middle;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+        padding: 1%;
+        text-align: center;
+        background-color: #E9D758;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+        border-radius: 5rem;
+        cursor: pointer;
     }
     /* animation page edit */
     /* The Modal (background) */
@@ -1250,6 +1566,95 @@ section {
 }
 
 @media screen and (min-width:0px) and (max-width: 700px) and (orientation: portrait) {
+    .instructions-button-title {
+        font-size: 2.3vh;
+        letter-spacing: 0.1vh;
+    }
+    .instructions-button-open {
+        position: fixed;
+        z-index: 5;
+        vertical-align: middle;
+        margin: 0 1.5% 4% 42vh;
+        padding: 1%;
+        text-align: center;
+        background-color: #E9D758;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        cursor: pointer;
+        border: unset;
+        width: 16vh;
+        height: 8vw;
+    }
+    .instructions-button-closed {
+        position: fixed;
+        z-index: -1;
+        vertical-align: middle;
+        margin: 0 1.5% 4% 42vw;
+        padding: 1.5%;
+        text-align: center;
+        background-color: #E9D758;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+        border-radius: 1rem;
+        cursor: pointer;
+        border: unset;
+        width: 16vh;
+        height: 8vw;
+    }
+    #map-instructions-close {
+        position: absolute;
+        top: 1vw;
+        left: 60vh;
+        z-index: 999;
+        color: black;
+        font-size: 3vh;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    #instructions-text {
+        font-size: 1.3vh;
+        margin-left: 3%;
+        margin-right: 2.5%;
+        width: 80%;
+    }
+    .instructions-title {
+        width: 50%;
+        margin: 5% 25% 2.5% 25%;
+        height: 12%;
+        font-size: 2.3vh;
+        background-color: white;
+        border-radius: 1rem;
+        text-align: center;
+        justify-content: center;
+        padding: 1%;
+    }
+    .instructions-open {
+        position: fixed;
+        margin-left: 17.5vh;
+        margin-top: 15vw;
+        z-index: 998;
+        width: 65vh;
+        height: 70vw;
+        background-image: url(../prelanding-bkgd.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 65vh 70vw;
+        border-radius: 1rem;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+    }
+    .speech {
+        width: 50%;
+        margin-left: 5%;
+        padding: 5%;
+        height: 50vw;
+        position: relative;
+        top: 0;
+        background-image: url(../speechbubble.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 28vh 50vw;
+        border-radius: 1rem;
+    }
     #take-quiz,
     .learn-more-title {
         font-size: 30px;
@@ -1308,9 +1713,12 @@ section {
         top: 0;
         left: 0;
         position: absolute;
-        padding: 1vw 1vh;
-        width: 30vh;
-        height: 45vw;
+        padding-left: 3vh;
+        padding-right: 3vh;
+        padding-top: 0;
+        padding-bottom: 4vh;
+        width: auto;
+        height: auto;
         overflow: hidden;
         border-radius: 1rem;
         background-color: rgb(255, 107, 53, 0.8);
@@ -1327,13 +1735,16 @@ section {
     }
     /* modals on hover*/
     .admap-modal-hover {
-        z-index: 2;
+        z-index: 4;
         top: 0;
         left: 0;
         position: absolute;
-        padding: 1vw 1vh;
-        width: 30vh;
-        height: 45vw;
+        padding-left: 3vh;
+        padding-right: 3vh;
+        padding-top: 0;
+        padding-bottom: 4ve;
+        width: auto;
+        height: auto;
         overflow: hidden;
         border-radius: 1rem;
         background-color: rgb(255, 107, 53, 0.8);
@@ -1341,8 +1752,12 @@ section {
     }
     /* flex item, img at background */
     .marker-flexitem-img {
-        height: 70%;
-        width: 58%;
+        align-self: center;
+        height: 250px;
+        width: 375px;
+        border-radius: 1rem;
+        box-shadow: 0 2vw 2vw rgba(0, 0, 0, 0.5);
+        background-repeat: no-repeat;
     }
     .explore-button {
         vertical-align: middle;

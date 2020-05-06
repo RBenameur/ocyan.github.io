@@ -1,4 +1,9 @@
 $(document).ready(function() {
+    const userNameInput = localStorage.getItem("username");
+
+    //input user's name into instructions
+    $(".changeName").text("" + userNameInput + "");
+
     //on click of the turtle graphic
     $(".animal-st").click(function() {
         // modal displays
@@ -507,6 +512,11 @@ $(document).ready(function() {
             alert(" I'm sorry, your browser does not support fullscreen mode! Please try a different browser");
         };
     });
+
+    $("#animation-close").click(function() {
+        const userNameInput = localStorage.getItem("username");
+        alert("Well done " + userNameInput + ", take the coral reef quiz to test your knowledge superstar!");
+    });
     // On compass image click menu appears
     $('#menu').on({
         'click': function() {
@@ -536,24 +546,11 @@ $(document).ready(function() {
             });
             $("ul").css("height", "450vh");
         } else {
-            $(".side-menu").css("height", "100vh");
-            $("ul").css("height", "100vh");
+            $(".side-menu").css("height", "400vh");
+            $("ul").css("height", "400vh");
         };
     });
     // On some menu options click additional options appear and arrow rotates
-    $("#adventure-map").click(function() {
-        $(".advent-li").css({ "font-size": "2vw", "padding-bottom": "2%" });
-        $(".nav-ul").css("height", "fit-content");
-        $("#am-icon").toggleClass("rotate");
-        if (ScreenOrientation.type === "landscape-primary" || ScreenOrientation.type === "landscape-secondary" || $(window).height() < $(window).width() && $(window).height() < 800) {
-            $(".advent-list").css("height", "fit-content");
-            $(".nav-ul").css("height", "550vh");
-        } else {
-            $(".advent-list").css("height", "fit-content");
-            $(".nav-ul").css("height", "100vh");
-        };
-        $(".advent-list").animate({ "height": 'toggle' });
-    });
     $("#marine-ecosystem").click(function() {
         $(".marine-eco-li").css({ "font-size": "2vw", "padding-bottom": "2%" });
         $(".nav-ul").css("height", "fit-content");
@@ -574,3 +571,4 @@ $(document).ready(function() {
     });
 
 });
+v4wx

@@ -213,7 +213,7 @@ function displayResults() {
   //hint which areas the users need to work on
   let hintContainer = document.querySelector(".hint-container");
   if (score == 10) {
-    hintContainer.textContent = "Fantastic! You have placed a green marker on this ecosystem in the map. Save your score to unlock the Ocyan Lost City content now!";
+    hintContainer.textContent = "Fantastic! You have placed a green marker on this ecosystem in the map. Save your score to unlock the Ocyan City content now and then visit the X on the map!";
     hintContainer.style.fontSize = "2rem";
   }
   else {
@@ -224,6 +224,7 @@ function displayResults() {
   hintList.innerHTML = `<br><p class="nonbold fade-in">`+wrongListHints.join("<br>")+`</p>`;
   hintContainer.appendChild(hintList);
 }
+<<<<<<< HEAD
 
     //display score
     function displayResults() {
@@ -243,6 +244,8 @@ function displayResults() {
         hintContainer.appendChild(hintList);
     }
 
+=======
+>>>>>>> master
     //update progress bar and question status
     function updateProgress() {
         const questionStatus = document.querySelector(".question-num");
@@ -355,6 +358,11 @@ resetBtn.addEventListener("click", function() {
     updatePointsDataObj();
 });
 
+//reset quiz
+resetBtn.addEventListener("click", function() {
+    resetQuiz();
+});
+    
 //save score
 saveScoreBtn.addEventListener("click", function() {
   updatePointsDataObj();
