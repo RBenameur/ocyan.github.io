@@ -27,8 +27,4 @@ function onEnterClickButton(e) {
     if (inputUserName.length > 0 && (e.key == "Enter")) {
         exploreBtn.click();
     } 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> master
