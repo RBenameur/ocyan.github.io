@@ -161,16 +161,6 @@
         border-radius: 1rem;
     }
     
-    .speech:after {
-        content: '';
-        border: 20px solid transparent;
-        border-left: 20px solid white;
-        border-bottom: 20px solid white;
-        position: absolute;
-        bottom: 35vh;
-        left: 28vw;
-    }
-    
     #animation-close {
         font-size: 5vw;
         position: fixed;
