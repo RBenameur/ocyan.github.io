@@ -45,16 +45,6 @@
         border-radius: 1rem;
     }
     
-    .finished-text:after {
-        content: '';
-        border: 20px solid transparent;
-        border-right: 20px solid white;
-        border-top: 20px solid white;
-        position: absolute;
-        bottom: 58vh;
-        left: 45vw;
-    }
-    
     #animation-close {
         cursor: pointer;
     }
