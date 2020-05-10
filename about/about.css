@@ -9,11 +9,11 @@ html,body {
   height: 100%;
   width: 100vw;
   font-size: 16px;
-  overflow: auto;
   background-image: url("prelanding-bkgd.png");
   background-position: center;
   background-size: cover;
   z-index: -2;
+  overflow: auto;
 }
 
 .about-ocyan {
