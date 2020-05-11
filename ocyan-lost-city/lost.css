@@ -188,9 +188,9 @@
     display: block;
     height: 6em;
     width: 3em;
-    z-index: 20;
+    z-index: 1;
   }
-  
+
   .trash-container {
     position: absolute;
     left:0;
