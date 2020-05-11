@@ -19,7 +19,6 @@ body {
     font-weight: 400;
 }
 
-
 /***********Start*************/
 
 .start {
@@ -33,9 +32,7 @@ body {
     box-shadow: 0 5px 25px 0 rgba(0, 0, 0, .25);
     z-index: 2;
     border-radius: 1em;
-
 }
-
 
 /***button to start quiz**/
 
@@ -55,6 +52,16 @@ body {
     border-radius: 5rem;
     cursor: pointer;
     border: unset;
+}
+
+.quiz-name {
+    color: #fff;
+    text-align: center;
+}
+
+.start-exit { 
+    color: rgb(14, 148, 153);
+    left: 80%;
 }
 
 
@@ -433,6 +440,9 @@ label.option-container:hover {
     .side-img {
         display: none;
     }
+    .start {
+        min-height: 20em;
+        min-width: 15em;}
 }
 
 
@@ -476,5 +486,12 @@ label.option-container:hover {
     .side-img {
         height: 20vh;
         width: 20vw;
+    }
+}
+
+/*phones*/
+@media (max-width: 600px) {
+    #quiz {
+        padding-top: 27em;
     }
 }
