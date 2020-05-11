@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html,body {
@@ -8,11 +9,11 @@ html,body {
   height: 100%;
   width: 100vw;
   font-size: 16px;
-  overflow: auto;
   background-image: url("prelanding-bkgd.png");
   background-position: center;
   background-size: cover;
   z-index: -2;
+  overflow: auto;
 }
 
 .about-ocyan {
@@ -93,80 +94,116 @@ html,body {
 }
 
 
-/*************Media Queries**************/
-
-/*portrait mode phones*/
-@media (max-width: 600px){
-  .about-ocyan {
-    padding-top: 17em;
-    margin-top: 17em;
-    margin-left: 2em;
-  }
-
-  .about-mascot {
-    height: 12em;
-    max-width: 5em;
-    margin-top: 2em;
-    margin-left: 2em;
-  }
-  .about-text::before {
-    top: 6%;
-    right: -15%;
-  }
-  
-  .about-text::after {
-    top: 9.5%;
-    right: -17%;
-  }
-  #menu {
-    margin-left: 2em;
-  }
-}
-
 .about-bold {font-weight: bold;}
 
-
-/*landscape mode phones*/
-@media (max-width: 767.98px) {
-  html, body {font-size: 14px;}
-  #side-bar {display: none;}
-
-  .about-ocyan {
-    padding-top: 22em;
-    margin-top: 18em;
-  }
-
-#menu {
-  width: 15vw;
-  height: 18vh;
-  margin-left: .4em;
-}
-.about-text::before {
-  top: 6%;
-  right: -15%;
-}
-
-.about-text::after {
-  top: 9.5%;
-  right: -17%;
-}
-#ocyan-logo {width: 20%;}
-.about-title {font-size: medium;}
-}
-
+/*************Media Queries**************/
 
 /*landscape tablets*/
-@media (max-width: 1023px)  {
+@media (min-width: 820px) and (max-width: 1026px)  {
   .about-ocyan {
-    margin-top: 17em;
     margin-left: 2em;
+    padding-top: 8em;
+    margin-top: 12em;
+    
   }
-  .about-text {font-size: medium;}
-
+  .about-text {
+    font-size: 1.5em;
+    max-width: 70%;
+  }
   .about-mascot {
     height: 18em;
     max-width: 8em;
     margin-top: 2em;
     margin-left: 2em;
   }
+}
+
+
+/*landscape mode phones*/
+@media (max-width: 823px) {
+  html, body {font-size: 14px;}
+  #side-bar {display: none;}
+  .about-text {font-size: medium;}
+  .about-ocyan {
+    padding-top: 10em;
+    margin-top: 15em;
+  }
+
+#menu {
+  width: 15vw;
+  height: 18vh;
+}
+
+.about-mascot {
+  height: 20em;
+  max-width: 12em;
+  margin-top: 2em;
+  margin-left: 2em;
+}
+
+#ocyan-logo {
+  width: 20%;}
+.about-title {font-size: medium;}
+.about-title { font-size: 2em;}
+}
+
+
+/*landscape mode smaller phones*/
+@media (max-width: 729.99px) {
+  .about-ocyan {
+    padding-top: 10em;
+    margin-top: 15em;
+  }
+  .about-mascot {
+    height: 18em;
+    max-width: 10em;
+    margin-top: 2em;
+    margin-left: 2em;
+  }
+  .about-text { width: 20em;}
+
+.about-text::before,
+.about-text::after {
+ display: none;
+}
+}
+
+/*portrait mode phones*/
+@media (max-width: 600px){
+  .about-ocyan {
+    padding-top: 4em;
+    margin-bottom: 6em;
+    margin-top: 4em;
+    margin-left: 2em;
+  }
+  
+.about-bottom {
+  margin: 0 auto;
+}
+
+.about-text {
+  max-width: 90%;
+}
+
+.about-mascot {
+ display: none;
+}
+
+  #menu {
+    width: 12vw;
+    height: 14vh;
+    margin-left: 2.5em;
+  }
+}
+
+
+/*portrait mode smaller phones*/
+
+@media (max-width: 375.98px){
+  .about-ocyan {
+    padding-top: 10em;
+    margin-top: 10em;
+    margin-bottom: 12em;
+  }
+  .about-title {font-size: 1.5em;}
 }

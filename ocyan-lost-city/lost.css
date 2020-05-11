@@ -46,6 +46,9 @@
   .push-down {
     margin-top: 20em;
   }
+
+  .bold {font-weight: bold;}
+
   /*background of story*/
   #story {
     position: relative;
@@ -59,14 +62,13 @@
   }
   
   .big-letter {
-    position: absolute;
-    top: -.3em;
-    left: .4em;
-    font-size: 3em;
-  }
-  
-  .space-letter {
-    margin-left: 6.5%;
+  float: left;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+  font-size: 4em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: .9;
   }
   
   #story-title  {
@@ -86,7 +88,7 @@
   
   #lost-city-img {
     display: block;
-    height: 80vh;
+    max-height: 80vh;
     width: 100%;
     z-index: -1;
   }
@@ -110,7 +112,7 @@
     align-items: center;
     height: 100%;
     width: 100vw;
-    padding-top: 35em;
+    padding-top: 10em;
     background-color: rgba(0,0,0,.6);
     overflow-y: auto;
     font-weight: 300;
@@ -125,7 +127,7 @@
     height: auto;
     width: 60vw;
     margin-top: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 10em;
     background-color: #e6e6e6;
   }
   
@@ -155,6 +157,28 @@
   .epilogue-txt {
     padding: 0 3em 3em 3em;
   }
+
+  #epilogue-btn {
+    margin: 0 auto;
+    border-radius: 15px;
+    border: none;
+    padding: .2em .8em;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: rgb(23, 166, 206);
+  }
+
+  .exit-btn-epilogue {
+    display: block;
+    width: 40%;
+    margin-top: 1em;
+    padding: .2em .8em;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #007EA7;
+  }
   
   /**background elements parallax**/ 
   #mascot-swim {
@@ -164,9 +188,9 @@
     display: block;
     height: 6em;
     width: 3em;
-    z-index: 20;
+    z-index: 1;
   }
-  
+
   .trash-container {
     position: absolute;
     left:0;
@@ -194,30 +218,32 @@
   
   /***************Media Queries*****************/
   
-  @media (max-width: 1145px) {
-    .space-letter {
-      margin-left: 8%;
+  @media (max-width: 1045px) {
+    #ending  {padding-top: 29em;}
+    div.side-menu-img {
+      width: auto;
+      margin-right: 2em;
     }
-  }
-  
-  @media (max-width: 908px) {
-    .space-letter {
-      margin-left: 13%;
-    }
-  }
-  
-  /*Medium devices (tablets)*/
-  @media (max-width: 767.98px) {
     .trash-container {display: none;}
+    #ocyan-logo {width: 15%;}
+    #menu { 
+      width: 65%;
+      margin-left: 2em;
+    }
+    #mascot-swim {
+      right: 3em;
+      top: 12em;
+    }
+  }
+
+  /*Medium devices (tablets)*/
+  @media (max-width: 812.98px) {
     #mascot-swim {
       right: .8em;
       top: 12em;
     }
   
-    #ending  {
-      padding-top: 60em;
-    }
-  
+    #ending  {padding-top: 60em;}
     .epilogue-container {
       width: 88vw;
       margin-bottom: 24em;
@@ -228,5 +254,43 @@
       top: -0.3em;
       right: .2em;
       font-size: 3em;
+    }
+  }
+
+   /*phone landscape*/
+   @media (max-width: 768.98px) {
+    #ending  {padding-top: 60em;}
+  
+    .epilogue-container {
+      width: 65vw;
+      margin-bottom: 40em;
+    }
+  }
+   /*phone portrait*/
+   @media (max-width: 414.98px) {
+    #ending  {padding-top: 77em;}
+    #mascot-swim {
+      right: .1em;
+      top: 12em;
+    }
+    .exit-epilogue {
+      top: -0.4em;
+      right: 1px;
+    }
+    .epilogue-txt {font-size: .9em;}
+    #ocyan-logo {width: 30%;}
+    .epilogue-container {
+      width: 70vw;
+      margin-bottom: 47em;
+    }
+    #menu {margin-left: 2.7em;}
+  }
+
+  @media (max-width: 823.98px) {
+    #ending  {padding-top: 45em;}
+    .epilogue-container {
+      margin-top: 20em;
+      width: 88vw;
+      margin-bottom: 24em;
     }
   }
