@@ -136,7 +136,6 @@
 
     //mutable variables
     let indexCount = 0;
-    //let currentQuestionSet = questions[indexCount];
     let score = 0;
     let wrongListHints = [];
     let userAnswerList = [];

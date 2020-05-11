@@ -5,7 +5,12 @@
   
   html, body {
     position: relative;
-    height: auto;
+    min-height: 100%;
+    background-color: red;
+    background: linear-gradient( #A6E3FB,#007EA7,#007EA7, #29539B, #134074, #134074, #191970, #09C6F9, #09C6F9);
+    background-repeat: no-repeat;
+    width: 100vw;
+    z-index: -3;
     line-height: 2;
     font-size: 16px;
     /*font-weight: bold;*/
@@ -20,12 +25,8 @@
   /******Story Content*****/
   
   .sea-gradient {
-    height: 100%;
-    background-color: red;
-    background: linear-gradient( #A6E3FB,#007EA7,#007EA7, #29539B, #134074, #134074, #191970, #09C6F9, #09C6F9);
-    background-repeat: no-repeat;
-    width: 100vw;
-    z-index: -3;
+
+   
   }
   
   p {
@@ -110,12 +111,12 @@
     display: none;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100vw;
-    padding-top: 10em;
+    height:100%;
+    width: 100%;
+    padding-top: 40em;
     background-color: rgba(0,0,0,.6);
-    overflow-y: auto;
     font-weight: 300;
+    overflow-y: auto;
   }
   
   .epilogue-container  {
@@ -129,6 +130,7 @@
     margin-top: 2em;
     margin-bottom: 10em;
     background-color: #e6e6e6;
+    overflow-y: auto;
   }
   
   .exit-epilogue {
@@ -218,8 +220,8 @@
   
   /***************Media Queries*****************/
   
-  @media (max-width: 1045px) {
-    #ending  {padding-top: 29em;}
+  @media (max-width: 1025px) {
+    #ending {padding-top: 34em;}
     div.side-menu-img {
       width: auto;
       margin-right: 2em;
@@ -234,19 +236,22 @@
       right: 3em;
       top: 12em;
     }
+    .epilogue-container {
+      width: 65vw;
+      margin-bottom: 12em;
+    }
   }
 
   /*Medium devices (tablets)*/
   @media (max-width: 812.98px) {
+    #ending {padding-top: 60em;}
     #mascot-swim {
       right: .8em;
       top: 12em;
     }
-  
-    #ending  {padding-top: 60em;}
     .epilogue-container {
-      width: 88vw;
-      margin-bottom: 24em;
+      width: 65vw;
+      margin-bottom: 46em;
     }
   
     .exit-epilogue {
@@ -257,40 +262,57 @@
     }
   }
 
-   /*phone landscape*/
-   @media (max-width: 768.98px) {
-    #ending  {padding-top: 60em;}
-  
+  @media (min-width: 822.98px) and (max-height: 411.98px){
+    #ending {padding-top: 60em;}
+    #mascot-swim {
+      right: .8em;
+      top: 12em;
+    }
     .epilogue-container {
       width: 65vw;
       margin-bottom: 40em;
     }
   }
+
+  
+   /*phone landscape*/
+   @media (max-width: 768.98px) {  
+    #ending {padding-top: 63em;}
+    .epilogue-container {
+      margin-bottom: 42em;
+    }
+  }
+
+  @media (min-width: 567.98px)  and (max-height: 320.98px){  
+    #ending {padding-top: 74em;}
+    .epilogue-container {
+      margin-bottom: 56em;
+    }
+    .epilogue-txt {font-size: medium;}
+  }
+
+  @media (max-width: 500px) {
+    #ending {padding-top: 72em;}
+    .exit-epilogue {display: none;}
+  }
+
    /*phone portrait*/
    @media (max-width: 414.98px) {
-    #ending  {padding-top: 77em;}
+     #ending {padding-top: 76em;}
+   .epilogue-container {
+     margin-bottom: 39em;
+   }
+
     #mascot-swim {
       right: .1em;
       top: 12em;
     }
-    .exit-epilogue {
-      top: -0.4em;
-      right: 1px;
-    }
     .epilogue-txt {font-size: .9em;}
     #ocyan-logo {width: 30%;}
-    .epilogue-container {
-      width: 70vw;
-      margin-bottom: 47em;
-    }
     #menu {margin-left: 2.7em;}
   }
-
-  @media (max-width: 823.98px) {
-    #ending  {padding-top: 45em;}
-    .epilogue-container {
-      margin-top: 20em;
-      width: 88vw;
-      margin-bottom: 24em;
-    }
+  @media (max-width: 320.98px) {
+    #ending {padding-top: 76em;}
+    .epilogue-container {margin-bottom: 45em;}
+    .epilogue-txt, #epilogue-btn {font-size: small;}
   }

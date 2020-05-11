@@ -30,6 +30,11 @@ $(trash).each(function () {
 function displayClosed() {
   epilogueContainer.style.display = "none";
   document.getElementById("ocyan-logo").style.width = 25 + "vw";
+  let scrollBar = window.innerWidth - document.body.offsetWidth;
+  $('body').css({
+    marginLeft: scrollBar,
+    overflow: 'auto'
+  });
 }
 
 /**************Event Listeners*************/
@@ -42,7 +47,7 @@ window.addEventListener("scroll", function(e) {
 
 //Click to read the epilogue
 epilogueBtn.addEventListener("click", function() {
-  document.getElementById("ending").style.display = "flex";
+  document.getElementById("ending").style.overflow = "auto";
   epilogueContainer.style.display = "flex";
   let scrollBar = window.innerWidth - document.body.offsetWidth;
   $('body').css({
@@ -54,11 +59,6 @@ epilogueBtn.addEventListener("click", function() {
 
 //close the epilogue using top x
 topCloseEpilogue.addEventListener("click", function() {
-  let scrollBar = window.innerWidth - document.body.offsetWidth;
-  $('body').css({
-    marginLeft: scrollBar,
-    overflow: 'auto'
-  });
   displayClosed();
 });
 
