@@ -136,7 +136,6 @@
 
     //mutable variables
     let indexCount = 0;
-    //let currentQuestionSet = questions[indexCount];
     let score = 0;
     let wrongListHints = [];
     let userAnswerList = [];
@@ -224,6 +223,24 @@ function displayResults() {
   hintList.innerHTML = `<br><p class="nonbold fade-in">`+wrongListHints.join("<br>")+`</p>`;
   hintContainer.appendChild(hintList);
 }
+    //display score
+    function displayResults() {
+        let percentage = (score * 100) / questions.length;
+        let resultTxt = document.querySelector(".result-text").textContent = "You got " + percentage + "% or " + score + " out of " + questions.length + " questions correct.";
+        //hint which areas the users need to work on
+        let hintContainer = document.querySelector(".hint-container");
+        if (score == 10) {
+            hintContainer.textContent = "Fantastic job! You've placed a flag/green marker on this ecosystem in the map. Ocyan City content is unlocked! Visit the X on the map.";
+            hintContainer.style.fontSize = "1.5rem";
+        } else {
+            hintContainer.textContent = "Hint: try revisiting the following...";
+        }
+        let hintList = document.createElement("p");
+        //innerHTML so <br> is rendered
+        hintList.innerHTML = `<br><p class="nonbold fade-in">` + wrongListHints.join("<br>") + `</p>`;
+        hintContainer.appendChild(hintList);
+    }
+
     //update progress bar and question status
     function updateProgress() {
         const questionStatus = document.querySelector(".question-num");

@@ -1,40 +1,163 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html,body {
-  height: 100vh;
-  width: 100vw;
-  font-size: 13px;
-}
-
-.about-ocyan {
-  display: block;
+  position: relative;
   height: 100%;
-  width: 74vw;
-  background-image: url("emptyabout.png");
+  width: 100vw;
+  font-size: 16px;
+  background-image: url("prelanding-bkgd.png");
   background-position: center;
   background-size: cover;
-  margin: 0 auto;
-  z-index: -3;
+  z-index: -2;
+  overflow: auto;
 }
 
+section.about-ocyan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  width: 100%;
+  padding: 0;
+  font-size: 1em;
+}
 
-#side-bar {
-  z-index: 3 !important;
+.about-bottom {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3em;
+  max-width: 90%;
+}
+
+.about-mascot {
+  height: 30em;
+  width: 20em;
 }
 
 .about-text {
+  position: relative;
+  padding: 2em;
+  background-color: #fff;
+  height: auto;
+  width: 60%;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+/*speech bubble*/
+
+.about-text::before {
   position: absolute;
-  top: 19em;
-  left:22em;
-  width: 30vw;
+  top: 8%;
+  right: -15%;
+  content: '';
+  height: 5em;
+  width: 8em;
+  background-color: #fff;
+  border-radius: 100%;
+  z-index: -3;
+}
+
+.about-text::after {
+  position: absolute;
+  top: 15.5%;
+  right: -16%;
+  content: '';
+  height: 5em;
+  width: 9em;
+  background-color: #0DADE9;
+  border-radius: 100%;
+  transform: rotate(-22deg);
+  z-index: -3;
+}
+
+.about-text p {
+  margin-bottom: 0;
+  margin-top: 1em;
 }
 
 .about-title {
+  max-width: 60%;
+  margin-bottom: 1em;
+  padding: .4em .8em;
+  margin-top: 2.5em;
+  border-radius: 20px;
+  background-color: #fff;
+  font-size: 3em;
+  font-weight: 600;
+}
+
+.about-title h1 {
+  margin: 0;
+  padding: 0;;
+}
+
+
+.about-bold {font-weight: bold;}
+
+/*************Media Queries**************/
+
+/*landscape tablets*/
+@media (min-width: 820px) and (max-width: 1366.98px)  {
+  .about-text {
+    font-size: 1.5em;
+    max-width: 70%;
+  }
+}
+
+/*landscape mode phones*/
+@media (max-width: 823.98px) {
+  html, body {font-size: 14px;}
+  .about-text {font-size: medium;}
+.about-mascot {
+  height: 16em;
+  width: 13em;
+  margin-top: 2em;
+  margin-left: .7em;
+}
+
+.about-title {font-size: medium;}
+.about-title { font-size: 2em;}
+}
+
+/*portrait mode phones*/
+@media (max-width: 640.98px){
+.about-ocyan {
+    padding-top: 7em;
+    margin-top: 7em;
+  }
+.about-text {
+  width: 90%;
+}
+
+.about-title {
+  position:relative;
+  padding: .5em .9em;
+}
+
+.about-mascot {
   position: absolute;
-  top: 5.2em;
-  left:11em;
-  font-weight: bold;
+  top: 19%;
+  right: 7%;
+  height: 10em;
+  width: 7em;
+}
+.about-text::before,
+.about-text::after {display: none;}
+}
+
+@media (max-width: 320.98px){
+  
+.about-mascot {
+  position: absolute;
+  top: 25%;
+  right: 6%;
+  height: 8em;
+  width: 6em;
+}
 }

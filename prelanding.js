@@ -1,18 +1,16 @@
 const inputUser = document.querySelector("#fname");
 let inputUserName = document.querySelector("#fname").value;
 
+//let default username be Explorer
+localStorage.setItem("username","Explorer");
 
 //record name in local storage to put in story
 document.getElementById("explore").addEventListener("click", function(){
     inputUserName = document.querySelector("#fname").value;
 
-  if (inputUserName.length == 0) {
-
-      localStorage.setItem("username","Explorer");
-  }
-  else {
+  if (inputUserName.length > 0) {
       localStorage.setItem("username", inputUserName);
-      }
+    }
 
 });
 
